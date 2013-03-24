@@ -10,4 +10,13 @@ $arr2 = array(
         'usuario' => 'usuario02'
     ),
 );
+
+$ent = "entrada";
+$sai = "saida";
+if ($var == "entrada")
+    if ($saida == "saida")
+        echo $saida;
+else
+    echo $entrada;
+
 ?>
