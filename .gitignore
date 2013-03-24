@@ -1,3 +1,9 @@
+bin
+.metadata
+*~
+target/
+
+#compiled
 *.class
 
 # Package Files #
