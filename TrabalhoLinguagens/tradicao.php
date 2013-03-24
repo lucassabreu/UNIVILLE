@@ -1,4 +1,5 @@
 <?php
+
 $nome = "Joao";
 $idade = 18;
 
@@ -10,12 +11,14 @@ echo "$nome tem $idade anos\n\n";
 
 $_GET['total'] = 90;
 
-$total = 0;
+$i = 0;
 voltar:
-    $total = $_GET['total'] + $total;
-    
-    if ($total < 100)
-        goto voltar;
-    else
-        echo $total . "\n";
+$i++;
+echo "Contando $i de 100\n";
+
+if ($i < 100)
+    goto voltar;
+
+for ($i = 0; $i <= 100; $i++)
+    echo "Contando $i de 100\n";
 ?>
