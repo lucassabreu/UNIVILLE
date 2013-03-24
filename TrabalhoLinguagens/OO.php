@@ -25,5 +25,5 @@ class Pessoa {
 
 $pessoa = new Pessoa('Joao', '085489655478', '5612448', new \DateTime('01/01/1994'));
 
-echo $pessoa->idade() . "\n";
+echo "Idade de $pessoa->nome eh " . $pessoa->idade() . "\n";
 ?>
