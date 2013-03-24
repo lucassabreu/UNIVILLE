@@ -15,24 +15,6 @@ if (!file_exists($xmlFile)) {
 foreach ($xml->livro as $livro) {
     echo "Livro: " . $livro->attributes()->id . "\n";
     echo " * Titulo: $livro->titulo\n";
-
-    $nAutores = count($livro->autores->autor);
-
-    if ($nAutores > 1) {
-        echo " * Autores: ";
-        $i = 1;
-        foreach ($livro->autores->autor as $autor) {
-            echo $autor;
-
-            if ($i <> $nAutores)
-                echo ' / ';
-
-            $i++;
-        }
-        echo "\n";
-    }else
-        echo " * Autor: " . $livro->autores->autor . "\n";
-    
     echo " * Categoria: $livro->categoria\n";
     echo " * Ano: $livro->ano\n";
     echo " * N. Paginas: $livro->paginas\n\n";
