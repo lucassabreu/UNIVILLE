@@ -13,6 +13,6 @@ class Pessoa {
     }
 }
 
-$pessoa = new Pessoa('Joao', '085489655478', '5612448', new \DateTime('01/01/1994'));
+$pessoa = new Pessoa('Joao', new \DateTime('01/01/1994'));
 echo "Idade de $pessoa->nome eh " . $pessoa->idade() . "\n";
 ?>
