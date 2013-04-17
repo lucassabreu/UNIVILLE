@@ -11,3 +11,4 @@ target/
 *.war
 *.ear
 /TrabalhoLinguagens/nbproject/private/
+/Escalonamento/nbproject/private/
