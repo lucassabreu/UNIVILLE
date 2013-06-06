@@ -18,6 +18,8 @@ public class SJFPreemptivo {
         int tempo = 0;
         int tempoTotalExec = 0;
 
+        Processo processoExec = null;
+
         // eu realizei a acumulação do tempo antes de fazer o while... o sor
         // não.
         for (Processo p : processos)
@@ -31,9 +33,11 @@ public class SJFPreemptivo {
                 if (tempo == processos[i].tempoChegada) {
                     System.out.println(String
                                     .format("    Chegou: %s", processos[i].nome));
+                    processoExec = processos[i];
                 }
             }
 
+            processoExec.tempoExecucao--;
             tempo++;
         }
     }
