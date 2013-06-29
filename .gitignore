@@ -1,3 +1,6 @@
+#eclipse
+RemoteSystemsTempFiles/
+
 #java specific
 *.class
 
