@@ -1,27 +1,14 @@
-#project folders/files and dist folders
-bin/
-.metadata/
-nbproject/
-dist/
-build/
-*~
-target/
-
-#subproject folders
-*/bin/
-*/.metadata/
-*/nbproject/
-*/dist/
-*/build/
-*/*~
-*/target/
-
-#compiled
+#java specific
 *.class
 
-# Package Files #
-*.jar
-*.war
-*.ear
-/TrabalhoLinguagens/nbproject/private/
-/Escalonamento/nbproject/private/
+#netbeans ignore personal stuff 
+nbproject/private/
+
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
