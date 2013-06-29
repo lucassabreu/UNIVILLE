@@ -35,7 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/venda_ingressos.o
+	${OBJECTDIR}/venda_ingressos_correto.o
 
 
 # C Compiler Flags
@@ -62,10 +62,10 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vendaingressos: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vendaingressos ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/venda_ingressos.o: venda_ingressos.c 
+${OBJECTDIR}/venda_ingressos_correto.o: venda_ingressos_correto.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/venda_ingressos.o venda_ingressos.c
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/venda_ingressos_correto.o venda_ingressos_correto.c
 
 # Subprojects
 .build-subprojects:

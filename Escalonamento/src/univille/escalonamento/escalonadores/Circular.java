@@ -71,10 +71,10 @@ public class Circular extends FCFS {
             if (this.contadorTrocaContexto == 0 || this.corrente == null) {
                 this.contadorTrocaContexto = this.quantum;
                 this.ultimoExecutado++;
-
-                if (this.ultimoExecutado >= prontos.size())
-                    this.ultimoExecutado = 0;
             }
+
+            if (this.ultimoExecutado >= prontos.size())
+                this.ultimoExecutado = 0;
 
             this.corrente = this.prontos.get(this.ultimoExecutado);
 

@@ -8,7 +8,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
-      <itemPath>venda_ingressos.c</itemPath>
+      <itemPath>venda_ingressos_correto.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
@@ -37,10 +37,12 @@
       </toolsSet>
       <compileType>
         <linkerTool>
-          <commandLine>-lpthread</commandLine>
+          <linkerLibItems>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="venda_ingressos.c" ex="false" tool="0" flavor2="0">
+      <item path="venda_ingressos_correto.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -64,7 +66,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="venda_ingressos.c" ex="false" tool="0" flavor2="0">
+      <item path="venda_ingressos_correto.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>

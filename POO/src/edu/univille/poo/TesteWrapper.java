@@ -8,7 +8,8 @@ public class TesteWrapper {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	@SuppressWarnings({ "unused", "deprecation" })
+    public static void main(String[] args) {
 
 		if (args.length != 3) {
 			System.out

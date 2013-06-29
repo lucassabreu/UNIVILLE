@@ -7,6 +7,8 @@ import univille.escalonamento.Processo;
 
 /**
  * Escalona os processos de acordo com a prioridade
+ * 
+ * Escalona prioridade menor
  */
 public class Prioridade extends Escalonador {
 

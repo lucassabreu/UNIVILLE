@@ -1,7 +1,8 @@
 package edu.univille.poo;
 
 public class AutoBoxing {
-	public static void main(String[] args) {
+	@SuppressWarnings("unused")
+    public static void main(String[] args) {
 		int idade = 20;
 		Integer minhaIdade = 20;
 		Integer minhaIdade2 = new Integer(20);
