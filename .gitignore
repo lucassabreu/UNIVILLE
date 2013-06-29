@@ -1,5 +1,7 @@
 #eclipse
 RemoteSystemsTempFiles/
+.project
+.classpath
 
 #java specific
 *.class
