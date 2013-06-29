@@ -1,14 +1,1 @@
-bin
-.metadata
-*~
-target/
-
-#compiled
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
-/TrabalhoLinguagens/nbproject/private/
-/Escalonamento/nbproject/private/
+ 
