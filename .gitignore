@@ -1,17 +1,14 @@
-#eclipse
-RemoteSystemsTempFiles/
-.settings/
-.project
-.classpath
-
 #java specific
 *.class
 
-#netbeans ignore personal stuff 
+#IDE especif files
 nbproject/private/
+.metadata/
 
 #output compiled files
 bin/
+dist/
+build/
 
 ## generic files to ignore
 *~

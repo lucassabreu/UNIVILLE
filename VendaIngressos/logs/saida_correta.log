@@ -1,0 +1,217 @@
+Pessoa 0 entrou no sistema.
+Pessoa 0, comprou lugar 89
+Pessoa 1 entrou no sistema.
+Pessoa 0, comprou lugar 25
+Pessoa 3 entrou no sistema.
+Pessoa 4 entrou no sistema.
+Pessoa 2 entrou no sistema.
+Pessoa 0, comprou lugar 51
+Pessoa 0, comprou lugar 12
+Pessoa 0, comprou lugar 91
+Pessoa 0, comprou lugar 73
+Pessoa 0, comprou lugar 26
+Pessoa 0, comprou lugar 52
+Pessoa 0, comprou lugar 32
+Pessoa 0, comprou lugar 80
+Pessoa 0, comprou lugar 22
+Pessoa 0, comprou lugar 90
+Pessoa 0, comprou lugar 5
+Pessoa 0, comprou lugar 96
+Pessoa 0, comprou lugar 6
+Pessoa 0, comprou lugar 45
+Pessoa 0, comprou lugar 38
+Pessoa 0, comprou lugar 64
+Pessoa 0, comprou lugar 62
+Pessoa 0, comprou lugar 72
+Pessoa 0, comprou lugar 93
+Pessoa 0, comprou lugar 76
+Pessoa 0, comprou lugar 29
+Pessoa 0, comprou lugar 34
+Pessoa 0, comprou lugar 14
+Pessoa 0, comprou lugar 65
+Pessoa 0, comprou lugar 17
+Pessoa 0, comprou lugar 18
+Pessoa 0, comprou lugar 39
+Pessoa 0, comprou lugar 27
+Pessoa 0, comprou lugar 7
+Pessoa 0, comprou lugar 11
+Pessoa 0, comprou lugar 71
+Pessoa 0, comprou lugar 16
+Pessoa 0, comprou lugar 4
+Pessoa 0, comprou lugar 63
+Pessoa 0, comprou lugar 21
+Pessoa 0, comprou lugar 87
+Pessoa 0, comprou lugar 92
+Pessoa 0, comprou lugar 20
+Pessoa 3, comprou lugar 49
+Pessoa 3, comprou lugar 70
+Pessoa 3, comprou lugar 99
+Pessoa 3, comprou lugar 46
+Pessoa 3, comprou lugar 58
+Pessoa 3, comprou lugar 10
+Pessoa 3, comprou lugar 57
+Pessoa 3, comprou lugar 28
+Pessoa 3, comprou lugar 66
+Pessoa 3, comprou lugar 97
+Pessoa 3, comprou lugar 24
+Pessoa 3, comprou lugar 74
+Pessoa 3, comprou lugar 79
+Pessoa 3, comprou lugar 41
+Pessoa 3, comprou lugar 42
+Pessoa 3, comprou lugar 8
+Pessoa 3, comprou lugar 56
+Pessoa 2, comprou lugar 47
+Pessoa 2, comprou lugar 9
+Pessoa 2, comprou lugar 1
+Pessoa 0, comprou lugar 95
+Pessoa 0, comprou lugar 50
+Pessoa 0, comprou lugar 15
+Pessoa 2, comprou lugar 94
+Pessoa 2, comprou lugar 3
+Pessoa 2, comprou lugar 2
+Pessoa 2, comprou lugar 59
+Pessoa 2, comprou lugar 85
+Pessoa 0, comprou lugar 75
+Pessoa 0, comprou lugar 19
+Pessoa 0, comprou lugar 60
+Pessoa 3, comprou lugar 36
+Pessoa 3, comprou lugar 30
+Pessoa 3, comprou lugar 88
+Pessoa 3, comprou lugar 68
+Pessoa 3, comprou lugar 35
+Pessoa 3, comprou lugar 13
+Pessoa 3, comprou lugar 40
+Pessoa 3, comprou lugar 77
+Pessoa 3, comprou lugar 67
+Pessoa 3, comprou lugar 53
+Pessoa 3, comprou lugar 84
+Pessoa 3, comprou lugar 0
+Pessoa 3, comprou lugar 31
+Pessoa 3, comprou lugar 83
+Pessoa 3, comprou lugar 86
+Pessoa 1, comprou lugar 61
+Pessoa 1, comprou lugar 98
+Pessoa 3, comprou lugar 54
+Pessoa 2, comprou lugar 23
+Pessoa 2, comprou lugar 78
+Pessoa 2, comprou lugar 55
+Pessoa 0, comprou lugar 43
+Pessoa 1, comprou lugar 33
+Pessoa 1, comprou lugar 48
+Pessoa 4, comprou lugar 37
+Pessoa 3, comprou lugar 81
+Pessoa 1, comprou lugar 82
+Pessoa 4, comprou lugar 44
+Pessoa 3, comprou lugar 69
+Pessoa 3 saiu do sistema.
+Pessoa 1 saiu do sistema.
+Pessoa 4 saiu do sistema.
+Pessoa 2 saiu do sistema.
+Pessoa 0 saiu do sistema.
+                   +-------------------+
+                   |      Pessoas      |
++-------+----------+---+---+---+---+---+
+| Lugar | Qt Compr | 1 | 2 | 3 | 4 | 5 |
++-------+----------+---+---+---+---+---+
+|     0 |        1 |   |   |   | x |   |
+|     1 |        1 |   |   | x |   |   |
+|     2 |        1 |   |   | x |   |   |
+|     3 |        1 |   |   | x |   |   |
+|     4 |        1 | x |   |   |   |   |
+|     5 |        1 | x |   |   |   |   |
+|     6 |        1 | x |   |   |   |   |
+|     7 |        1 | x |   |   |   |   |
+|     8 |        1 |   |   |   | x |   |
+|     9 |        1 |   |   | x |   |   |
+|    10 |        1 |   |   |   | x |   |
+|    11 |        1 | x |   |   |   |   |
+|    12 |        1 | x |   |   |   |   |
+|    13 |        1 |   |   |   | x |   |
+|    14 |        1 | x |   |   |   |   |
+|    15 |        1 | x |   |   |   |   |
+|    16 |        1 | x |   |   |   |   |
+|    17 |        1 | x |   |   |   |   |
+|    18 |        1 | x |   |   |   |   |
+|    19 |        1 | x |   |   |   |   |
+|    20 |        1 | x |   |   |   |   |
+|    21 |        1 | x |   |   |   |   |
+|    22 |        1 | x |   |   |   |   |
+|    23 |        1 |   |   | x |   |   |
+|    24 |        1 |   |   |   | x |   |
+|    25 |        1 | x |   |   |   |   |
+|    26 |        1 | x |   |   |   |   |
+|    27 |        1 | x |   |   |   |   |
+|    28 |        1 |   |   |   | x |   |
+|    29 |        1 | x |   |   |   |   |
+|    30 |        1 |   |   |   | x |   |
+|    31 |        1 |   |   |   | x |   |
+|    32 |        1 | x |   |   |   |   |
+|    33 |        1 |   | x |   |   |   |
+|    34 |        1 | x |   |   |   |   |
+|    35 |        1 |   |   |   | x |   |
+|    36 |        1 |   |   |   | x |   |
+|    37 |        1 |   |   |   |   | x |
+|    38 |        1 | x |   |   |   |   |
+|    39 |        1 | x |   |   |   |   |
+|    40 |        1 |   |   |   | x |   |
+|    41 |        1 |   |   |   | x |   |
+|    42 |        1 |   |   |   | x |   |
+|    43 |        1 | x |   |   |   |   |
+|    44 |        1 |   |   |   |   | x |
+|    45 |        1 | x |   |   |   |   |
+|    46 |        1 |   |   |   | x |   |
+|    47 |        1 |   |   | x |   |   |
+|    48 |        1 |   | x |   |   |   |
+|    49 |        1 |   |   |   | x |   |
+|    50 |        1 | x |   |   |   |   |
+|    51 |        1 | x |   |   |   |   |
+|    52 |        1 | x |   |   |   |   |
+|    53 |        1 |   |   |   | x |   |
+|    54 |        1 |   |   |   | x |   |
+|    55 |        1 |   |   | x |   |   |
+|    56 |        1 |   |   |   | x |   |
+|    57 |        1 |   |   |   | x |   |
+|    58 |        1 |   |   |   | x |   |
+|    59 |        1 |   |   | x |   |   |
+|    60 |        1 | x |   |   |   |   |
+|    61 |        1 |   | x |   |   |   |
+|    62 |        1 | x |   |   |   |   |
+|    63 |        1 | x |   |   |   |   |
+|    64 |        1 | x |   |   |   |   |
+|    65 |        1 | x |   |   |   |   |
+|    66 |        1 |   |   |   | x |   |
+|    67 |        1 |   |   |   | x |   |
+|    68 |        1 |   |   |   | x |   |
+|    69 |        1 |   |   |   | x |   |
+|    70 |        1 |   |   |   | x |   |
+|    71 |        1 | x |   |   |   |   |
+|    72 |        1 | x |   |   |   |   |
+|    73 |        1 | x |   |   |   |   |
+|    74 |        1 |   |   |   | x |   |
+|    75 |        1 | x |   |   |   |   |
+|    76 |        1 | x |   |   |   |   |
+|    77 |        1 |   |   |   | x |   |
+|    78 |        1 |   |   | x |   |   |
+|    79 |        1 |   |   |   | x |   |
+|    80 |        1 | x |   |   |   |   |
+|    81 |        1 |   |   |   | x |   |
+|    82 |        1 |   | x |   |   |   |
+|    83 |        1 |   |   |   | x |   |
+|    84 |        1 |   |   |   | x |   |
+|    85 |        1 |   |   | x |   |   |
+|    86 |        1 |   |   |   | x |   |
+|    87 |        1 | x |   |   |   |   |
+|    88 |        1 |   |   |   | x |   |
+|    89 |        1 | x |   |   |   |   |
+|    90 |        1 | x |   |   |   |   |
+|    91 |        1 | x |   |   |   |   |
+|    92 |        1 | x |   |   |   |   |
+|    93 |        1 | x |   |   |   |   |
+|    94 |        1 |   |   | x |   |   |
+|    95 |        1 | x |   |   |   |   |
+|    96 |        1 | x |   |   |   |   |
+|    97 |        1 |   |   |   | x |   |
+|    98 |        1 |   | x |   |   |   |
+|    99 |        1 |   |   |   | x |   |
++-------+----------+---+---+---+---+---+
+Fim da Execucao
