@@ -1,7 +1,20 @@
-bin
-.metadata
+#project folders/files and dist folders
+bin/
+.metadata/
+nbproject/
+dist/
+build/
 *~
 target/
+
+#subproject folders
+*/bin/
+*/.metadata/
+*/nbproject/
+*/dist/
+*/build/
+*/*~
+*/target/
 
 #compiled
 *.class
