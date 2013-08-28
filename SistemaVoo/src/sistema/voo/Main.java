@@ -71,6 +71,9 @@ public class Main {
 
         // listar
         c.listagemDeLinhas();
+        
+        
+        new Baga
 
     }
 }

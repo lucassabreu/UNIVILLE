@@ -17,3 +17,4 @@ build/
 *.swp
 *.out
 lol.log
+/Escalonamento/nbproject/private/
