@@ -35,6 +35,8 @@ public class Main {
 		for (ItemPedido ip : ped.getItemPedidos())
 			s.save(ip);
 
+		s.createCriteria(Pedido.class).list();
+		
 		s.getTransaction().commit();
 	}
 }

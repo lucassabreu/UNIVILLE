@@ -12,7 +12,8 @@ public class Main {
 		for (int i = 0; i < 10; i++)
 			paginas.add(new Pagina(i));
 
-		Pagina[] referencias = new Pagina[] { //
+		Pagina[] referencias = Pagina.genSequencia(paginas);
+		/*new Pagina[] { //
 				paginas.get(0), //
 				paginas.get(1), //
 				paginas.get(2), //
@@ -25,7 +26,7 @@ public class Main {
 				paginas.get(9), //
 				paginas.get(4), //
 				paginas.get(9) //
-		};
+		};*/
 
 		Algoritmo[] algs = new Algoritmo[] {
 				Algoritmo.getInstanceOf(Algoritmo.FIFO, 3, referencias),

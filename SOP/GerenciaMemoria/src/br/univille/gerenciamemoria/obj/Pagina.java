@@ -12,12 +12,12 @@ public class Pagina {
 		this(numero, 0, 0, 0);
 	}
 
-	public Pagina(int numero, int ordemCarga, int carga, int br) {
+	public Pagina(int numero, int carga, int ultimaReferencia, int numeroReferencias) {
 		super();
 		this.numero = numero;
-		this.carga = ordemCarga;
-		this.ultimaReferencia = carga;
-		this.numeroReferencias = br;
+		this.carga = carga;
+		this.ultimaReferencia = ultimaReferencia;
+		this.numeroReferencias = numeroReferencias;
 	}
 
 	public static Pagina[] genSequencia(ArrayList<Pagina> paginas) {
