@@ -8,11 +8,12 @@ import java.sql.SQLException;
 
 public class MySQLSelect {
     public static void main(String[] args) {
+        Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String strConn = "jdbc:mysql://localhost/poo2013";
 
-            Connection conn = DriverManager.getConnection(strConn, "root", "");
+            conn = DriverManager.getConnection(strConn, "root", "");
 
             String sqlInsert = "SELECT codigo, nome, endereco, sexo, cidade FROM cliente";
 
@@ -22,14 +23,16 @@ public class MySQLSelect {
 
             while (resultSet.next()) {
 
-                System.out.println(String.format("%d, %s, %s, %s, %s", 
-                                resultSet.getInt(1),
-                                resultSet.getString(2),
-                                resultSet.getString(3),
-                                resultSet.getBoolean(4) ? "Masculino" : "Feminino",
-                                resultSet.getString(5)));
+                System.out.println(String
+                                .format("%d, %s, %s, %s, %s", //
+                                                resultSet.getInt(1), //
+                                                resultSet.getString(2), //
+                                                resultSet.getString(3), //
+                                                resultSet.getBoolean(4) ? "Masculino" : "Feminino", //
+                                                resultSet.getString(5)));
             }
 
+            conn.close();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }

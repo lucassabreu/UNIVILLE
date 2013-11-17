@@ -26,6 +26,8 @@ public class MySQLInsert {
             
             System.out.printf("NumLinhas: %d\n", numLinhas);
             
+            conn.close();
+            
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }

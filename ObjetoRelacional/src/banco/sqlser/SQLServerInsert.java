@@ -11,7 +11,8 @@ public class SQLServerInsert {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			String stringConn = "jdbc:sqlserver://localhost:1433;databaseName=poo2013;user=bob;password=bob121236334";
-			Connection conn = DriverManager.getConnection(stringConn);
+			@SuppressWarnings("unused")
+            Connection conn = DriverManager.getConnection(stringConn);
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
