@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>RobocodeLinux</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Robots</name>
+			<type>2</type>
+			<location>/home/lucas/.robocode/robots</location>
+		</link>
+		<link>
+			<name>Source</name>
+			<type>2</type>
+			<location>/media/Dados/Documents/workspace/UNIVILLE/Robocode/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>
