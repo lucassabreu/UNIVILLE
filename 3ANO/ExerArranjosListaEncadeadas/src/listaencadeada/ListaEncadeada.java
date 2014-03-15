@@ -58,7 +58,34 @@ public class ListaEncadeada {
     }
 
     public GameEntry remove(int i) {
-        return null;
+        if (i >= this.size || i < 0)
+            throw new IndexOutOfBoundsException("Posição " + i + " inválida");
+
+        Node node = null;
+
+        if (i == 0) {
+            node = this.head;
+            this.head = node.getNext();
+        } else {
+            Node prev = this.head;
+            node = this.head.getNext();
+
+            for(int j = 1; j < i && node != null; j++) {
+                prev = node;
+                node = node.getNext();
+            }
+            
+            prev.setNext(null);
+            if (node != null)
+                prev.setNext(node.getNext());
+        }
+
+        this.size--;
+        
+        if (node != null)
+            return node.getElement();
+        else
+            return null;
     }
 
     public static void main(String[] args) {
@@ -66,9 +93,17 @@ public class ListaEncadeada {
         ListaEncadeada list = new ListaEncadeada();
 
         for (int i = 0; i < 20; i++)
-            list.add(new Node(new GameEntry("Name " + (i + 1), (int) (Math
-                            .random() * 1000.0))));
+            list.add(new Node(new GameEntry("Name " + (i + 1), 2000 - i * 100
+                            // (int) (Math.random() * 1000.0)
+            )));
 
+        list.remove(0);
+        
+        GameEntry ge = list.remove(0);
+        
+        System.out.println("GameEntry: " + ge.toString());
+        
+        System.out.println("Lista: ");
         list.print();
     }
 

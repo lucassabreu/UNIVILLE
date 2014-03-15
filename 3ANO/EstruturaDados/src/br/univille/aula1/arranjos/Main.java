@@ -1,4 +1,4 @@
-package br.univille.arranjos.aula1;
+package br.univille.aula1.arranjos;
 
 public class Main {
 

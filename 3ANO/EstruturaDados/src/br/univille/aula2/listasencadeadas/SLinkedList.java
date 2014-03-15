@@ -1,4 +1,4 @@
-package br.univille.arranjos.aula2;
+package br.univille.aula2.listasencadeadas;
 
 public class SLinkedList {
 	protected Node head;
