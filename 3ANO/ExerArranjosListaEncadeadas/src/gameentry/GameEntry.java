@@ -1,6 +1,6 @@
 package gameentry;
 
-
+/* teste */
 public class GameEntry {
 	private String name;
 	protected int score;
