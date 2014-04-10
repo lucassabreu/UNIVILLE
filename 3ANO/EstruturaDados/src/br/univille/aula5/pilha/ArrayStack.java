@@ -120,7 +120,6 @@ public class ArrayStack<E> implements Stack<E> {
 
         System.out.println(as.pop() + " - " + as);
 
-        //
         // System.out.println("IsEmpty: " + as.isEmpty());
         //
         // as.push("Elemento " + as.size());
