@@ -5,7 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
+@NamedQueries({
+        @NamedQuery(name = "getAllClientes", query = "SELECT c FROM Cliente c"),
+        @NamedQuery(name = "getClienteByEnd", query = "SELECT c FROM Cliente c WHERE c.endereco LIKE :ender"), })
 @Entity
 public class Cliente {
     @Id

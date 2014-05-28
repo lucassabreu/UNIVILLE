@@ -1,10 +1,13 @@
 package ejb;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import dao.Cliente;
 
@@ -25,9 +28,23 @@ public class ClienteBean implements ClienteBeanRemote, ClienteBeanLocal {
 
     @WebMethod
     public void save(Cliente cliente) {
-        if (em.find(Cliente.class, cliente.getOid()) != null)
-            em.persist(cliente); // INSERT
+        if (this.em.find(Cliente.class, cliente.getOid()) != null)
+            this.em.persist(cliente); // INSERT
         else
-            em.merge(cliente); // UPDATE
+            this.em.merge(cliente); // UPDATE
+    }
+
+    @SuppressWarnings("unchecked")
+    @WebMethod
+    public List<Cliente> getAllClientes() {
+        Query q = this.em.createNativeQuery("getAllClientes", Cliente.class);
+        return q.getResultList();
+    }
+
+    public Cliente getClienteByEnd(String ender) {
+        Query q = this.em.createNativeQuery("getClienteByEnd", Cliente.class);
+        q.setParameter("ender", ender);
+        q.setMaxResults(1);
+        return (Cliente) q.getSingleResult();
     }
 }
