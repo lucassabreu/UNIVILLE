@@ -41,6 +41,7 @@ public class ClienteBean implements ClienteBeanRemote, ClienteBeanLocal {
         return q.getResultList();
     }
 
+    @WebMethod
     public Cliente getClienteByEnd(String ender) {
         Query q = this.em.createNativeQuery("getClienteByEnd", Cliente.class);
         q.setParameter("ender", ender);

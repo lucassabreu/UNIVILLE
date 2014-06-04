@@ -1,5 +1,7 @@
 package dao;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +14,9 @@ import javax.persistence.NamedQuery;
         @NamedQuery(name = "getAllClientes", query = "SELECT c FROM Cliente c"),
         @NamedQuery(name = "getClienteByEnd", query = "SELECT c FROM Cliente c WHERE c.endereco LIKE :ender"), })
 @Entity
-public class Cliente {
+public class Cliente implements Serializable {
+    private static final long serialVersionUID = -7244586951401888766L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int     oid;
