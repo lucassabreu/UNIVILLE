@@ -19,13 +19,13 @@ public class Cliente implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int     oid;
+    private int               oid;
     @Column(unique = true, nullable = false)
-    private String  codigo;
-    private String  nome;
+    private String            codigo;
+    private String            nome;
     @Column(length = 5000)
-    private String  endereco;
-    private boolean sexo;
+    private String            endereco;
+    private boolean           sexo;
 
     public int getOid() {
         return oid;
