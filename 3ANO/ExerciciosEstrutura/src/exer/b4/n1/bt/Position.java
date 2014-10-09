@@ -1,4 +1,4 @@
-package exer.b4.bt;
+package exer.b4.n1.bt;
 
 public class Position<E> {
 

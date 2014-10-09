@@ -1,7 +1,7 @@
-package exer.b4;
+package exer.b4.n1;
 
-import exer.b4.bt.IBinaryTree;
-import exer.b4.bt.SimpleComparebleBinaryTree;
+import exer.b4.n1.bt.IBinaryTree;
+import exer.b4.n1.bt.SimpleComparebleBinaryTree;
 
 public class Main {
     public static void main(String[] args) {
