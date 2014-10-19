@@ -108,7 +108,7 @@ public class ExercicioE2 {
      * pares A com B, A com C e A com D; B com C, B com D e por último C com D.
      */
     public static int[] propriedadeDistributiva(int[] valores) {
-        int numeroMultiplicacoes = 0, pos = 0;
+        int pos = 0;
         int retorno[], tamanho = 0;
 
         if (valores.length < 2)
