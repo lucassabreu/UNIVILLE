@@ -9,18 +9,32 @@ public class ArvoreImpl implements Arvore {
     protected Posicao raiz;
     protected int     tamanho;
 
+    public static void main(String[] args) {
+        int[] vs = new int[] { 22, 26, 11, 25, 23, 24, 13, 14, 7, 30, 15, 3, 6,
+                27, 5, 20, 28, 18, 4, 29, 10, 1, 17, 19, 21, 9, 8, 12, 2, 16 };
+
+        Arvore a = new ArvoreImpl();
+
+        for (int v : vs)
+            a.adicionaValor(v);
+
+        a.imprimirArvore(System.out);
+    }
+
     @Override
     public void adicionaValor(Integer valor) {
         if (this.raiz == null)
             this.raiz = this.criarPosicao(null, valor);
         else
             this.adicionarValorParaPosicao(this.raiz, valor);
-
     }
 
     public void adicionarValorParaPosicao(Posicao posicao, int valor) {
         if (posicao == null)
             return;
+
+        int maiorDistanciaEsquerda = 0;
+        int maiorDistanciaDireita = 0;
 
         if (valor > posicao.getValor()) {
             if (posicao.getDireita() == null) {
@@ -36,60 +50,19 @@ public class ArvoreImpl implements Arvore {
             }
         }
 
-        int balanco = posicao.getBalanco();
+        if (posicao.getEsquerda() != null)
+            maiorDistanciaEsquerda = posicao.getEsquerda().getMaiorDistancia() + 1;
 
-        for (int i = 0; i < 3 && Math.abs(balanco) > 1; i++) {
-            this.balancear(posicao, balanco);
-            balanco = posicao.getBalanco();
-        }
+        if (posicao.getDireita() != null)
+            maiorDistanciaDireita = posicao.getDireita().getMaiorDistancia() + 1;
 
-    }
+        posicao.setBalanco(maiorDistanciaEsquerda - maiorDistanciaDireita);
 
-    protected void balancear(Posicao posicao, int balanco) {
+        if (maiorDistanciaDireita > maiorDistanciaEsquerda)
+            posicao.setMaiorDistancia(maiorDistanciaDireita);
+        else
+            posicao.setMaiorDistancia(maiorDistanciaEsquerda);
 
-        if (balanco == 0)
-            return;
-
-        Posicao topo = posicao.getTopo();
-        Posicao aux = null;
-
-        if (balanco > 0) {
-            // guarda a Esquerda do Topo em aux;
-            // a direita da Esquerda vai para a esquerda do Topo;
-            // o topo da direita da Esquerda passa a ser o Topo, se houver a
-            // direita da Esquerda;
-            // o Topo vai para a direita da Esquerda;
-
-            aux = posicao.getEsquerda();
-            posicao.setEsquerda(aux.getDireita());
-            if (aux.getDireita() != null)
-                aux.getDireita().setTopo(posicao);
-            aux.setDireita(posicao);
-            posicao.setTopo(aux);
-        } else {
-            // guarda a Direita do Topo em aux;
-            // a esquerda da Direita vai para a direita do Topo;
-            // o topo da esquerda da Direita passa a ser o Topo, se houver a
-            // esquerda da Direita;
-            // o Topo vai para a esquerda da Direita;
-
-            aux = posicao.getDireita();
-            posicao.setDireita(aux.getEsquerda());
-            if (aux.getEsquerda() != null)
-                aux.getEsquerda().setTopo(posicao);
-            aux.setEsquerda(posicao);
-            posicao.setTopo(aux);
-        }
-
-        aux.setTopo(topo);
-        if (topo != null) {
-            if (topo.getEsquerda() == posicao)
-                topo.setEsquerda(aux);
-            else
-                topo.setDireita(aux);
-        } else {
-            this.raiz = aux;
-        }
     }
 
     protected Posicao criarPosicao(Posicao topo, int valor) {

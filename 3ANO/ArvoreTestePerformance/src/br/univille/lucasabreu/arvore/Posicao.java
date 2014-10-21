@@ -6,45 +6,27 @@ public class Posicao {
     private Posicao topo;
     private int     valor = 0;
 
-    /**
-     * Balanço
-     * 
-     * @return
-     */
-    public int getBalanco() {
-
-        int pesoEsquerda = 0;
-        int pesoDireita = 0;
-
-        if (this.direita != null)
-            pesoDireita = this.direita.getMaiorDistancia() + 1;
-
-        if (this.esquerda != null)
-            pesoEsquerda = this.esquerda.getMaiorDistancia() + 1;
-
-        return pesoEsquerda - pesoDireita;
-    }
-
-    public int getMaiorDistancia() {
-        int pesoEsquerda = 0;
-        int pesoDireita = 0;
-
-        if (this.direita != null) {
-            pesoDireita = this.direita.getMaiorDistancia() + 1;
-        }
-
-        if (this.esquerda != null) {
-            pesoEsquerda = this.esquerda.getMaiorDistancia() + 1;
-        }
-
-        if (pesoDireita > pesoEsquerda)
-            return pesoDireita;
-        else
-            return pesoEsquerda;
-    }
+    private int     maiorDistancia;
+    private int     balanco;
 
     public int getValor() {
         return valor;
+    }
+
+    public int getMaiorDistancia() {
+        return maiorDistancia;
+    }
+
+    public void setMaiorDistancia(int maiorDistancia) {
+        this.maiorDistancia = maiorDistancia;
+    }
+
+    public int getBalanco() {
+        return balanco;
+    }
+
+    public void setBalanco(int balanco) {
+        this.balanco = balanco;
     }
 
     public void setValor(int valor) {
