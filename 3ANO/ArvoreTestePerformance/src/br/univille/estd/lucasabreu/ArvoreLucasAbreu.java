@@ -1,10 +1,10 @@
-package br.univille.lucasabreu.arvore;
+package br.univille.estd.lucasabreu;
 
 import java.io.PrintStream;
 
 import br.edu.univille.arvore.Arvore;
 
-public class ArvoreImpl implements Arvore {
+public class ArvoreLucasAbreu implements Arvore {
 
     protected Posicao raiz;
     protected int     tamanho;
@@ -13,7 +13,7 @@ public class ArvoreImpl implements Arvore {
         int[] vs = new int[] { 22, 26, 11, 25, 23, 24, 13, 14, 7, 30, 15, 3, 6,
                 27, 5, 20, 28, 18, 4, 29, 10, 1, 17, 19, 21, 9, 8, 12, 2, 16 };
 
-        Arvore a = new ArvoreImpl();
+        Arvore a = new ArvoreLucasAbreu();
 
         for (int v : vs)
             a.adicionaValor(v);

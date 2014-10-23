@@ -1,4 +1,4 @@
-package br.univille.lucasabreu.arvore;
+package br.univille.estd.lucasabreu;
 
 public class Posicao {
     private Posicao esquerda;
