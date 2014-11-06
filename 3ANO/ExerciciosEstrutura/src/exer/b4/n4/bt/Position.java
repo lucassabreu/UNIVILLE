@@ -9,11 +9,6 @@ public class Position {
     private int      maxDistance;
     private int      balance;
 
-    public Position rotateRight() {
-        Position left = this.left;
-        left.right = this;
-        return left;
-    }
 
     public int getValue() {
         return value;

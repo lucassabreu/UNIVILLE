@@ -10,31 +10,48 @@ public class BalancedBinaryTree implements IBinaryTree {
     @Override
     public void add(Integer value) {
         if (this.root == null)
-            this.root = this.createPosition(null, value);
-        else
-            this.addToPosition(this.root, value);
+            this.root = this.createPosition(value);
+        else {
+            this.root = this.addToPosition(this.root, //
+                            this.createPosition(value));
+            this.root.setTop(null);
+        }
     }
 
-    public void addToPosition(Position position, int value) {
+    public Position addToPosition(Position position, Position newOne) {
+
         if (position == null)
-            return;
+            position = newOne;
+        else {
+            if (newOne.getValue() > position.getValue()) {
+                position.setRight(this
+                                .addToPosition(position.getRight(), newOne));
+                position.getRight().setTop(position);
+            } else {
+                position.setLeft(this.addToPosition(position.getLeft(), newOne));
+                position.getLeft().setTop(position);
+            }
+        }
+
+        this.recalcBalance(position);
+
+        if (position.getBalance() > 1) {
+            position = this.rotateRight(position);
+            this.recalcBalance(position);
+        } else {
+            if (position.getBalance() < -1) {
+                position = this.rotateLeft(position);
+                this.recalcBalance(position);
+            }
+        }
+
+        return position;
+    }
+
+    public void recalcBalance(Position position) {
 
         int maxDistanceLeft = 0;
         int maxDistanceRight = 0;
-
-        if (value > position.getValue()) {
-            if (position.getRight() == null) {
-                position.setRight(this.createPosition(position, value));
-            } else {
-                this.addToPosition(position.getRight(), value);
-            }
-        } else {
-            if (position.getLeft() == null) {
-                position.setLeft(this.createPosition(position, value));
-            } else {
-                this.addToPosition(position.getLeft(), value);
-            }
-        }
 
         if (position.getLeft() != null)
             maxDistanceLeft = position.getLeft().getMaxDistance() + 1;
@@ -51,10 +68,23 @@ public class BalancedBinaryTree implements IBinaryTree {
 
     }
 
-    protected Position createPosition(Position top, int value) {
+    public Position rotateRight(Position pos) {
+        Position left = pos.getLeft();
+        pos.setLeft(null);
+        left.setRight(this.addToPosition(left.getRight(), pos));
+        return left;
+    }
+
+    public Position rotateLeft(Position pos) {
+        Position right = pos.getRight();
+        pos.setRight(null);
+        right.setLeft(this.addToPosition(right.getLeft(), pos));
+        return right;
+    }
+
+    protected Position createPosition(Integer value) {
         Position position = new Position();
 
-        position.setTop(top);
         position.setValue(value);
         this.size++;
 
@@ -68,15 +98,24 @@ public class BalancedBinaryTree implements IBinaryTree {
         out.print(sb);
     }
 
-    protected void listPreOrderPosition(Position posicao, StringBuilder sb) {
-        if (posicao == null)
+    protected void listPreOrderPosition(Position position, StringBuilder sb) {
+        if (position == null)
             return;
 
-        sb.append(posicao.getValue()).append(' ') //
-                        .append(posicao.getMaxDistance()).append(' ') //
-                        .append(posicao.getBalance()).append('\n');
-        this.listPreOrderPosition(posicao.getLeft(), sb);
-        this.listPreOrderPosition(posicao.getRight(), sb);
+        System.out.print(position.getValue() + " ");
+        System.out.print(position.getMaxDistance() + " ");
+        System.out.println(position.getBalance());
+
+        listPreOrderPosition(position.getLeft(), sb);
+        listPreOrderPosition(position.getRight(), sb);
+
+        /*
+         * sb.append(position.getValue()).append(' ') //
+         * .append(position.getMaxDistance()).append(' ') //
+         * .append(position.getBalance()).append('\n');
+         * this.listPreOrderPosition(position.getLeft(), sb);
+         * this.listPreOrderPosition(position.getRight(), sb);
+         */
     }
 
     public int getSize() {
