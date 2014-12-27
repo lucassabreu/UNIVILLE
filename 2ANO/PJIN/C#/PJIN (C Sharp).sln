@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello World (C Sharp)", "Hello World (C Sharp)\Hello World (C Sharp).csproj", "{AC4CB68B-CC4C-4C51-8CED-B603747AC98C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lacos Encadeados (C Sharp)", "Lacos Encadeados (C Sharp)\Lacos Encadeados (C Sharp).csproj", "{7ADC4A54-2429-4F6E-A51A-CF5D825AB1CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcao Ackermann (C Sharp)", "Funcao Ackermann\Funcao Ackermann (C Sharp).csproj", "{D269D292-2D20-4D80-B5AD-5A9B34868060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contador Frequencia Palavras (C Sharp)", "Contador Frequencia Palavras (C Sharp)\Contador Frequencia Palavras (C Sharp).csproj", "{959EB861-E5CB-483C-8CB9-A8CE1F3BCDFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC4CB68B-CC4C-4C51-8CED-B603747AC98C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4CB68B-CC4C-4C51-8CED-B603747AC98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4CB68B-CC4C-4C51-8CED-B603747AC98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4CB68B-CC4C-4C51-8CED-B603747AC98C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADC4A54-2429-4F6E-A51A-CF5D825AB1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADC4A54-2429-4F6E-A51A-CF5D825AB1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADC4A54-2429-4F6E-A51A-CF5D825AB1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADC4A54-2429-4F6E-A51A-CF5D825AB1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D269D292-2D20-4D80-B5AD-5A9B34868060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D269D292-2D20-4D80-B5AD-5A9B34868060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D269D292-2D20-4D80-B5AD-5A9B34868060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D269D292-2D20-4D80-B5AD-5A9B34868060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{959EB861-E5CB-483C-8CB9-A8CE1F3BCDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{959EB861-E5CB-483C-8CB9-A8CE1F3BCDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{959EB861-E5CB-483C-8CB9-A8CE1F3BCDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{959EB861-E5CB-483C-8CB9-A8CE1F3BCDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
