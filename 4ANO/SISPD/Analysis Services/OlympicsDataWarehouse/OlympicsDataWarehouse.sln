@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "OlympicsDataWarehouse", "CubosASOlympics\OlympicsDataWarehouse.dwproj", "{F4B03931-0EC3-42A0-8037-9B006FD523B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4B03931-0EC3-42A0-8037-9B006FD523B2}.Development|Default.ActiveCfg = Development
+		{F4B03931-0EC3-42A0-8037-9B006FD523B2}.Development|Default.Build.0 = Development
+		{F4B03931-0EC3-42A0-8037-9B006FD523B2}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

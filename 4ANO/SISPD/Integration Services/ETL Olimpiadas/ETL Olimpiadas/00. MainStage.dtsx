@@ -1,0 +1,414 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/28/2015 12:25:30 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="NOT-LUCAS"
+  DTS:CreatorName="NOT-LUCAS\Lucas"
+  DTS:DTSID="{B383B6D6-9600-4B1A-8D0F-F5C18B288774}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="00  MainStage"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{EF8E084C-B6A2-47D2-B37E-497D6BA799C4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\01 Load Olympics File"
+      DTS:CreationName="SSIS.ExecutePackageTask.3"
+      DTS:Description="Tarefa Executar Pacote"
+      DTS:DTSID="{5F7DADFC-8DD3-4014-919A-7A0AD83FCA10}"
+      DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="01 Load Olympics File"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>01. Load Olympics File.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\02 Build Olympics Fact"
+      DTS:CreationName="SSIS.ExecutePackageTask.3"
+      DTS:Description="Tarefa Executar Pacote"
+      DTS:DTSID="{0129C848-A066-4068-AB71-2215B9DAD8EB}"
+      DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="02 Build Olympics Fact"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>02. Build Stage Olympics Fact.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\03 Build Stage Athlete Dimension"
+      DTS:CreationName="SSIS.ExecutePackageTask.3"
+      DTS:Description="Tarefa Executar Pacote"
+      DTS:DTSID="{B25B39C5-EE25-4F1A-9089-71C696CBD20A}"
+      DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="03 Build Stage Athlete Dimension"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>03. Build Stage Athlete Dimension.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\03 Build Stage Ceremony Closing Date"
+      DTS:CreationName="SSIS.ExecutePackageTask.3"
+      DTS:Description="Tarefa Executar Pacote"
+      DTS:DTSID="{5DD8790C-90B0-481B-A9EC-2F2A3C3EDA90}"
+      DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="03 Build Stage Ceremony Closing Date"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>03. Build Stage Ceremony Closing Date.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\03 Build Stage Country Dimension"
+      DTS:CreationName="SSIS.ExecutePackageTask.3"
+      DTS:Description="Tarefa Executar Pacote"
+      DTS:DTSID="{D4DD2EF9-427B-4A20-B0E1-BE8DB5A8CFE2}"
+      DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="03 Build Stage Country Dimension"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>03. Build Stage Country Dimension.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\03 Build Stage Olympics Dimension"
+      DTS:CreationName="SSIS.ExecutePackageTask.3"
+      DTS:Description="Tarefa Executar Pacote"
+      DTS:DTSID="{5D7F90EB-BFDF-4358-BB04-3BB650942292}"
+      DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="03 Build Stage Olympics Dimension"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>03. Build Stage Olympics Dimension.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\03 Build Stage Sport Dimension"
+      DTS:CreationName="SSIS.ExecutePackageTask.3"
+      DTS:Description="Tarefa Executar Pacote"
+      DTS:DTSID="{76595A32-207F-475F-8256-ED54C1AED89E}"
+      DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="03 Build Stage Sport Dimension"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>03. Build Stage Sport Dimension.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5EDFBF19-38E0-438C-9EF2-315D127673C1}"
+      DTS:From="Package\01 Load Olympics File"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\02 Build Olympics Fact" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B6B2BE7F-EE45-4651-819F-B9BEA537EDA7}"
+      DTS:From="Package\02 Build Olympics Fact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\03 Build Stage Athlete Dimension" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{68B161F0-6EB9-4BB6-8534-3421DB04BA62}"
+      DTS:From="Package\02 Build Olympics Fact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\03 Build Stage Ceremony Closing Date" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{272B0049-3AA6-41EB-93F2-417B2CF466E6}"
+      DTS:From="Package\02 Build Olympics Fact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\03 Build Stage Country Dimension" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{302ECF6F-60A5-44B6-A966-DFE17C9884B0}"
+      DTS:From="Package\02 Build Olympics Fact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\03 Build Stage Sport Dimension" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{EF9BD406-E0D3-4CD4-B60B-7B57153DC060}"
+      DTS:From="Package\02 Build Olympics Fact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\03 Build Stage Olympics Dimension" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="184,42"
+          Id="Package\01 Load Olympics File"
+          TopLeft="49.333333333333,18" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\02 Build Olympics Fact"
+          TopLeft="70.3333333333333,161" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\03 Build Stage Athlete Dimension"
+          TopLeft="216.416666666667,302.416666666667" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\03 Build Stage Ceremony Closing Date"
+          TopLeft="381.416666666667,162.333333333333" />
+        <NodeLayout
+          Size="250,42"
+          Id="Package\03 Build Stage Country Dimension"
+          TopLeft="373.083333333333,242.5" />
+        <NodeLayout
+          Size="247,42"
+          Id="Package\03 Build Stage Olympics Dimension"
+          TopLeft="418,89" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\03 Build Stage Sport Dimension"
+          TopLeft="54,372" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="137.833333333333,60">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,101"
+              Start="0,0"
+              End="0,93.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="164.333333333333,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="171.083333333333,99.4166666666666"
+              Start="0,0"
+              End="171.083333333333,91.9166666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.7083333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.7083333333333"
+                    Point2="0,49.7083333333333"
+                    Point3="4,49.7083333333333" />
+                  <mssgle:LineSegment
+                    End="167.083333333333,49.7083333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="167.083333333333,49.7083333333333"
+                    Point2="171.083333333333,49.7083333333333"
+                    Point3="171.083333333333,53.7083333333333" />
+                  <mssgle:LineSegment
+                    End="171.083333333333,91.9166666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="258.333333333333,182.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.083333333334,0"
+              Start="0,0"
+              End="115.583333333334,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="115.583333333334,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="209.333333333333,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="288.75,39.5"
+              Start="0,0"
+              End="288.75,32">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.53496503496503" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.53496503496503"
+                    Point2="0,13.534965034965"
+                    Point3="4,13.534965034965" />
+                  <mssgle:LineSegment
+                    End="284.75,13.534965034965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="284.75,13.534965034965"
+                    Point2="288.75,13.534965034965"
+                    Point3="288.75,17.534965034965" />
+                  <mssgle:LineSegment
+                    End="288.75,32" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="119.333333333333,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.6666666666667,169"
+              Start="0,0"
+              End="49.6666666666667,161.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.9090909090909" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.9090909090909"
+                    Point2="0,57.9090909090909"
+                    Point3="4,57.9090909090909" />
+                  <mssgle:LineSegment
+                    End="45.6666666666667,57.9090909090909" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.6666666666667,57.9090909090909"
+                    Point2="49.6666666666667,57.9090909090909"
+                    Point3="49.6666666666667,61.9090909090909" />
+                  <mssgle:LineSegment
+                    End="49.6666666666667,161.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="194.333333333333,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="347.166666666667,-30"
+              Start="0,0"
+              End="347.166666666667,-22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-8.15189873417722" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-8.15189873417722"
+                    Point2="0,-12.1518987341772"
+                    Point3="4,-12.1518987341772" />
+                  <mssgle:LineSegment
+                    End="343.166666666667,-12.1518987341772" />
+                  <mssgle:CubicBezierSegment
+                    Point1="343.166666666667,-12.1518987341772"
+                    Point2="347.166666666667,-12.1518987341772"
+                    Point3="347.166666666667,-16.1518987341772" />
+                  <mssgle:LineSegment
+                    End="347.166666666667,-22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,1016 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/25/2015 7:44:02 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="NOT-LUCAS"
+  DTS:CreatorName="NOT-LUCAS\Lucas"
+  DTS:DTSID="{3DAC77B7-C547-455D-A832-5C1A303D4255}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="01  Load Olympics File"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{F931B0B0-2416-4780-AE17-C675448F17A6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Olympics File]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="File with the Olympics Data"
+      DTS:DTSID="{740BCF3C-61E6-49C0-988C-4DFEA5DD8F1A}"
+      DTS:ObjectName="Olympics File">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Documents\workspace\UNIVILLE\4ANO\SISPD\Integration Services\ETL Olimpiadas\Entradas\Olympics.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Athlete"
+              DTS:DTSID="{8E729FC6-D21C-45AD-8B7F-7EB5287FFBCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{81522B66-18CC-4EAC-B67C-A5B2A0370678}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{2B28EDA5-0556-43AF-B976-7142B1590E21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{A56A3310-DF73-46FB-B045-AEBF905F6727}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Closing Ceremony Date"
+              DTS:DTSID="{EC605169-0A67-413A-9126-A8EE3DFAB9FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sport"
+              DTS:DTSID="{DA8B4DEB-F2BA-4DB1-AFFE-333F2BC65014}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gold Medals"
+              DTS:DTSID="{C47ADF25-1A90-4749-92B6-6E269A00602F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Silver Medals"
+              DTS:DTSID="{A63CB760-870A-43BD-B2A1-2C74D003BBF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bronze Medals"
+              DTS:DTSID="{5371BDBE-E2A1-4FF5-A0A8-68478785D6B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Medals"
+              DTS:DTSID="{6028105B-685C-4311-8324-EDA0FB2F6058}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="131"
+              DTS:DataPrecision="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Points"
+              DTS:DTSID="{F777ADD1-D584-4119-9236-108B4872F2DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{10CB0693-1B10-4AC1-B176-B7FE2FE4C282}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Continent"
+              DTS:DTSID="{03B726C9-59E5-4406-9C67-8643D6F252C4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsStage Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3D3BE7F6-5E98-49D0-ADA5-094EF68AC836}"
+      DTS:ObjectName="OlympicsStage Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=OlympicsStage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsStage Managed]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{67C419E7-0B28-4CAA-8DC2-DE7740D777E7}"
+      DTS:ObjectName="OlympicsStage Managed">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=OlympicsStage;Integrated Security=True;Application Name=SSIS-01  Load Olympics File-{67C419E7-0B28-4CAA-8DC2-DE7740D777E7}LocalHost.OlympicsStage1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load File to LoadOlympcis Table"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{4F91242E-E128-4EBD-8D8D-8D9745768041}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load File to LoadOlympcis Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="LoadOlympics Table"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">"dbo"."LoadOlympics"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsStage Managed]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsStage Managed]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Athlete]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Athlete"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Athlete]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Athlete]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Age]"
+                      cachedDataType="i1"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Year]"
+                      cachedDataType="numeric"
+                      cachedName="Year"
+                      cachedPrecision="4"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Sport]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sport"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Sport]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Sport]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Type]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Continent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Continent]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Points]"
+                      cachedDataType="numeric"
+                      cachedName="Points"
+                      cachedPrecision="2"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Points]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Points]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Closing Ceremony Date]"
+                      cachedDataType="date"
+                      cachedName="Closing Ceremony Date"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[ClosingCeremonyDate]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Closing Ceremony Date]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Gold Medals]"
+                      cachedDataType="numeric"
+                      cachedName="Gold Medals"
+                      cachedPrecision="2"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[GoldMedals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Gold Medals]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Silver Medals]"
+                      cachedDataType="numeric"
+                      cachedName="Silver Medals"
+                      cachedPrecision="2"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[SilverMedals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Silver Medals]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Bronze Medals]"
+                      cachedDataType="numeric"
+                      cachedName="Bronze Medals"
+                      cachedPrecision="2"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[BronzeMedals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Bronze Medals]" />
+                    <inputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].Columns[Total Medals]"
+                      cachedDataType="numeric"
+                      cachedName="Total Medals"
+                      cachedPrecision="2"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[TotalMedals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Total Medals]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Athlete]"
+                      dataType="wstr"
+                      length="100"
+                      name="Athlete" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Age]"
+                      dataType="i2"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[ClosingCeremonyDate]"
+                      dataType="dbTimeStamp"
+                      name="ClosingCeremonyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Sport]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sport" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[GoldMedals]"
+                      dataType="i4"
+                      name="GoldMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[SilverMedals]"
+                      dataType="i4"
+                      name="SilverMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[BronzeMedals]"
+                      dataType="i4"
+                      name="BronzeMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[TotalMedals]"
+                      dataType="i4"
+                      name="TotalMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="50"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Continent]"
+                      dataType="wstr"
+                      length="50"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input].ExternalColumns[Points]"
+                      dataType="i4"
+                      name="Points" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load File to LoadOlympcis Table\Olympics File"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="Olympics File"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load File to LoadOlympcis Table\Olympics File.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Olympics File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Olympics File]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Athlete]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Athlete]"
+                      length="100"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Athlete]"
+                      name="Athlete"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Age]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Age]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Year]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Year]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Year]"
+                      name="Year"
+                      precision="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Closing Ceremony Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Closing Ceremony Date]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Closing Ceremony Date]"
+                      name="Closing Ceremony Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Sport]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Sport]"
+                      length="50"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Sport]"
+                      name="Sport"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Gold Medals]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Gold Medals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Gold Medals]"
+                      name="Gold Medals"
+                      precision="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Silver Medals]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Silver Medals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Silver Medals]"
+                      name="Silver Medals"
+                      precision="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Bronze Medals]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Bronze Medals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Bronze Medals]"
+                      name="Bronze Medals"
+                      precision="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Total Medals]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Total Medals]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Total Medals]"
+                      name="Total Medals"
+                      precision="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Type]"
+                      length="50"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Continent]"
+                      length="50"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Continent]"
+                      name="Continent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Points]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Points]"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].Columns[Points]"
+                      name="Points"
+                      precision="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Athlete]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Athlete" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Age]"
+                      dataType="i1"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Year]"
+                      dataType="numeric"
+                      name="Year"
+                      precision="4" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Closing Ceremony Date]"
+                      dataType="date"
+                      name="Closing Ceremony Date" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Sport]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sport" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Gold Medals]"
+                      dataType="numeric"
+                      name="Gold Medals"
+                      precision="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Silver Medals]"
+                      dataType="numeric"
+                      name="Silver Medals"
+                      precision="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Bronze Medals]"
+                      dataType="numeric"
+                      name="Bronze Medals"
+                      precision="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Total Medals]"
+                      dataType="numeric"
+                      name="Total Medals"
+                      precision="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Points]"
+                      dataType="numeric"
+                      name="Points"
+                      precision="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Continent" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load File to LoadOlympcis Table.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Load File to LoadOlympcis Table\LoadOlympics Table.Inputs[ADO NET Destination Input]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\Load File to LoadOlympcis Table\Olympics File.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Null to Unknown"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E3DCE23B-9E3E-47A3-9515-D3E3BF42FB79}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Null to Unknown"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D3BE7F6-5E98-49D0-ADA5-094EF68AC836}"
+          SQLTask:SqlStatementSource="UPDATE LoadOlympics SET Athlete = 'Unkwown Athlete'&#xA;WHERE Athlete is null OR Athlete = ''" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE LoadOlympcis"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B76424DE-1F99-4A34-AB96-454D57441FE4}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE LoadOlympcis"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D3BE7F6-5E98-49D0-ADA5-094EF68AC836}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE LoadOlympics" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{A96789D9-13A8-49D6-878D-0723AC4529EE}"
+      DTS:From="Package\TRUNCATE LoadOlympcis"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load File to LoadOlympcis Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{18499247-E0CD-4176-939D-329AFA073F02}"
+      DTS:From="Package\Load File to LoadOlympcis Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Null to Unknown" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="233,42"
+          Id="Package\Load File to LoadOlympcis Table"
+          TopLeft="65,108" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Null to Unknown"
+          TopLeft="102,190" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\TRUNCATE LoadOlympcis"
+          TopLeft="76,31" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="179,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="181.5,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load File to LoadOlympcis Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Load File to LoadOlympcis Table\Olympics File"
+          TopLeft="83,16" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Load File to LoadOlympcis Table\LoadOlympics Table"
+          TopLeft="62,122" />
+        <EdgeLayout
+          Id="Package\Load File to LoadOlympcis Table.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="152,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load File to LoadOlympcis Table\LoadOlympics Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

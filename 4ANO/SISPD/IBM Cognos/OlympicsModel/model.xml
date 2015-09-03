@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ Licensed Materials - Property of IBM
+
+ IBM Cognos Products: fmmd
+
+ (C) Copyright IBM Corp. 2003, 2014
+
+ US Government Users Restricted Rights - Use, duplication or disclosure
+ restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<project queryMode="dynamic" xmlns="http://www.developer.cognos.com/schemas/bmt/60/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.developer.cognos.com/schemas/bmt/60/10 BMTModelSpecification.xsd">
+	<name>Project</name>
+	<locales>
+		<locale>en</locale>
+	</locales>
+	<defaultLocale>en</defaultLocale>
+	<namespace>
+		<name locale="en">Model</name>
+		<lastChanged>2001-03-21T00:00:00</lastChanged>
+	</namespace>
+	<dataSources/>
+	<parameterMaps>
+		<parameterMap hidden="true">
+			<name>_env</name>
+			<!--This reserved map supplies default values for session variables.-->
+		</parameterMap>
+		<parameterMap hidden="true">
+			<name>_governor</name>
+			<!--This reserved map specifies query governor limits.-->
+		</parameterMap>
+	</parameterMaps>
+	<securityViews/>
+	<packages/>
+</project>

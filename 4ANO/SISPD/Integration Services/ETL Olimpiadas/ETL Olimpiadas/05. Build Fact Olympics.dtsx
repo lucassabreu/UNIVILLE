@@ -1,0 +1,1992 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/28/2015 3:39:20 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="NOT-LUCAS"
+  DTS:CreatorName="NOT-LUCAS\Lucas"
+  DTS:DTSID="{4D2F056B-F972-4522-BAEB-88AD32DFC82C}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="05  Build Fact Olympics"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{6CA41854-D22B-436D-BBC6-18E75C7074DA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{44939B3B-01C9-44D3-B7B7-75EF91C47570}"
+      DTS:ObjectName="OlympicsDataWarehouse Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=NOT-LUCAS;Initial Catalog=OlympicsDataWarehouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsDataWarehouse Managed]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{B5C5ECE8-1C89-4CF2-B8F8-65F740D38A8A}"
+      DTS:ObjectName="OlympicsDataWarehouse Managed">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=OlympicsDataWarehouse;Integrated Security=True;Application Name=SSIS-04  Load DW Dimensions-{B5C5ECE8-1C89-4CF2-B8F8-65F740D38A8A}LocalHost.OlympicsDataWarehouse;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsStage Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3D3BE7F6-5E98-49D0-ADA5-094EF68AC836}"
+      DTS:ObjectName="OlympicsStage Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=OlympicsStage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsStage Managed]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{67C419E7-0B28-4CAA-8DC2-DE7740D777E7}"
+      DTS:ObjectName="OlympicsStage Managed">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=OlympicsStage;Integrated Security=True;Application Name=SSIS-01  Load Olympics File-{67C419E7-0B28-4CAA-8DC2-DE7740D777E7}LocalHost.OlympicsStage1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Fact Olympics"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{E2ED294C-C8D3-4AEC-92A3-98C257ECE153}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Fact Olympics"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Fact Olympics\LookUp Athlete"
+              componentClassID="{671046B0-AA63-4C9F-90E4-C06E0B710CE3}"
+              contactInfo="Pesquisa;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;6"
+              description="Une colunas adicionais aos fluxos de dados pesquisando valores de uma tabela. Por exemplo, una à coluna 'employee id' a tabela de funcionários para obter 'hire date' e 'employee name'. Essa transformação é recomendada quando a tabela de pesquisa está de acordo com a memória."
+              name="LookUp Athlete"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica a instrução SQL que gera a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        Athlete, AthleteSK
+FROM            DimAthlete</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT        Athlete, AthleteSK
+FROM            DimAthlete) [refTable]
+where [refTable].[Athlete] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de conexão usado para acessar o conjunto de dados de referência."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de cache da tabela de pesquisa."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica como a transformação Pesquisa trata as linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a porcentagem do cache alocada para linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se os metadados de referência em um formato XML devem ser referenciados."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Athlete" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AthleteSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica a lista de identificadores de linhagem mapeados para os parâmetros usados pela instrução SQL na propriedade SQLCommand. As entradas na lista são separadas por ponto e vírgulas."
+                  name="ParameterMap">#{Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Athlete]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se as chaves duplicadas nos dados de referência devem ser tratadas como erros quando o modo de cache cheio é usado."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Fact Olympics\LookUp Athlete.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  description="O gerenciador de conexões usado para acessar dados de pesquisa."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Fact Olympics\LookUp Athlete.Inputs[Entrada de Pesquisa]"
+                  name="Entrada de Pesquisa">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\LookUp Athlete.Inputs[Entrada de Pesquisa].Columns[Athlete]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Athlete"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Athlete]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência que uma coluna une."
+                          name="JoinToReferenceColumn">Athlete</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Correspondência de Pesquisa]"
+                  errorOrTruncationOperation="Pesquisa"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Saída de Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Athlete.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Correspondência de Pesquisa].Columns[AthleteSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar Coluna"
+                      lineageId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Correspondência de Pesquisa].Columns[AthleteSK]"
+                      name="AthleteSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn">AthleteSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída Sem Correspondência de Pesquisa]"
+                  description="A saída de Pesquisa que trata as linhas sem entradas correspondentes no conjunto de dados de referência. Use essa saída quando a propriedade NoMatchBehavior estiver definida como &quot;Enviar as linhas sem entradas correspondentes para a saída sem correspondência&quot;."
+                  exclusionGroup="1"
+                  name="Saída Sem Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Athlete.Inputs[Entrada de Pesquisa]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Erro de Pesquisa]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Athlete.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate"
+              componentClassID="{671046B0-AA63-4C9F-90E4-C06E0B710CE3}"
+              contactInfo="Pesquisa;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;6"
+              description="Une colunas adicionais aos fluxos de dados pesquisando valores de uma tabela. Por exemplo, una à coluna 'employee id' a tabela de funcionários para obter 'hire date' e 'employee name'. Essa transformação é recomendada quando a tabela de pesquisa está de acordo com a memória."
+              name="LookUp ClosingCeremonyDate"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica a instrução SQL que gera a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        ClosingCeremonyDate, ClosingCeremonyDateSK
+FROM            DimClosingCeremonyDate</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT        ClosingCeremonyDate, ClosingCeremonyDateSK
+FROM            DimClosingCeremonyDate) [refTable]
+where [refTable].[ClosingCeremonyDate] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de conexão usado para acessar o conjunto de dados de referência."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de cache da tabela de pesquisa."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica como a transformação Pesquisa trata as linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a porcentagem do cache alocada para linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se os metadados de referência em um formato XML devem ser referenciados."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ClosingCeremonyDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ClosingCeremonyDateSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica a lista de identificadores de linhagem mapeados para os parâmetros usados pela instrução SQL na propriedade SQLCommand. As entradas na lista são separadas por ponto e vírgulas."
+                  name="ParameterMap">#{Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se as chaves duplicadas nos dados de referência devem ser tratadas como erros quando o modo de cache cheio é usado."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  description="O gerenciador de conexões usado para acessar dados de pesquisa."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Inputs[Entrada de Pesquisa]"
+                  name="Entrada de Pesquisa">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Inputs[Entrada de Pesquisa].Columns[ClosingCeremonyDate]"
+                      cachedDataType="dbDate"
+                      cachedName="ClosingCeremonyDate"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência que uma coluna une."
+                          name="JoinToReferenceColumn">ClosingCeremonyDate</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Correspondência de Pesquisa]"
+                  errorOrTruncationOperation="Pesquisa"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Saída de Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Correspondência de Pesquisa].Columns[ClosingCeremonyDateSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar Coluna"
+                      lineageId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Correspondência de Pesquisa].Columns[ClosingCeremonyDateSK]"
+                      name="ClosingCeremonyDateSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn">ClosingCeremonyDateSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída Sem Correspondência de Pesquisa]"
+                  description="A saída de Pesquisa que trata as linhas sem entradas correspondentes no conjunto de dados de referência. Use essa saída quando a propriedade NoMatchBehavior estiver definida como &quot;Enviar as linhas sem entradas correspondentes para a saída sem correspondência&quot;."
+                  exclusionGroup="1"
+                  name="Saída Sem Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Inputs[Entrada de Pesquisa]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Erro de Pesquisa]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Fact Olympics\LookUp Country"
+              componentClassID="{671046B0-AA63-4C9F-90E4-C06E0B710CE3}"
+              contactInfo="Pesquisa;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;6"
+              description="Une colunas adicionais aos fluxos de dados pesquisando valores de uma tabela. Por exemplo, una à coluna 'employee id' a tabela de funcionários para obter 'hire date' e 'employee name'. Essa transformação é recomendada quando a tabela de pesquisa está de acordo com a memória."
+              name="LookUp Country"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica a instrução SQL que gera a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        Country, CountrySK
+FROM            DimCountry</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT        Country, CountrySK
+FROM            DimCountry) [refTable]
+where [refTable].[Country] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de conexão usado para acessar o conjunto de dados de referência."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de cache da tabela de pesquisa."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica como a transformação Pesquisa trata as linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a porcentagem do cache alocada para linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se os metadados de referência em um formato XML devem ser referenciados."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Country" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountrySK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica a lista de identificadores de linhagem mapeados para os parâmetros usados pela instrução SQL na propriedade SQLCommand. As entradas na lista são separadas por ponto e vírgulas."
+                  name="ParameterMap">#{Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Country]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se as chaves duplicadas nos dados de referência devem ser tratadas como erros quando o modo de cache cheio é usado."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Fact Olympics\LookUp Country.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  description="O gerenciador de conexões usado para acessar dados de pesquisa."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Fact Olympics\LookUp Country.Inputs[Entrada de Pesquisa]"
+                  name="Entrada de Pesquisa">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\LookUp Country.Inputs[Entrada de Pesquisa].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Country"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Country]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência que uma coluna une."
+                          name="JoinToReferenceColumn">Country</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Correspondência de Pesquisa]"
+                  errorOrTruncationOperation="Pesquisa"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Saída de Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Country.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Correspondência de Pesquisa].Columns[CountrySK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar Coluna"
+                      lineageId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Correspondência de Pesquisa].Columns[CountrySK]"
+                      name="CountrySK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn">CountrySK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída Sem Correspondência de Pesquisa]"
+                  description="A saída de Pesquisa que trata as linhas sem entradas correspondentes no conjunto de dados de referência. Use essa saída quando a propriedade NoMatchBehavior estiver definida como &quot;Enviar as linhas sem entradas correspondentes para a saída sem correspondência&quot;."
+                  exclusionGroup="1"
+                  name="Saída Sem Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Country.Inputs[Entrada de Pesquisa]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Erro de Pesquisa]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Country.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Fact Olympics\LookUp Olympics"
+              componentClassID="{671046B0-AA63-4C9F-90E4-C06E0B710CE3}"
+              contactInfo="Pesquisa;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;6"
+              description="Une colunas adicionais aos fluxos de dados pesquisando valores de uma tabela. Por exemplo, una à coluna 'employee id' a tabela de funcionários para obter 'hire date' e 'employee name'. Essa transformação é recomendada quando a tabela de pesquisa está de acordo com a memória."
+              name="LookUp Olympics"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica a instrução SQL que gera a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        [Year], OlympicsSK
+FROM            DimOlympics</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT        [Year], OlympicsSK
+FROM            DimOlympics) [refTable]
+where [refTable].[Year] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de conexão usado para acessar o conjunto de dados de referência."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de cache da tabela de pesquisa."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica como a transformação Pesquisa trata as linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a porcentagem do cache alocada para linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se os metadados de referência em um formato XML devem ser referenciados."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="OlympicsSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica a lista de identificadores de linhagem mapeados para os parâmetros usados pela instrução SQL na propriedade SQLCommand. As entradas na lista são separadas por ponto e vírgulas."
+                  name="ParameterMap">#{Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[OlympicsYear]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se as chaves duplicadas nos dados de referência devem ser tratadas como erros quando o modo de cache cheio é usado."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Fact Olympics\LookUp Olympics.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  description="O gerenciador de conexões usado para acessar dados de pesquisa."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Fact Olympics\LookUp Olympics.Inputs[Entrada de Pesquisa]"
+                  name="Entrada de Pesquisa">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\LookUp Olympics.Inputs[Entrada de Pesquisa].Columns[OlympicsYear]"
+                      cachedDataType="i4"
+                      cachedName="OlympicsYear"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[OlympicsYear]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência que uma coluna une."
+                          name="JoinToReferenceColumn">Year</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Correspondência de Pesquisa]"
+                  errorOrTruncationOperation="Pesquisa"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Saída de Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Olympics.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Correspondência de Pesquisa].Columns[OlympicsSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar Coluna"
+                      lineageId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Correspondência de Pesquisa].Columns[OlympicsSK]"
+                      name="OlympicsSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn">OlympicsSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída Sem Correspondência de Pesquisa]"
+                  description="A saída de Pesquisa que trata as linhas sem entradas correspondentes no conjunto de dados de referência. Use essa saída quando a propriedade NoMatchBehavior estiver definida como &quot;Enviar as linhas sem entradas correspondentes para a saída sem correspondência&quot;."
+                  exclusionGroup="1"
+                  name="Saída Sem Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Olympics.Inputs[Entrada de Pesquisa]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Erro de Pesquisa]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Olympics.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Fact Olympics\LookUp Sport"
+              componentClassID="{671046B0-AA63-4C9F-90E4-C06E0B710CE3}"
+              contactInfo="Pesquisa;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;6"
+              description="Une colunas adicionais aos fluxos de dados pesquisando valores de uma tabela. Por exemplo, una à coluna 'employee id' a tabela de funcionários para obter 'hire date' e 'employee name'. Essa transformação é recomendada quando a tabela de pesquisa está de acordo com a memória."
+              name="LookUp Sport"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica a instrução SQL que gera a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        Sport, SportSK
+FROM            DimSport</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT        Sport, SportSK
+FROM            DimSport) [refTable]
+where [refTable].[Sport] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de conexão usado para acessar o conjunto de dados de referência."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o tipo de cache da tabela de pesquisa."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica como a transformação Pesquisa trata as linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a porcentagem do cache alocada para linhas sem entradas correspondentes no conjunto de dados de referência."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso Máximo de Memória para o Cache de Referência em uma plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se os metadados de referência em um formato XML devem ser referenciados."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Sport" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SportSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica a lista de identificadores de linhagem mapeados para os parâmetros usados pela instrução SQL na propriedade SQLCommand. As entradas na lista são separadas por ponto e vírgulas."
+                  name="ParameterMap">#{Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Sport]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se as chaves duplicadas nos dados de referência devem ser tratadas como erros quando o modo de cache cheio é usado."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Fact Olympics\LookUp Sport.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  description="O gerenciador de conexões usado para acessar dados de pesquisa."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Fact Olympics\LookUp Sport.Inputs[Entrada de Pesquisa]"
+                  name="Entrada de Pesquisa">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\LookUp Sport.Inputs[Entrada de Pesquisa].Columns[Sport]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Sport"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Sport]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência que uma coluna une."
+                          name="JoinToReferenceColumn">Sport</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Correspondência de Pesquisa]"
+                  errorOrTruncationOperation="Pesquisa"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Saída de Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Sport.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Correspondência de Pesquisa].Columns[SportSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar Coluna"
+                      lineageId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Correspondência de Pesquisa].Columns[SportSK]"
+                      name="SportSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica a coluna na tabela de referência a partir da qual uma coluna é copiada."
+                          name="CopyFromReferenceColumn">SportSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída Sem Correspondência de Pesquisa]"
+                  description="A saída de Pesquisa que trata as linhas sem entradas correspondentes no conjunto de dados de referência. Use essa saída quando a propriedade NoMatchBehavior estiver definida como &quot;Enviar as linhas sem entradas correspondentes para a saída sem correspondência&quot;."
+                  exclusionGroup="1"
+                  name="Saída Sem Correspondência de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Sport.Inputs[Entrada de Pesquisa]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Erro de Pesquisa]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Pesquisa"
+                  synchronousInputId="Package\Load Fact Olympics\LookUp Sport.Inputs[Entrada de Pesquisa]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Erro de Pesquisa].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Erro de Pesquisa].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Fact Olympics\Query FactOlympics (Stage)"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="Query FactOlympics (Stage)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">"dbo"."FactOlympics"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsStage Managed]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsStage Managed]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[OlympicsYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[OlympicsYear]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[OlympicsYear]"
+                      name="OlympicsYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[ClosingCeremonyDate]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]"
+                      name="ClosingCeremonyDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Sport]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[Sport]"
+                      length="50"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Sport]"
+                      name="Sport"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Athlete]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[Athlete]"
+                      length="100"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[Athlete]"
+                      name="Athlete"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[GoldMedals]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[GoldMedals]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[GoldMedals]"
+                      name="GoldMedals"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[SilverMedals]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[SilverMedals]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[SilverMedals]"
+                      name="SilverMedals"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[BronzeMedals]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[BronzeMedals]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[BronzeMedals]"
+                      name="BronzeMedals"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[OlympicsYear]"
+                      dataType="i4"
+                      name="OlympicsYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[ClosingCeremonyDate]"
+                      dataType="dbDate"
+                      name="ClosingCeremonyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[Sport]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sport" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[Athlete]"
+                      dataType="wstr"
+                      length="100"
+                      name="Athlete" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[GoldMedals]"
+                      dataType="i4"
+                      name="GoldMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[SilverMedals]"
+                      dataType="i4"
+                      name="SilverMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].ExternalColumns[BronzeMedals]"
+                      dataType="i4"
+                      name="BronzeMedals" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[OlympicsYear]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[OlympicsYear]"
+                      name="OlympicsYear" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[ClosingCeremonyDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[ClosingCeremonyDate]"
+                      name="ClosingCeremonyDate" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[Sport]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[Sport]"
+                      name="Sport" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[Athlete]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[Athlete]"
+                      name="Athlete" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[GoldMedals]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[GoldMedals]"
+                      name="GoldMedals" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[SilverMedals]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[SilverMedals]"
+                      name="SilverMedals" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[BronzeMedals]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[BronzeMedals]"
+                      name="BronzeMedals" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Fact Olympics\Write Into FactOlympics (DW)"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Write Into FactOlympics (DW)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">"dbo"."FactOlympics"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsDataWarehouse Managed]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsDataWarehouse Managed]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[OlympicsYear]"
+                      cachedDataType="i4"
+                      cachedName="OlympicsYear"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[OlympicsYear]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[OlympicsYear]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[GoldMedals]"
+                      cachedDataType="i4"
+                      cachedName="GoldMedals"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[GoldMedals]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[GoldMedals]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[SilverMedals]"
+                      cachedDataType="i4"
+                      cachedName="SilverMedals"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[SilverMedals]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[SilverMedals]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[BronzeMedals]"
+                      cachedDataType="i4"
+                      cachedName="BronzeMedals"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[BronzeMedals]"
+                      lineageId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output].Columns[BronzeMedals]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[OlympicsSK]"
+                      cachedDataType="i4"
+                      cachedName="OlympicsSK"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[OlympicsSK]"
+                      lineageId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Correspondência de Pesquisa].Columns[OlympicsSK]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[SportSK]"
+                      cachedDataType="i4"
+                      cachedName="SportSK"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[SportSK]"
+                      lineageId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Correspondência de Pesquisa].Columns[SportSK]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[CountrySK]"
+                      cachedDataType="i4"
+                      cachedName="CountrySK"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[CountrySK]"
+                      lineageId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Correspondência de Pesquisa].Columns[CountrySK]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[AthleteSK]"
+                      cachedDataType="i4"
+                      cachedName="AthleteSK"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[AthleteSK]"
+                      lineageId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Correspondência de Pesquisa].Columns[AthleteSK]" />
+                    <inputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].Columns[ClosingCeremonyDateSK]"
+                      cachedDataType="i4"
+                      cachedName="ClosingCeremonyDateSK"
+                      externalMetadataColumnId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[ClosingCeremonyDateSK]"
+                      lineageId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Correspondência de Pesquisa].Columns[ClosingCeremonyDateSK]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[OlympicsYear]"
+                      dataType="i4"
+                      name="OlympicsYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[OlympicsSK]"
+                      dataType="i4"
+                      name="OlympicsSK" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[ClosingCeremonyDateSK]"
+                      dataType="i4"
+                      name="ClosingCeremonyDateSK" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[SportSK]"
+                      dataType="i4"
+                      name="SportSK" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[CountrySK]"
+                      dataType="i4"
+                      name="CountrySK" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[AthleteSK]"
+                      dataType="i4"
+                      name="AthleteSK" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[GoldMedals]"
+                      dataType="i4"
+                      name="GoldMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[SilverMedals]"
+                      dataType="i4"
+                      name="SilverMedals" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input].ExternalColumns[BronzeMedals]"
+                      dataType="i4"
+                      name="BronzeMedals" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Fact Olympics.Paths[ADO NET Source Output]"
+              endId="Package\Load Fact Olympics\LookUp Olympics.Inputs[Entrada de Pesquisa]"
+              name="ADO NET Source Output"
+              startId="Package\Load Fact Olympics\Query FactOlympics (Stage).Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa]"
+              endId="Package\Load Fact Olympics\LookUp Sport.Inputs[Entrada de Pesquisa]"
+              name="Saída de Correspondência de Pesquisa"
+              startId="Package\Load Fact Olympics\LookUp Olympics.Outputs[Saída de Correspondência de Pesquisa]" />
+            <path
+              refId="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa1]"
+              endId="Package\Load Fact Olympics\LookUp Country.Inputs[Entrada de Pesquisa]"
+              name="Saída de Correspondência de Pesquisa"
+              startId="Package\Load Fact Olympics\LookUp Sport.Outputs[Saída de Correspondência de Pesquisa]" />
+            <path
+              refId="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa2]"
+              endId="Package\Load Fact Olympics\LookUp Athlete.Inputs[Entrada de Pesquisa]"
+              name="Saída de Correspondência de Pesquisa"
+              startId="Package\Load Fact Olympics\LookUp Country.Outputs[Saída de Correspondência de Pesquisa]" />
+            <path
+              refId="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa3]"
+              endId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Inputs[Entrada de Pesquisa]"
+              name="Saída de Correspondência de Pesquisa"
+              startId="Package\Load Fact Olympics\LookUp Athlete.Outputs[Saída de Correspondência de Pesquisa]" />
+            <path
+              refId="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa4]"
+              endId="Package\Load Fact Olympics\Write Into FactOlympics (DW).Inputs[ADO NET Destination Input]"
+              name="Saída de Correspondência de Pesquisa"
+              startId="Package\Load Fact Olympics\LookUp ClosingCeremonyDate.Outputs[Saída de Correspondência de Pesquisa]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Remove Old Data"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{CCCECFFF-29CB-4AFB-87BA-CB2259A653A2}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Remove Old Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Remove Old Data\Delete Old Data"
+              componentClassID="{93FFEC66-CBC8-4C7F-9C6A-CB1C17A7567D}"
+              contactInfo="Comando OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;2"
+              description="Executa uma instrução SQL para cada linha em um fluxo de dados. Por exemplo, chame um procedimento armazenado 'new employee setup' para cada linha da tabela 'new employees'. Observação: a execução de uma instrução SQL para cada linha de um fluxo de dados grande pode demorar."
+              name="Delete Old Data"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">DELETE FactOlympics WHERE OlympicsYear BETWEEN ? AND ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remove Old Data\Delete Old Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsDataWarehouse Connection]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB]"
+                  errorOrTruncationOperation="Execução de Comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Comando OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB].Columns[InitialYear]"
+                      cachedDataType="i4"
+                      cachedName="InitialYear"
+                      externalMetadataColumnId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].Columns[InitialYear]" />
+                    <inputColumn
+                      refId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB].Columns[FinalYear]"
+                      cachedDataType="i4"
+                      cachedName="FinalYear"
+                      externalMetadataColumnId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].Columns[FinalYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informações de parâmetro. Corresponde os valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informações de parâmetro. Corresponde os valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Remove Old Data\Delete Old Data.Outputs[Saída de Comando OLE DB]"
+                  exclusionGroup="1"
+                  name="Saída de Comando OLE DB"
+                  synchronousInputId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Remove Old Data\Delete Old Data.Outputs[Saída de Erro de Comando OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Comando OLE DB"
+                  synchronousInputId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remove Old Data\Delete Old Data.Outputs[Saída de Erro de Comando OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remove Old Data\Delete Old Data.Outputs[Saída de Erro de Comando OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remove Old Data\Delete Old Data.Outputs[Saída de Erro de Comando OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remove Old Data\Delete Old Data.Outputs[Saída de Erro de Comando OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Remove Old Data\Get Filter Period"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="Get Filter Period"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        MIN(OlympicsYear) AS InitialYear, MAX(OlympicsYear) AS FinalYear
+FROM            FactOlympics</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Remove Old Data\Get Filter Period.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsStage Managed]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsStage Managed]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].Columns[InitialYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].ExternalColumns[InitialYear]"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].Columns[InitialYear]"
+                      name="InitialYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].Columns[FinalYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].ExternalColumns[FinalYear]"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].Columns[FinalYear]"
+                      name="FinalYear"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].ExternalColumns[InitialYear]"
+                      dataType="i4"
+                      name="InitialYear" />
+                    <externalMetadataColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output].ExternalColumns[FinalYear]"
+                      dataType="i4"
+                      name="FinalYear" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[InitialYear]"
+                      dataType="i4"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[InitialYear]"
+                      name="InitialYear" />
+                    <outputColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[FinalYear]"
+                      dataType="i4"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[FinalYear]"
+                      name="FinalYear" />
+                    <outputColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Remove Old Data.Paths[ADO NET Source Output]"
+              endId="Package\Remove Old Data\Delete Old Data.Inputs[Entrada de Comando OLE DB]"
+              name="ADO NET Source Output"
+              startId="Package\Remove Old Data\Get Filter Period.Outputs[ADO NET Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{B405453E-EF24-4175-987D-50E8D404BD15}"
+      DTS:From="Package\Remove Old Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load Fact Olympics" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Load Fact Olympics"
+          TopLeft="36,110" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Remove Old Data"
+          TopLeft="38,32" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="120.75,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Fact Olympics">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Load Fact Olympics\Query FactOlympics (Stage)"
+          TopLeft="37,14" />
+        <NodeLayout
+          Size="222,54"
+          Id="Package\Load Fact Olympics\Write Into FactOlympics (DW)"
+          TopLeft="528.714285714286,255.571428571429" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Load Fact Olympics\LookUp Olympics"
+          TopLeft="276,16" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Load Fact Olympics\LookUp Sport"
+          TopLeft="290,84" />
+        <EdgeLayout
+          Id="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa]"
+          TopLeft="359.5,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-85.3740234375,3.15234375,170.748046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Fact Olympics.Paths[ADO NET Source Output]"
+          TopLeft="250,36">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26,0"
+              Start="0,0"
+              End="18.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load Fact Olympics\LookUp Country"
+          TopLeft="281,157" />
+        <EdgeLayout
+          Id="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa1]"
+          TopLeft="360.5,126">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-85.3740234375,5.65234375,170.748046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Load Fact Olympics\LookUp Athlete"
+          TopLeft="282,233" />
+        <EdgeLayout
+          Id="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa2]"
+          TopLeft="358.75,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-85.3740234375,7.15234375,170.748046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="223,42"
+          Id="Package\Load Fact Olympics\LookUp ClosingCeremonyDate"
+          TopLeft="240,305" />
+        <EdgeLayout
+          Id="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa3]"
+          TopLeft="355,275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-85.3740234375,5.15234375,170.748046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Fact Olympics.Paths[Saída de Correspondência de Pesquisa4]"
+          TopLeft="463,326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.7142857142857,-43.4285714285714"
+              Start="0,0"
+              End="58.2142857142857,-43.4285714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.8571428571428,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.8571428571428,0"
+                    Point2="32.8571428571428,0"
+                    Point3="32.8571428571428,-4" />
+                  <mssgle:LineSegment
+                    End="32.8571428571428,-39.4285714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.8571428571428,-39.4285714285714"
+                    Point2="32.8571428571428,-43.4285714285714"
+                    Point3="36.8571428571428,-43.4285714285714" />
+                  <mssgle:LineSegment
+                    End="58.2142857142857,-43.4285714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-52.5168805803572,1,170.748046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Fact Olympics\Query FactOlympics (Stage)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Fact Olympics\Write Into FactOlympics (DW)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Fact Olympics\LookUp Olympics">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Fact Olympics\LookUp Sport">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Fact Olympics\LookUp Country">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Fact Olympics\LookUp Athlete">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Fact Olympics\LookUp ClosingCeremonyDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Remove Old Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Remove Old Data\Get Filter Period"
+          TopLeft="109,22" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Remove Old Data\Delete Old Data"
+          TopLeft="104,106" />
+        <EdgeLayout
+          Id="Package\Remove Old Data.Paths[ADO NET Source Output]"
+          TopLeft="184.75,64">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Remove Old Data\Get Filter Period">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

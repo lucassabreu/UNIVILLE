@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Olympics Reports", "Olympics Reports\Olympics Reports.rptproj", "{FCF418B3-EFDD-4B24-891E-D860C78613CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.Debug|Default.ActiveCfg = Debug
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.Debug|Default.Build.0 = Debug
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.Debug|Default.Deploy.0 = Debug
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.DebugLocal|Default.Build.0 = DebugLocal
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.Release|Default.ActiveCfg = Release
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.Release|Default.Build.0 = Release
+		{FCF418B3-EFDD-4B24-891E-D860C78613CA}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,737 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/28/2015 1:02:26 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="NOT-LUCAS"
+  DTS:CreatorName="NOT-LUCAS\Lucas"
+  DTS:DTSID="{FDA22F38-89B2-4CE4-82FB-EF26CB8C8437}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5583.0"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="03  Build Stage Ceremony Closing Date"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{0B65B10B-44AF-4221-8D6F-DA84D95DF492}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsStage Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3D3BE7F6-5E98-49D0-ADA5-094EF68AC836}"
+      DTS:ObjectName="OlympicsStage Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=OlympicsStage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OlympicsStage Managed]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{67C419E7-0B28-4CAA-8DC2-DE7740D777E7}"
+      DTS:ObjectName="OlympicsStage Managed">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=OlympicsStage;Integrated Security=True;Application Name=SSIS-01  Load Olympics File-{67C419E7-0B28-4CAA-8DC2-DE7740D777E7}LocalHost.OlympicsStage1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Build Ceremony Closing Date Dimensions"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{E35E83E2-A900-4F36-8C41-5D162892B3DB}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Build Ceremony Closing Date Dimensions"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First)"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Cria novos valores de coluna aplicando expressões a colunas de entrada da transformação. Crie novas colunas ou substitua as existentes. Por exemplo, concatene os valores das colunas 'first name' e 'last name' para formar uma coluna 'full name'."
+              name="New Columns (First)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Inputs[Entrada de Coluna Derivada]"
+                  description="Entrada para a Transformação Coluna Derivada"
+                  name="Entrada de Coluna Derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Inputs[Entrada de Coluna Derivada].Columns[ClosingCeremonyDate]"
+                      cachedDataType="dbDate"
+                      cachedName="ClosingCeremonyDate"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada]"
+                  description="Saída Padrão da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  name="Saída de Coluna Derivada"
+                  synchronousInputId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">[YEAR](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">YEAR(ClosingCeremonyDate)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Month]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Month]"
+                      name="Month"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">[MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">MONTH(ClosingCeremonyDate)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[MonthDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[MonthDescription]"
+                      name="MonthDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">([MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 1 ? "January" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 2 ? "February" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 3 ? "March" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 4 ? "April" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 5 ? "May" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 6 ? "June" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 7 ? "July" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 8 ? "August" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 9 ? "September" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 10 ? "October" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 11 ? "November" : [MONTH](#{Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]}) == 12 ? "December" : "InvalidMonth")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(MONTH(ClosingCeremonyDate) == 1 ? "January" : MONTH(ClosingCeremonyDate) == 2 ? "February" : MONTH(ClosingCeremonyDate) == 3 ? "March" : MONTH(ClosingCeremonyDate) == 4 ? "April" : MONTH(ClosingCeremonyDate) == 5 ? "May" : MONTH(ClosingCeremonyDate) == 6 ? "June" : MONTH(ClosingCeremonyDate) == 7 ? "July" : MONTH(ClosingCeremonyDate) == 8 ? "August" : MONTH(ClosingCeremonyDate) == 9 ? "September" : MONTH(ClosingCeremonyDate) == 10 ? "October" : MONTH(ClosingCeremonyDate) == 11 ? "November" : MONTH(ClosingCeremonyDate) == 12 ? "December" : "InvalidMonth")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Erro de Coluna Derivada]"
+                  description="Saída de Erro da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Coluna Derivada"
+                  synchronousInputId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second)"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Cria novos valores de coluna aplicando expressões a colunas de entrada da transformação. Crie novas colunas ou substitua as existentes. Por exemplo, concatene os valores das colunas 'first name' e 'last name' para formar uma coluna 'full name'."
+              name="New Columns (Second)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Inputs[Entrada de Coluna Derivada]"
+                  description="Entrada para a Transformação Coluna Derivada"
+                  name="Entrada de Coluna Derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Inputs[Entrada de Coluna Derivada].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Inputs[Entrada de Coluna Derivada].Columns[Month]"
+                      cachedDataType="i4"
+                      cachedName="Month"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Month]" />
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Inputs[Entrada de Coluna Derivada].Columns[MonthDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="MonthDescription"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[MonthDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada]"
+                  description="Saída Padrão da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  name="Saída de Coluna Derivada"
+                  synchronousInputId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada].Columns[MonthCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada].Columns[MonthCode]"
+                      name="MonthCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">(#{Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Year]} * 100) + #{Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Month]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(Year * 100) + Month</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada].Columns[MonthYear]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      length="17"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada].Columns[MonthYear]"
+                      name="MonthYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">#{Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[MonthDescription]} + "/" + ((DT_STR,4,1252)#{Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Year]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">MonthDescription + "/" + ((DT_STR,4,1252)Year)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Erro de Coluna Derivada]"
+                  description="Saída de Erro da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Coluna Derivada"
+                  synchronousInputId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="Query LoadOlympics"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT ClosingCeremonyDate
+FROM            LoadOlympics</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsStage Managed]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsStage Managed]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].ExternalColumns[ClosingCeremonyDate]"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]"
+                      name="ClosingCeremonyDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].ExternalColumns[ClosingCeremonyDate]"
+                      dataType="dbDate"
+                      name="ClosingCeremonyDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Error Output].Columns[ClosingCeremonyDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Error Output].Columns[ClosingCeremonyDate]"
+                      name="ClosingCeremonyDate" />
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Write Into DimCeremonyClosingDateStage"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">"DimCeremonyClosingDateStage"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OlympicsStage Managed]"
+                  connectionManagerRefId="Package.ConnectionManagers[OlympicsStage Managed]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].Columns[ClosingCeremonyDate]"
+                      cachedDataType="dbDate"
+                      cachedName="ClosingCeremonyDate"
+                      externalMetadataColumnId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[ClosingCeremonyDate]"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output].Columns[ClosingCeremonyDate]" />
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].Columns[Month]"
+                      cachedDataType="i4"
+                      cachedName="Month"
+                      externalMetadataColumnId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[Month]"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[Month]" />
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].Columns[MonthDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="MonthDescription"
+                      externalMetadataColumnId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[MonthDescription]"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada].Columns[MonthDescription]" />
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].Columns[MonthCode]"
+                      cachedDataType="i4"
+                      cachedName="MonthCode"
+                      externalMetadataColumnId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[MonthCode]"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada].Columns[MonthCode]" />
+                    <inputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].Columns[MonthYear]"
+                      cachedDataType="wstr"
+                      cachedLength="17"
+                      cachedName="MonthYear"
+                      externalMetadataColumnId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[MonthYear]"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada].Columns[MonthYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[ClosingCeremonyDate]"
+                      dataType="dbTimeStamp"
+                      name="ClosingCeremonyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[MonthCode]"
+                      dataType="i4"
+                      name="MonthCode" />
+                    <externalMetadataColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[Month]"
+                      dataType="i4"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[MonthDescription]"
+                      dataType="wstr"
+                      length="20"
+                      name="MonthDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[MonthYear]"
+                      dataType="wstr"
+                      length="20"
+                      name="MonthYear" />
+                    <externalMetadataColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Build Ceremony Closing Date Dimensions.Paths[ADO NET Source Output]"
+              endId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Inputs[Entrada de Coluna Derivada]"
+              name="ADO NET Source Output"
+              startId="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Build Ceremony Closing Date Dimensions.Paths[Saída de Coluna Derivada]"
+              endId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Inputs[Entrada de Coluna Derivada]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Build Ceremony Closing Date Dimensions\New Columns (First).Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Build Ceremony Closing Date Dimensions.Paths[Saída de Coluna Derivada1]"
+              endId="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage.Inputs[ADO NET Destination Input]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Build Ceremony Closing Date Dimensions\New Columns (Second).Outputs[Saída de Coluna Derivada]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE DimCeremonyClosingDateStage"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C8AAF80C-BF77-4634-ADEF-2B25505A57E8}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE DimCeremonyClosingDateStage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D3BE7F6-5E98-49D0-ADA5-094EF68AC836}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE DimCeremonyClosingDateStage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{EF06F49E-5037-40CF-83E9-6B713DA92D0E}"
+      DTS:From="Package\TRUNCATE DimCeremonyClosingDateStage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Build Ceremony Closing Date Dimensions" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="318,42"
+          Id="Package\TRUNCATE DimCeremonyClosingDateStage"
+          TopLeft="105,77" />
+        <NodeLayout
+          Size="274,42"
+          Id="Package\Build Ceremony Closing Date Dimensions"
+          TopLeft="132,176" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="266.5,119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Build Ceremony Closing Date Dimensions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="280,42"
+          Id="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage"
+          TopLeft="117,315" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics"
+          TopLeft="169,48" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Build Ceremony Closing Date Dimensions\New Columns (First)"
+          TopLeft="167,139" />
+        <EdgeLayout
+          Id="Package\Build Ceremony Closing Date Dimensions.Paths[ADO NET Source Output]"
+          TopLeft="256.5,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Build Ceremony Closing Date Dimensions\New Columns (Second)"
+          TopLeft="164,237" />
+        <EdgeLayout
+          Id="Package\Build Ceremony Closing Date Dimensions.Paths[Saída de Coluna Derivada]"
+          TopLeft="257.5,181">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Build Ceremony Closing Date Dimensions.Paths[Saída de Coluna Derivada1]"
+          TopLeft="258.25,279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Build Ceremony Closing Date Dimensions\Write Into DimCeremonyClosingDateStage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Build Ceremony Closing Date Dimensions\Query LoadOlympics">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
