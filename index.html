@@ -1,65 +1,157 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!DOCTYPE html>
+<html ng-app="homeUnivilleApp">
+	<head>
+		
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+		<title>Univille Universidade - Nova Marca, Novo Portal Há 50 anos universidade para vida</title>
+		
+        <link href="./css/bootstrap.min.css" rel="stylesheet" />
+        <link href="./css/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="./css/principal.css" rel="stylesheet" />
+	</head>
+	<body>
+		
+        <!--
+        <div class="fullscreen login-enturma">
+            <div class="login-enturma-content">
+                <form action="http://univille.edu.br/access/Login.html" method="post" name="enturmaLogin" id="enturmaLogin">
+                    <input name="action" type="hidden" value="login" />
+                    <input name="savePassword" type="hidden" value="" />
+                    <input name="redirect" type="hidden" value="http://univille.edu.br/account/MySpace.html" />
 
-  <title>Univille</title>
-  <meta name="description" content="Este repositorio irá acumular os fontes construidos durante o curso de Bacharelado em Sistemas de Informação.">
+                    <label for="login">Usuário:</label>
+                    <input type="text" name="login" autocomplete="off" value="" id="login">
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" autocomplete="off" value="" id="password">
+                    <input type="submit" class="inputButton" value="Enviar">
+                    
+                    <a title="Esqueci a senha?" href="http://univille.edu.br/access/Login.html">Esqueci a senha</a>
+                </form>
+            </div>
+        </div> -->
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Univille</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Este repositorio irá acumular os fontes construidos durante o curso de Bacharelado em Sistemas de Informação.</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/lucassabreu/UNIVILLE/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/lucassabreu/UNIVILLE/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/lucassabreu/UNIVILLE" class="code">View Univille on GitHub</a>
+        <div class="fullscreen choose-role-dlg" ng-controller="RoleDialogCtrl">
+            <div class="choose-role">
+                <h1 class="header">Seleção de Usuário</h1>
+                <p class="help">Por favor, selecione o usuário que mais se adapta as suas necessidades.</p>
+                
+                <ul class="roles">
+                    <li class="role">
+                        <a ng-click="chooseRole('estudante')">
+                            <span class="role-icon estudante"></span>
+                            <span class="role-text">Estudantes</span>
+                        </a>
+                    </li>
+                    <li class="role">
+                        <a ng-click="chooseRole('professor')">
+                            <span class="role-icon professor"></span>
+                            <span class="role-text">Professores</span>
+                        </a>
+                    </li>
+                    <li class="role">
+                        <a ng-click="chooseRole('fornecedor')">
+                            <span class="role-icon fornecedor"></span>
+                            <span class="role-text">Fornecedores</span>
+                        </a>
+                    </li>
+                    <li class="role">
+                        <a ng-click="chooseRole('visitante')">
+                            <span class="role-icon visitante"></span>
+                            <span class="role-text">Visitantes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <span class="blc"></span><span class="trc"></span>
+        
+        <div class="web-content">
+            <div class="nav-menu" ng-controller="TopMenuCtrl">
+                <div class="nav-content">
+                    <ul class="controls">
+                        <li><a href="#" ng-click="changeRole()">{{role.name}}</a></li>
+                    </ul>
+                    <ul class="nav-items">
+                        <li ng-repeat="item in items"><a href="#{{item.anchor}}" class="nit-{{item.anchor}}" ng-click="resetContents()">{{item.label}}</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="banners" class="page home-show-case" ng-controller="HomeShowcaseCtrl">
+                <a name="banners" class="anchor"></a>
+                <carousel class="banners" interval="intervalTime" no-wrap="noWrapSlides">
+                    <slide ng-repeat="banner in banners" active="slide.active">
+                        <a href="{{banner.link}}"><img src="{{banner.image}}" alt="{{banner.title}}" title="{{banner.title}}" /></a>
+                    </slide>
+                </carousel>
+                
+                <div class="agenda">
+                    <div class="event" ng-repeat="ev in agenda">
+                        <div class="date">{{ev.date | date : 'dd/MMMM'}}</div>
+                        <div class="description"><a href="{{ev.link}}">{{ev.description}}</a></div>
+                    </div>
+                </div>
+            </div>
+    
+            <span ng-controller="CategoryPageCtrl">
+                <div id="{{page.id}}" class="page links"  ng-repeat="page in pages">
+                    <div class="page-content">
+                        <div class="labels">
+                            <h1 class="first">{{page.label}}</h1>
+                        </div>
+                        <div class="contents">
+                            <ul class="sub-items">
+                                <li class="sub-item" ng-repeat="item in page.children">
+                                    <a href="{{item.hasLink ? item.link : '#' + page.id}}" 
+                                    ng-mouseover="descriptionSet(page, $index)"
+                                    ng-mouseleave="descriptionSet(page, -1)"
+                                    ng-click="detailPage(page, $index)">
+                                        {{item.label}} <span ng-if="item.hasLink" class="glyphicon glyphicon-new-window" />
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="page-help">{{page.cDescription}}</div>
+                        </div>
+                    </div>
+                    <div class="sub-pages">
+                        <div class="sub-page sb-{{$index}}" ng-repeat="spage in page.children">
+                            <div class="labels">
+                                <h1 class="first">
+                                    <a href="#{{page.id}}" ng-click="backTo(page)">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>{{page.label}}
+                                    </a>
+                                </h1>
+                                <h1> > </h1><h1>{{spage.label}}</h1>
+                            </div>
+                            <div class="contents">
+                                <ul class="sub-items">
+                                    <li class="sub-item" ng-repeat="item in spage.children">
+                                        <a href="{{item.link}}"
+                                        ng-mouseover="descriptionSet(spage, $index)"
+                                        ng-mouseleave="descriptionSet(spage, -1)">
+                                        {{item.label}} <span class="glyphicon glyphicon-new-window" />
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="page-help">{{spage.cDescription}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </span>
         </div>
-        <article class="markdown-body">
-          <h1>
-<a id="univille" class="anchor" href="#univille" aria-hidden="true"><span class="octicon octicon-link"></span></a>UNIVILLE</h1>
+            
+		<!-- 3D Party -->
+		<script src="./3d-party/jquery/dist/jquery.min.js"></script>
+		<script src="./3d-party/angularjs/angular.min.js"></script>
+		<script src="./3d-party/angular-route/angular-route.min.js"></script>
+		<script src="./3d-party/bootstrap.min.js"></script>
+		<script src="./3d-party/ui-bootstrap-tpls-0.13.4.min.js"></script>
 
-<p>Este repositorio irá acumular os fontes construidos durante o curso de Bacharelado em Sistemas de Informação.</p>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/lucassabreu" class="avatar"><img src="https://avatars1.githubusercontent.com/u/3457213?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/lucassabreu">lucassabreu</a> maintains <a href="https://github.com/lucassabreu/UNIVILLE">Univille</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/lucassabreu/UNIVILLE/tarball/master" class="tar">tar</a><a href="https://github.com/lucassabreu/UNIVILLE/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
-</body>
+        <script src="./js/data.js"></script>
+        <script src="./js/controllers.js"></script>
+        <script src="./js/app.js"></script>
+		
+	</body>
 </html>
