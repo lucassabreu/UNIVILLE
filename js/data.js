@@ -9,6 +9,11 @@ var data = {
             title : 'Aulões Preparatórios',
             image : 'http://www.univille.edu.br/community/novoportal/VirtualDisk.html?action=readFile&file=20150902Aulao_Enem_SBS.jpg&current=/.banners',
             link : 'http://www.univille.edu.br/pt-BR/a-univille/proreitorias/proex/eventos-univille/eventos-acontecendo/aulao-enem/613435'
+        },
+        {
+            title : 'Nota Guia do Estudante',
+            image : 'http://www.univille.edu.br/community/novoportal/VirtualDisk.html?action=readFile&file=20150909Guia-do-Estudante-2015.jpg&current=/.banners',
+            link : '#',
         }
     ],
     'agenda' : [
@@ -41,7 +46,7 @@ var data = {
     'pages' : [
          {
             id : 'institucional' ,
-            label: "INSTITUCIONAL",
+            label: "Institucional",
             children : [
                 {
                     label : 'Sobre a Univille e FURJ',
@@ -99,7 +104,7 @@ var data = {
         },
         {
             id : 'formasingresso',
-            label: "FORMAS DE INGRESSO",
+            label: "Formas de Ingresso",
             children : [
                 {
                     label : "Inscreva-se",
@@ -113,7 +118,7 @@ var data = {
         },
         {
             id : 'cursos',
-            label : 'CURSOS',
+            label : 'Cursos',
             children : [
                 {
                     label : "Graduação",
@@ -139,7 +144,7 @@ var data = {
         },
         {
             id : 'servicos',
-            label : 'SERVIÇOS',
+            label : 'Serviços',
             children : [
                         {
                             label: "Assessoria Internacional",
@@ -266,7 +271,7 @@ var data = {
         },
         {
             id : 'extensao',
-            label : 'EXTENSÃO',
+            label : 'Extensão',
             children : [
                 {
                     label: "Área de Extensão",
@@ -308,12 +313,12 @@ var data = {
 };
 
 var descriptions = [
-    "Alguma descrição que auxilie a pessoa a entender o link que ela está passando sobre...",    
-    "Pode ser um parágrafo ou apenas uma frase",    
-    "A intensão é que seja curta, embora fácil de entender",    
-    "As siglas que existem no menu poderiam simplesmente estar escritas por extenso, isso já ajuda",    
-    "É preciso tomar cuidado, mesmo que exista o artício das descrições o nome do link precisa ser claro também",    
-    "Espero que não acabe tendo um resumo super longo aqui...",    
+    "Mauris at faucibus dolor. Mauris gravida dignissim augue, non mollis diam. Phasellus eget purus nec massa venenatis aliquam. Vivamus eu dignissim libero. Sed viverra est in ullamcorper placerat. Praesent tincidunt ullamcorper sem, eget elementum nisi aliquam eget. Morbi commodo pulvinar tortor non tincidunt. Vestibulum sagittis eros eu tristique pulvinar. Phasellus mollis enim eu massa accumsan, at sollicitudin leo sollicitudin. Integer imperdiet augue at suscipit tincidunt.",    
+    "Duis massa turpis, pulvinar eget mauris ut, consequat cursus massa. Vivamus ultricies magna eu semper vestibulum. Etiam convallis turpis sit amet nibh semper pulvinar a ac eros. Aenean volutpat, ipsum eget aliquet tempor, nibh lacus lacinia tortor, non placerat dui erat quis risus. Duis ut nibh vitae ipsum pulvinar cursus et vel leo. Sed laoreet vitae lacus faucibus facilisis. Ut ultricies interdum rutrum. Aenean tincidunt.",    
+    "Donec facilisis, libero a suscipit rhoncus, metus erat pretium turpis, quis auctor dolor erat a leo. Donec a laoreet lacus. Sed mi ligula, vehicula eget justo ut, viverra sodales velit. Maecenas at euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum rhoncus diam suscipit libero ornare imperdiet. Morbi consequat semper porta. Suspendisse neque nunc, porta ut condimentum ut.",    
+    "Pellentesque nec dolor libero. Vestibulum pharetra odio arcu, vel varius nibh varius at. Aliquam erat volutpat. Praesent venenatis nunc ut ex tempor malesuada ut vel odio. Ut ac nisl eget diam euismod rutrum vitae eu libero. Vivamus efficitur risus egestas tristique tempus. Phasellus luctus elementum orci sit amet ullamcorper. Phasellus commodo aliquet mauris eu bibendum. Nam auctor pulvinar massa. Curabitur consequat luctus tellus, vitae venenatis.",    
+    "Pellentesque tellus velit, tincidunt at fringilla eget, consectetur vel nisi. Donec fringilla neque at nisl mollis, ut blandit dui scelerisque. Mauris euismod urna lorem, at dapibus dui aliquam vel. Phasellus rhoncus congue luctus. Vivamus urna purus, gravida vel magna a, porta fermentum tellus. Vivamus dictum efficitur lectus. Nullam diam ante, tincidunt in felis vitae, lacinia facilisis nibh. Vestibulum a nisl nisi. Suspendisse sed iaculis orci.",    
+    "Nullam porttitor eleifend risus, et tincidunt eros suscipit a. Mauris porttitor eros eget facilisis hendrerit. In eleifend ipsum vitae volutpat mattis. In eget pulvinar erat. Vestibulum ut mauris metus. Suspendisse dignissim suscipit nisl, ut consectetur massa porta ac. Fusce sed risus enim. Duis blandit elementum magna, ut lobortis nunc consectetur vel. Ut ac blandit ligula. Cras consectetur ligula vel nisl bibendum, sed varius lorem tempus.",    
 ];
 
 for(var key in data.pages) {

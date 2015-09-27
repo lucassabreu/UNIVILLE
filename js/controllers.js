@@ -1,11 +1,5 @@
 // controles das paginas individuais
 
-var stateController = {
-    role : {
-        name : "visitante",
-    },
-};
-
 (function(data){
     
     var controllers = angular.module('homeUnivilleControllers', []);
@@ -16,7 +10,7 @@ var stateController = {
             $scope.stCtrl = stateController;
             
             $scope.chooseRole = function (role) {
-                stateController.role.name = role;
+                stateController.setRoleName(role);
                 
                 jQuery('.choose-role-dlg').hide();
                 jQuery(".web-content").show();
@@ -56,21 +50,30 @@ var stateController = {
                 }
             }
             
-            $scope.detailPage = function (page, index) {
-                var currentPage = jQuery('#' + page.id + ' .page-content');
-                var subPage = jQuery('#' + page.id + ' .sb-' + index);
+            $scope.openLinks = function (page) {
+                page.inside = true;
+                jQuery("#" + page.id + " .sub-items").removeClass('active');
+                jQuery("#" + page.id + " .page-help").removeClass('active');
                 
-                currentPage.height(0);
-                subPage.height('600px');
+                jQuery("#" + page.id + " .sb-page").addClass('active');
             };
             
-            $scope.backTo = function (page) {
+            $scope.detailPage = function (page, index) {
+                page.inside = true;
+                jQuery("#" + page.id + " .sub-items").removeClass('active');
+                jQuery("#" + page.id + " .page-help").removeClass('active');
+                jQuery("#" + page.id + " .sb-page").removeClass('active');
+
+                var subPage = jQuery('#' + page.id + ' .sb-' + index);
+                subPage.addClass('active');
+            };
+            
+            $scope.backInfo = function (page) {
+                page.inside = false;
+                jQuery("#" + page.id + " .sub-items").removeClass('active');
+                jQuery("#" + page.id + " .sb-page").removeClass('active');
                 
-                var backPage = jQuery('#' + page.id + ' .page-content');
-                var subPages = jQuery('#' + page.id + ' .sub-pages');
-                
-                backPage.height('600px');
-                subPages.height(0);                
+                jQuery("#" + page.id + " .page-help").addClass('active');
             };
             
             $scope.descriptionSet = function (page, index) {
@@ -93,7 +96,7 @@ var stateController = {
             $scope.items = [];
             
             $scope.items.push({
-                'label' : "DESTAQUES",
+                'label' : "Destaques",
                 'anchor' : "banners",
             });
             
@@ -108,11 +111,15 @@ var stateController = {
             }
             
             $scope.resetContents = function () {
-                var backPage = jQuery('.page-content');
-                var subPages = jQuery('.sub-pages');
+                var helps = jQuery('.page-help');
+                var subItems = jQuery('.sub-items');
                 
-                backPage.height('600px');
-                subPages.height(0);    
+                for(var key in data.pages) {
+                    data.pages[key].inside = false;
+                }
+                
+                helps.addClass('active');
+                subItems.removeClass('active');    
             }
         }
     ]);
