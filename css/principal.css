@@ -46,7 +46,8 @@
 
 .nav-menu .page-status .nav-search button,
 .nav-menu .page-status .nav-search .search-input,
-.nav-menu .user-info .login-form input {
+.nav-menu .user-info .login-form input,
+.nav-menu .user-info .login-form button {
     border: 2px solid #ffffff;
     margin:0;
     padding: 0;
@@ -98,19 +99,26 @@
 }
 
 .nav-menu .user-info .login-form {
-    padding: 18px;
+    position: relative;
+    padding-top: 18px;
+    padding-right: 8px;
+    height: 100%;
 }
 
 .nav-menu .user-info .login-form input {
     display: block;
     margin-bottom: 5px;
-    padding: 2px;
-    float: right;
-    width: 100%;
+    padding: 4px;
+    float: left;
+    width: 70%;
 }
 
 .nav-menu .user-info .login-form button {
-    display: none;
+    width: 25%;
+    height: 68px;
+    position: absolute;
+    right: 8px;
+    top: 18px;
 }
 
 .nav-menu .nav-items {
