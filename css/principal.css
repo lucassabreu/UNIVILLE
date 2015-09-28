@@ -249,7 +249,7 @@
     font-size: 40px;
     font-weight: bold;
     position: relative;
-    top: .4ex;
+    top: .15ex;
     right: .5ex;
 }
 
@@ -295,7 +295,8 @@
 
 .page .back-links a:before {
     position: relative;
-    top: 1px;
+    top: .15ex;
+    right: .5ex;
     display: inline-block;
     font-family: 'Glyphicons Halflings';
     font-style: normal;
