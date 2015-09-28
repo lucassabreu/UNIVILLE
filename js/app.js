@@ -88,7 +88,6 @@ jQuery(function() {
     };
     
     jQuery('.page').css('height', cssHeights.page);
-    jQuery('.page-content').css('height', cssHeights.pageContents);
     jQuery('.page.home-show-case .banners img, .page.home-show-case .banners').css('height', cssHeights.banners);
 
     if (stateController.role) {
