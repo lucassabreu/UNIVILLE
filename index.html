@@ -115,46 +115,44 @@
     
             <span ng-controller="CategoryPageCtrl">
                 <div id="{{page.id}}" class="page links" ng-repeat="page in pages">
-                    <div class="page-content">
-                        <div class="page-panel">
-                            <div class="labels">
-                                <h1 class="first">{{page.label}}</h1>
+                    <div class="page-panel">
+                        <div class="labels">
+                            <h1 class="first">{{page.label}}</h1>
+                        </div>
+                        
+                        <div class="page-help {{page.inside ? '' : 'active'}}">
+                            <p>{{page.cDescription}}</p>
+                            <div class="access-links">
+                                <a href="#{{page.id}}" ng-click="openLinks(page)">Links de Acesso</a>
                             </div>
+                        </div>
+                        
+                        <div class="sub-items sb-page">
+                            <ul class="sub-items-list">
+                                <li class="sub-item" ng-repeat="item in page.children">
+                                    <a href="{{item.hasLink ? item.link : '#' + page.id}}" 
+                                       ng-click="detailPage(page, $index)">
+                                        {{item.label}} <span ng-if="item.hasLink" class="glyphicon glyphicon-new-window" />
+                                    </a>
+                                </li>
+                            </ul>
                             
-                            <div class="page-help {{page.inside ? '' : 'active'}}">
-                                <p>{{page.cDescription}}</p>
-                                <div class="access-links">
-                                    <a href="#{{page.id}}" ng-click="openLinks(page)">Links de Acesso</a>
-                                </div>
+                            <div class="back-links">
+                                <a href="#{{page.id}}" ng-click="backInfo(page)">Voltar</a>
                             </div>
+                        </div>
+                        
+                        <div class="sub-items sb-{{$index}}" ng-repeat="spage in page.children">
+                            <ul class="sub-items-list">
+                                <li class="sub-item" ng-repeat="item in spage.children">
+                                    <a href="{{item.link}}">
+                                    {{item.label}} <span class="glyphicon glyphicon-new-window" />
+                                    </a>
+                                </li>
+                            </ul>
                             
-                            <div class="sub-items sb-page">
-                                <ul class="sub-items-list">
-                                    <li class="sub-item" ng-repeat="item in page.children">
-                                        <a href="{{item.hasLink ? item.link : '#' + page.id}}" 
-                                           ng-click="detailPage(page, $index)">
-                                            {{item.label}} <span ng-if="item.hasLink" class="glyphicon glyphicon-new-window" />
-                                        </a>
-                                    </li>
-                                </ul>
-                                
-                                <div class="back-links">
-                                    <a href="#{{page.id}}" ng-click="backInfo(page)">Voltar</a>
-                                </div>
-                            </div>
-                            
-                            <div class="sub-items sb-{{$index}}" ng-repeat="spage in page.children">
-                                <ul class="sub-items-list">
-                                    <li class="sub-item" ng-repeat="item in spage.children">
-                                        <a href="{{item.link}}">
-                                        {{item.label}} <span class="glyphicon glyphicon-new-window" />
-                                        </a>
-                                    </li>
-                                </ul>
-                                
-                                <div class="back-links">
-                                    <a href="#{{page.id}}" ng-click="openLinks(page)">Voltar</a>
-                                </div>
+                            <div class="back-links">
+                                <a href="#{{page.id}}" ng-click="openLinks(page)">Voltar</a>
                             </div>
                         </div>
                     </div>
