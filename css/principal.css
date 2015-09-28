@@ -1,4 +1,4 @@
-.nav-menu {
+ro.nav-menu {
     color: #005631;
     z-index: 99999;
     position: fixed;
@@ -449,6 +449,7 @@
 .choose-role .roles li a {
     text-decoration: none;
     cursor: pointer;
+    color: #005631;
 }
 
 .choose-role .role-icon.visitante {
