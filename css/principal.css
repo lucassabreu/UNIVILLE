@@ -332,13 +332,6 @@
     transition: background-color .2s;
 }
 
-.page .page-content{
-    position: relative;
-    overflow-x: hidden;
-    /*height: 600px; --javascript*/
-    transition: height 1s linear 0.1s;
-}
-
 .page.home-show-case {
     background-color: white;
     border: none;
