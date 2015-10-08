@@ -1,0 +1,265 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dcf91565-ac8e-4d11-8ae1-59493f506d7a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Enem</ID>
+  <Name>Enem</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9703" scrolltop="-11151" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20638" y="14393" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Provas Enem" left="-2083" top="-6151" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5398" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000a00001615000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="Provas Enem" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-9703</DiagramViewPortLeft>
+            <DiagramViewPortTop>-11151</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Enem</DataSourceID>
+  <Schema>
+    <xs:schema id="Enem" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Enem" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="d79738d2-5e95-419a-903d-6baa0aa0a054">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Provas_x0020_Enem" msprop:design-time-name="568f8fdf-ff42-49c2-bc64-fa5e5e196df0" msprop:IsLogical="True" msprop:FriendlyName="Provas Enem" msprop:DbTableName="Provas Enem" msprop:TableType="View" msprop:Description="" msprop:QueryDefinition="SELECT        NU_INSCRICAO AS [Número de Inscrição], NU_ANO AS [Ano do Enem], IDADE AS Idade, TP_SEXO AS Sexo, &#xD;&#xA;                         COD_MUNICIPIO_INSC AS [Cód. Município de Residência], NO_MUNICIPIO_INSC AS [Município de Residência], UF_INSC AS [UF Residência], &#xD;&#xA;                         ST_CONCLUSAO AS [Sit. Conclusão Ensino Médio], IN_TP_ENSINO AS [Tipo de Ensino], IN_CERTIFICADO AS [Solicitou Certificação?], &#xD;&#xA;                         IN_BRAILLE AS [Solicitou Em Braille?], IN_AMPLIADA AS [Solicitou Ampliada?], IN_LEDOR AS [Solicitou Aux. Ledor?], &#xD;&#xA;                         IN_ACESSO AS [Solicitou Sala de Fácil Acesso?], IN_TRANSCRICAO AS [Solicitou Transcrição?], IN_LIBRAS AS [Solicitou Em Libras?], &#xD;&#xA;                         IN_UNIDADE_PRISIONAL AS [É De Unidade Prisional?], IN_BAIXA_VISAO AS [É Baixa Visão?], IN_CEGUEIRA AS [É Cego?], &#xD;&#xA;                         IN_DEFICIENCIA_AUDITIVA AS [É Deficiênte Auditivo?], IN_DEFICIENCIA_FISICA AS [É Deficiênte Física?], IN_DEFICIENCIA_MENTAL AS [É Deficiênte Mental?], &#xD;&#xA;                         IN_DEFICIT_ATENCAO AS [É Portador de Déficit Atenção?], IN_DISLEXIA AS [É Disléxico?], IN_GESTANTE AS [É Gestante?], IN_LACTANTE AS [É Lactante?], &#xD;&#xA;                         IN_LEITURA_LABIAL AS [Socitou Leitura Labial?], IN_SABATISTA AS [Solicitou Prova Sabatista?], IN_SURDEZ AS [É Surdo?], TP_ESTADO_CIVIL AS [Estado Civil], &#xD;&#xA;                         TP_COR_RACA AS [Cor/Raça], PK_COD_ENTIDADE AS [Cod. Escola], COD_MUNICIPIO_ESC AS [Cód. Município Escola], NO_MUNICIPIO_ESC AS [Município Escola], &#xD;&#xA;                         UF_ESC AS [UF Escola], ID_DEPENDENCIA_ADM AS [Tipo Escola], ID_LOCALIZACAO AS [Localização Escola], SIT_FUNC AS [Sit. Funcionamento Escola], &#xD;&#xA;                         COD_MUNICIPIO_PROVA AS [Cód. Município Prova], NO_MUNICIPIO_PROVA AS [Município Prova], UF_MUNICIPIO_PROVA AS [UF Prova], &#xD;&#xA;                         IN_PRESENCA_CN AS [Sit. Prova Ciências Naturais], IN_PRESENCA_CH AS [Sit. Prova Ciências Humanas], IN_PRESENCA_LC AS [Sit. Prova Linguas], &#xD;&#xA;                         IN_PRESENCA_MT AS [Sit. Prova Matemática], NU_NT_CN AS [Nota Ciências Natureza], NU_NT_CH AS [Nota Ciências Humanas], NU_NT_LC AS [Nota Linguas], &#xD;&#xA;                         NU_NT_MT AS [Nota Matemática], TX_RESPOSTAS_CN AS [Repos. Ciências Natureza], TX_RESPOSTAS_CH AS [Repos. Ciências Humanas], &#xD;&#xA;                         TX_RESPOSTAS_LC AS [Repos. Linguas], TX_RESPOSTAS_MT AS [Repos. Matemática], ID_PROVA_CN AS [Cor Prova Ciências Naturais], &#xD;&#xA;                         ID_PROVA_CH AS [Cor Prova Ciências Humanas], ID_PROVA_LC AS [Cor Prova Liguas], ID_PROVA_MT AS [Cor Prova Matemática], &#xD;&#xA;                         TP_LINGUA AS [Lingua Estrangeira], DS_GABARITO_CN AS [Gabarito Ciências Naturais], DS_GABARITO_CH AS [Gabarito Ciências Humanas], &#xD;&#xA;                         DS_GABARITO_LC AS [Gabarito Linguas], DS_GABARITO_MT AS [Gabarito Matemática], IN_STATUS_REDACAO AS [Sit. Presença Redação], &#xD;&#xA;                         NU_NOTA_COMP1 AS [Nota Redação Competência 1], NU_NOTA_COMP2 AS [Nota Redação Competência 2], NU_NOTA_COMP3 AS [Nota Redação Competência 3], &#xD;&#xA;                         NU_NOTA_COMP4 AS [Nota Redação Competência 4], NU_NOTA_COMP5 AS [Nota Redação Competência 5], NU_NOTA_REDACAO AS [Nota Redação], &#xD;&#xA;                         IN_CONCLUINTE_CENSO AS [Concluiu o Censo?], COD_ETAPA_ENSINO_CENSO AS [Etapa Ensino], COD_ENTIDADE_CENSO AS [Cod. Escola Censo], &#xD;&#xA;                         COD_MUNICIPIO_ESC_CENSO AS [Cód. Município Escola Censo], NO_MUNICIPIO_ESC_CENSO AS [Município Escola Censo], UF_ESC_CENSO AS [UF Escola Censo],&#xD;&#xA;                          ID_DEPENDENCIA_ADM_CENSO AS [Tipo Escola Censo], ID_LOCALIZACAO_CENSO AS [Localização Escola Censo], &#xD;&#xA;                         SIT_FUNC_CENSO AS [Sit. Funcionamento Escola Censo]&#xD;&#xA;FROM            ProvasEnem" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Número_x0020_de_x0020_Inscrição" msprop:design-time-name="a70a363a-7f74-4a22-9f24-6d3abae6a38b" msprop:DbColumnName="Número de Inscrição" msprop:FriendlyName="Número de Inscrição" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Ano_x0020_do_x0020_Enem" msprop:design-time-name="1f0ecb0b-4ada-41dd-af3c-8759d1d486d8" msprop:DbColumnName="Ano do Enem" msprop:FriendlyName="Ano do Enem" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Idade" msprop:design-time-name="7d22b798-864d-46de-a43d-63e22d307192" msprop:DbColumnName="Idade" msprop:FriendlyName="Idade" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sexo" msprop:design-time-name="3b517cbd-ed96-4047-a88d-f79f1708b927" msprop:DbColumnName="Sexo" msprop:FriendlyName="Sexo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_de_x0020_Residência" msprop:design-time-name="c9dad526-0899-40f7-bb28-559b281f4cdc" msprop:DbColumnName="Cód. Município de Residência" msprop:FriendlyName="Cód. Município de Residência" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_de_x0020_Residência" msprop:design-time-name="ec54e537-4f0e-47da-87d3-bcbb281c087c" msprop:DbColumnName="Município de Residência" msprop:FriendlyName="Município de Residência" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Residência" msprop:design-time-name="f50fd3b4-aa75-4396-a7ce-558d58c1e2e7" msprop:DbColumnName="UF Residência" msprop:FriendlyName="UF Residência" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sit._x0020_Conclusão_x0020_Ensino_x0020_Médio" msprop:design-time-name="996ee310-f06c-4541-a5a0-5c99ed6fb562" msprop:DbColumnName="Sit. Conclusão Ensino Médio" msprop:FriendlyName="Sit. Conclusão Ensino Médio" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Tipo_x0020_de_x0020_Ensino" msprop:design-time-name="20e5c3c7-a990-4822-b26b-b2a33f0bad41" msprop:DbColumnName="Tipo de Ensino" msprop:FriendlyName="Tipo de Ensino" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Certificação_x003F_" msprop:design-time-name="3e784bc9-74ec-40da-883d-432d6a431906" msprop:DbColumnName="Solicitou Certificação?" msprop:FriendlyName="Solicitou Certificação?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Em_x0020_Braille_x003F_" msprop:design-time-name="79afb102-6b73-43f4-84ca-d869decc9f9f" msprop:DbColumnName="Solicitou Em Braille?" msprop:FriendlyName="Solicitou Em Braille?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Ampliada_x003F_" msprop:design-time-name="4f439be5-fb7f-47f9-bffb-c65ebed500aa" msprop:DbColumnName="Solicitou Ampliada?" msprop:FriendlyName="Solicitou Ampliada?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Aux._x0020_Ledor_x003F_" msprop:design-time-name="46e18828-7bf5-4be8-b273-662d8bc1aa95" msprop:DbColumnName="Solicitou Aux. Ledor?" msprop:FriendlyName="Solicitou Aux. Ledor?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Sala_x0020_de_x0020_Fácil_x0020_Acesso_x003F_" msprop:design-time-name="9c942c71-c0d2-4db9-be02-74e9ba19a63e" msprop:DbColumnName="Solicitou Sala de Fácil Acesso?" msprop:FriendlyName="Solicitou Sala de Fácil Acesso?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Transcrição_x003F_" msprop:design-time-name="4b31571b-a6fb-4ed8-a556-86e708a6e7f7" msprop:DbColumnName="Solicitou Transcrição?" msprop:FriendlyName="Solicitou Transcrição?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Em_x0020_Libras_x003F_" msprop:design-time-name="884f208e-792f-48ed-a01f-30e4e032da36" msprop:DbColumnName="Solicitou Em Libras?" msprop:FriendlyName="Solicitou Em Libras?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_De_x0020_Unidade_x0020_Prisional_x003F_" msprop:design-time-name="a3a80711-99cc-4c66-84aa-ea06f256fb5f" msprop:DbColumnName="É De Unidade Prisional?" msprop:FriendlyName="É De Unidade Prisional?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Baixa_x0020_Visão_x003F_" msprop:design-time-name="5aa55581-823e-4d59-ae1d-27ec6530631a" msprop:DbColumnName="É Baixa Visão?" msprop:FriendlyName="É Baixa Visão?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Cego_x003F_" msprop:design-time-name="aae34ae6-9c76-4ace-b941-9717dce78d6b" msprop:DbColumnName="É Cego?" msprop:FriendlyName="É Cego?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Auditivo_x003F_" msprop:design-time-name="c1fbfc02-2abe-456a-8598-441f51cdcd57" msprop:DbColumnName="É Deficiênte Auditivo?" msprop:FriendlyName="É Deficiênte Auditivo?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Física_x003F_" msprop:design-time-name="6f91c2ed-7a96-4b4a-99dd-48f725216a9b" msprop:DbColumnName="É Deficiênte Física?" msprop:FriendlyName="É Deficiênte Física?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Mental_x003F_" msprop:design-time-name="6166cdcd-dbea-4582-be63-fbdb0a1b193d" msprop:DbColumnName="É Deficiênte Mental?" msprop:FriendlyName="É Deficiênte Mental?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Portador_x0020_de_x0020_Déficit_x0020_Atenção_x003F_" msprop:design-time-name="f5284c78-fdfd-4cea-988f-c137c9ab7ec7" msprop:DbColumnName="É Portador de Déficit Atenção?" msprop:FriendlyName="É Portador de Déficit Atenção?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Disléxico_x003F_" msprop:design-time-name="caba60cf-f315-448e-886b-1922c5add862" msprop:DbColumnName="É Disléxico?" msprop:FriendlyName="É Disléxico?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Gestante_x003F_" msprop:design-time-name="675e707f-bc50-4444-9b92-50035ef43b07" msprop:DbColumnName="É Gestante?" msprop:FriendlyName="É Gestante?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Lactante_x003F_" msprop:design-time-name="7773c5c8-47e9-4443-bee4-ddeb568699f9" msprop:DbColumnName="É Lactante?" msprop:FriendlyName="É Lactante?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Socitou_x0020_Leitura_x0020_Labial_x003F_" msprop:design-time-name="5a2408ff-1698-4e5b-96f8-53ec256d7930" msprop:DbColumnName="Socitou Leitura Labial?" msprop:FriendlyName="Socitou Leitura Labial?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Prova_x0020_Sabatista_x003F_" msprop:design-time-name="39372eef-ecd2-4a0d-9490-66c524a3d5d3" msprop:DbColumnName="Solicitou Prova Sabatista?" msprop:FriendlyName="Solicitou Prova Sabatista?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Surdo_x003F_" msprop:design-time-name="82c5cf0b-bb14-42a6-a254-0d9802fc4c05" msprop:DbColumnName="É Surdo?" msprop:FriendlyName="É Surdo?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Estado_x0020_Civil" msprop:design-time-name="3c2a9183-93fd-4dc5-bed4-0a94361d16a2" msprop:DbColumnName="Estado Civil" msprop:FriendlyName="Estado Civil" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x002F_Raça" msprop:design-time-name="68079bbc-f927-46ed-9343-03a0cc761a32" msprop:DbColumnName="Cor/Raça" msprop:FriendlyName="Cor/Raça" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cod._x0020_Escola" msprop:design-time-name="727cbb4f-573b-4236-b578-7d1c71e97b57" msprop:DbColumnName="Cod. Escola" msprop:FriendlyName="Cod. Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_Escola" msprop:design-time-name="c6d31cae-6603-47b8-b2bb-bd815f5b4205" msprop:DbColumnName="Cód. Município Escola" msprop:FriendlyName="Cód. Município Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_Escola" msprop:design-time-name="a7bf890e-08e8-44e4-b3de-3a151e2b03a2" msprop:DbColumnName="Município Escola" msprop:FriendlyName="Município Escola" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Escola" msprop:design-time-name="b166d98b-bb74-4eec-bb39-affe7ef92489" msprop:DbColumnName="UF Escola" msprop:FriendlyName="UF Escola" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola" msprop:design-time-name="69fff4bd-ed2a-4e49-b552-332a6c576c3f" msprop:DbColumnName="Tipo Escola" msprop:FriendlyName="Tipo Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Localização_x0020_Escola" msprop:design-time-name="06f806d5-7247-4ba4-afbe-04f0f95e5451" msprop:DbColumnName="Localização Escola" msprop:FriendlyName="Localização Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola" msprop:design-time-name="fab515a5-6ea7-40cf-bb53-7fb8121fa952" msprop:DbColumnName="Sit. Funcionamento Escola" msprop:FriendlyName="Sit. Funcionamento Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_Prova" msprop:design-time-name="e7789076-148e-410d-bf65-930f24deb923" msprop:DbColumnName="Cód. Município Prova" msprop:FriendlyName="Cód. Município Prova" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_Prova" msprop:design-time-name="a835285a-327b-4238-9497-8f5310af3c5f" msprop:DbColumnName="Município Prova" msprop:FriendlyName="Município Prova" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Prova" msprop:design-time-name="eaf104d9-49c5-44b0-9bb9-561ead2cadb5" msprop:DbColumnName="UF Prova" msprop:FriendlyName="UF Prova" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="1479d66e-461f-4289-b2ba-9d81a0d042ea" msprop:DbColumnName="Sit. Prova Ciências Naturais" msprop:FriendlyName="Sit. Prova Ciências Naturais" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="51baef0d-493b-45a3-9420-bccac422f3e5" msprop:DbColumnName="Sit. Prova Ciências Humanas" msprop:FriendlyName="Sit. Prova Ciências Humanas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Linguas" msprop:design-time-name="53593fc1-f85c-4b35-b039-87b507b16259" msprop:DbColumnName="Sit. Prova Linguas" msprop:FriendlyName="Sit. Prova Linguas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Matemática" msprop:design-time-name="91e31b8f-268d-43c6-af9b-7bea67e4df53" msprop:DbColumnName="Sit. Prova Matemática" msprop:FriendlyName="Sit. Prova Matemática" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Ciências_x0020_Natureza" msprop:design-time-name="4a3f42ca-e829-4d62-841a-44a291f5da04" msprop:DbColumnName="Nota Ciências Natureza" msprop:FriendlyName="Nota Ciências Natureza" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Ciências_x0020_Humanas" msprop:design-time-name="d371f86d-b36d-4e72-bbc0-0feb0adf38eb" msprop:DbColumnName="Nota Ciências Humanas" msprop:FriendlyName="Nota Ciências Humanas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Linguas" msprop:design-time-name="28d4b22e-682d-460e-bda7-b4159b3f4f59" msprop:DbColumnName="Nota Linguas" msprop:FriendlyName="Nota Linguas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Matemática" msprop:design-time-name="79e3c4be-a033-4394-8063-a63d783f27b4" msprop:DbColumnName="Nota Matemática" msprop:FriendlyName="Nota Matemática" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Repos._x0020_Ciências_x0020_Natureza" msprop:design-time-name="6cf76c51-ce52-41cc-a895-943a7ccc5225" msprop:DbColumnName="Repos. Ciências Natureza" msprop:FriendlyName="Repos. Ciências Natureza" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Repos._x0020_Ciências_x0020_Humanas" msprop:design-time-name="e894de3e-5d7b-4bd0-8744-30da1a6596b7" msprop:DbColumnName="Repos. Ciências Humanas" msprop:FriendlyName="Repos. Ciências Humanas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Repos._x0020_Linguas" msprop:design-time-name="28d0b3a8-36ed-479b-bde6-c834b679ab76" msprop:DbColumnName="Repos. Linguas" msprop:FriendlyName="Repos. Linguas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Repos._x0020_Matemática" msprop:design-time-name="6ed1589a-b49d-4afc-9b7d-6af25607c396" msprop:DbColumnName="Repos. Matemática" msprop:FriendlyName="Repos. Matemática" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="2aae4783-f7c1-4aec-bbb9-b88208757429" msprop:DbColumnName="Cor Prova Ciências Naturais" msprop:FriendlyName="Cor Prova Ciências Naturais" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="c8e21cd6-5e64-4223-9c32-022614211a8f" msprop:DbColumnName="Cor Prova Ciências Humanas" msprop:FriendlyName="Cor Prova Ciências Humanas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Liguas" msprop:design-time-name="8febc264-9229-4ffa-8d02-6faacba12fa2" msprop:DbColumnName="Cor Prova Liguas" msprop:FriendlyName="Cor Prova Liguas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Matemática" msprop:design-time-name="cfff2774-47c8-4896-8dfb-f40dd12c29c0" msprop:DbColumnName="Cor Prova Matemática" msprop:FriendlyName="Cor Prova Matemática" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Lingua_x0020_Estrangeira" msprop:design-time-name="7eb574dc-eea2-4ed2-b6bc-31510b80fc28" msprop:DbColumnName="Lingua Estrangeira" msprop:FriendlyName="Lingua Estrangeira" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Gabarito_x0020_Ciências_x0020_Naturais" msprop:design-time-name="8df7e9bd-fe40-4a5c-90a4-143451a8af09" msprop:DbColumnName="Gabarito Ciências Naturais" msprop:FriendlyName="Gabarito Ciências Naturais" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Gabarito_x0020_Ciências_x0020_Humanas" msprop:design-time-name="8ec47cef-cd9c-45ec-9a31-5f6f73249110" msprop:DbColumnName="Gabarito Ciências Humanas" msprop:FriendlyName="Gabarito Ciências Humanas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Gabarito_x0020_Linguas" msprop:design-time-name="d211cb15-6866-45dd-b9cd-8e6bda9a7269" msprop:DbColumnName="Gabarito Linguas" msprop:FriendlyName="Gabarito Linguas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Gabarito_x0020_Matemática" msprop:design-time-name="76dfe94f-8546-4339-97ec-379afaff3d9d" msprop:DbColumnName="Gabarito Matemática" msprop:FriendlyName="Gabarito Matemática" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sit._x0020_Presença_x0020_Redação" msprop:design-time-name="37bddd63-2486-4ea8-9497-463e721ee47a" msprop:DbColumnName="Sit. Presença Redação" msprop:FriendlyName="Sit. Presença Redação" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_1" msprop:design-time-name="e00ad941-aa63-49e3-934f-063d93a7a805" msprop:DbColumnName="Nota Redação Competência 1" msprop:FriendlyName="Nota Redação Competência 1" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_2" msprop:design-time-name="744b76de-3335-4561-976e-db06161bec38" msprop:DbColumnName="Nota Redação Competência 2" msprop:FriendlyName="Nota Redação Competência 2" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_3" msprop:design-time-name="3b08a922-f441-4a6d-adf5-731a11455520" msprop:DbColumnName="Nota Redação Competência 3" msprop:FriendlyName="Nota Redação Competência 3" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_4" msprop:design-time-name="9eac90d7-0459-4802-94b6-d645131b3a88" msprop:DbColumnName="Nota Redação Competência 4" msprop:FriendlyName="Nota Redação Competência 4" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_5" msprop:design-time-name="51957925-8b6a-428a-bf4e-d2b468726cc1" msprop:DbColumnName="Nota Redação Competência 5" msprop:FriendlyName="Nota Redação Competência 5" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação" msprop:design-time-name="0fc59e0f-4b32-426f-801e-a9f201889788" msprop:DbColumnName="Nota Redação" msprop:FriendlyName="Nota Redação" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Concluiu_x0020_o_x0020_Censo_x003F_" msprop:design-time-name="e820c9e6-a129-4dc2-ac67-ee58cc8a2a59" msprop:DbColumnName="Concluiu o Censo?" msprop:FriendlyName="Concluiu o Censo?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Etapa_x0020_Ensino" msprop:design-time-name="7b1163cb-a350-47bb-8c78-1c5698d2828c" msprop:DbColumnName="Etapa Ensino" msprop:FriendlyName="Etapa Ensino" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cod._x0020_Escola_x0020_Censo" msprop:design-time-name="55c243f2-a6c4-4d7a-a4fa-10ac354792bc" msprop:DbColumnName="Cod. Escola Censo" msprop:FriendlyName="Cod. Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_Escola_x0020_Censo" msprop:design-time-name="84bda2b6-5f5c-4d45-92c7-f45aee6e0622" msprop:DbColumnName="Cód. Município Escola Censo" msprop:FriendlyName="Cód. Município Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_Escola_x0020_Censo" msprop:design-time-name="cff2a092-06ca-4bb6-a898-41dca6c69a1b" msprop:DbColumnName="Município Escola Censo" msprop:FriendlyName="Município Escola Censo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Escola_x0020_Censo" msprop:design-time-name="2812f7d2-844a-480b-aade-4616e3bc28ad" msprop:DbColumnName="UF Escola Censo" msprop:FriendlyName="UF Escola Censo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola_x0020_Censo" msprop:design-time-name="1e4836df-08d5-4d2f-861e-b45e669293e5" msprop:DbColumnName="Tipo Escola Censo" msprop:FriendlyName="Tipo Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Localização_x0020_Escola_x0020_Censo" msprop:design-time-name="d2d9c91d-496e-45e3-8973-a2fc9280dd33" msprop:DbColumnName="Localização Escola Censo" msprop:FriendlyName="Localização Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola_x0020_Censo" msprop:design-time-name="ee4ccf76-60b6-40f3-9a35-bd7766c9793a" msprop:DbColumnName="Sit. Funcionamento Escola Censo" msprop:FriendlyName="Sit. Funcionamento Escola Censo" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <Enem xmlns="" />
+  </Schema>
+</DataSourceView>

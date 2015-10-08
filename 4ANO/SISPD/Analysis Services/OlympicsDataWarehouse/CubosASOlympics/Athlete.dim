@@ -1,8 +1,8 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="717853ba-830f-4c8c-8c35-e83caa92221c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Athlete</ID>
   <Name>Athlete</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T02:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T02:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
@@ -66,7 +66,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T02:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="cc728bfe-c220-4db1-978d-fe6fecd1d60c">
     <DataSourceViewID>DataSourceView</DataSourceViewID>
@@ -85,8 +85,8 @@
       <Usage>Key</Usage>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="c5e29827-2619-478e-beae-894097d2e408">
-          <NullProcessing>UnknownMember</NullProcessing>
           <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="13863300-a825-4994-b17b-c096bdbeada8">
             <TableID>dbo_DimAthlete</TableID>
             <ColumnID>AthleteSK</ColumnID>
@@ -114,6 +114,7 @@
     <Attribute dwd:design-time-name="f4671fcd-95af-4e0b-8f33-b93e05d5ccda">
       <ID>Birth Year</ID>
       <Name>Birth Year</Name>
+      <Type>Years</Type>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="6171091a-f4cc-449f-af9e-634e7142e0f5">
           <DataType>Integer</DataType>
@@ -134,15 +135,21 @@
       <ID>Hierarchy</ID>
       <Name>Athlete</Name>
       <Levels>
-        <Level dwd:design-time-name="463d76b1-7c20-4002-a878-954177ef37fb">
-          <ID>Birth Year</ID>
-          <Name>Birth Year</Name>
-          <SourceAttributeID>Birth Year</SourceAttributeID>
-        </Level>
         <Level dwd:design-time-name="3d680c70-b581-4e0e-949d-f5ab17e47edb">
           <ID>Athlete</ID>
           <Name>Athlete</Name>
           <SourceAttributeID>Athlete</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="11d893a4-b6e8-47c1-a796-4a2c63b5e1a2">
+      <ID>Hierarchy 1</ID>
+      <Name>Athlete Birth Year</Name>
+      <Levels>
+        <Level dwd:design-time-name="9092b383-b280-4577-9c07-1df29ec69e35">
+          <ID>Birth Year</ID>
+          <Name>Birth Year</Name>
+          <SourceAttributeID>Birth Year</SourceAttributeID>
         </Level>
       </Levels>
     </Hierarchy>

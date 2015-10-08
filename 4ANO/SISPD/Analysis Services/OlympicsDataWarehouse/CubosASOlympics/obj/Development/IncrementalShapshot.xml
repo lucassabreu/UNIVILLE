@@ -33,7 +33,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>ZrctXKdSlqYSk1W6cs0Bbg37cxM=31/08/2015 20:03:3031/08/2015 19:51:48</TimeStamp>
+        <TimeStamp>n2CLuXBvkL0LhMODRenWHPxvdEE=03/09/2015 19:31:1531/08/2015 19:51:48</TimeStamp>
         <ID>
           <String>Athlete</String>
         </ID>
@@ -46,8 +46,29 @@
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0iYMznWLD7pq/wejDu52O3L1b7E=03/09/2015 19:15:4203/09/2015 19:15:42</TimeStamp>
+        <ID>
+          <String>Sport</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>D8wd55wQdzUlKE3lmoPy/G/Lrpo=03/09/2015 19:19:0203/09/2015 19:17:48</TimeStamp>
+        <ID>
+          <String>Olympics</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AOTHALz38VxLhqG7JVLieZ/Yz+o=03/09/2015 19:24:4703/09/2015 19:21:05</TimeStamp>
+        <ID>
+          <String>Closing Ceremony Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>BivKTjOOv3VkQfC/bivB2MDyLvQ=31/08/2015 20:05:0331/08/2015 20:05:03i6fNuux/VjuqI9uKS2v+GD0ue/Q=31/08/2015 20:05:0331/08/2015 20:05:03</TimeStamp>
+        <TimeStamp>MG/BXKt1CqbpgYJ8KQFPymK954Y=03/09/2015 19:30:4431/08/2015 20:05:03i6fNuux/VjuqI9uKS2v+GD0ue/Q=31/08/2015 20:05:0331/08/2015 20:05:03</TimeStamp>
         <ID>
           <String>Olympics</String>
         </ID>
@@ -64,5 +85,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2015-08-31T23:05:17.753333Z</LastDeployed>
+  <LastDeployed>2015-09-03T22:31:21.553333Z</LastDeployed>
 </DeploymentSnapshot>

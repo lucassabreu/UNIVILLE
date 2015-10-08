@@ -1,0 +1,6 @@
+D:\Documents\workspace\UNIVILLE\4ANO\ITC\SimuladorProgramaMaquinaTurring\SimuladorProgramaMaquinaTurring\bin\Debug\SimuladorProgramaMaquinaTurring.exe.config
+D:\Documents\workspace\UNIVILLE\4ANO\ITC\SimuladorProgramaMaquinaTurring\SimuladorProgramaMaquinaTurring\bin\Debug\SimuladorProgramaMaquinaTurring.exe
+D:\Documents\workspace\UNIVILLE\4ANO\ITC\SimuladorProgramaMaquinaTurring\SimuladorProgramaMaquinaTurring\bin\Debug\SimuladorProgramaMaquinaTurring.pdb
+D:\Documents\workspace\UNIVILLE\4ANO\ITC\SimuladorProgramaMaquinaTurring\SimuladorProgramaMaquinaTurring\obj\Debug\SimuladorProgramaMaquinaTurring.csprojResolveAssemblyReference.cache
+D:\Documents\workspace\UNIVILLE\4ANO\ITC\SimuladorProgramaMaquinaTurring\SimuladorProgramaMaquinaTurring\obj\Debug\SimuladorProgramaMaquinaTurring.exe
+D:\Documents\workspace\UNIVILLE\4ANO\ITC\SimuladorProgramaMaquinaTurring\SimuladorProgramaMaquinaTurring\obj\Debug\SimuladorProgramaMaquinaTurring.pdb

@@ -1,11 +1,188 @@
 ﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8c8e2230-0689-4200-b01e-86b032073903" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Olympics</ID>
   <Name>Olympics</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T02:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T02:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-85" scrolltop="-877" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20108" y="13070" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimAthlete" left="689" top="7242" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimAthlete" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactOlympics" left="20" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="4339" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000f3100000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactOlympics" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimCountry" left="6759" top="1270" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCountry" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1790" top="4542" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactOlympics-DimAthlete]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2189" y="7242" />
+              <point x="2189" y="4842" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4059" top="2022" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactOlympics-DimCountry]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="12" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6759" y="2421" />
+              <point x="4359" y="2421" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimClosingCeremonyDate" left="8591" top="5419" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="4339" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000f31000004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimClosingCeremonyDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4059" top="-79" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="4832" height="6372" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactOlympics-DimClosingCeremonyDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="2" sourceattachpoint="14" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8591" y="5893" />
+              <point x="6475" y="5893" />
+              <point x="6475" y="221" />
+              <point x="4359" y="221" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimOlympics" left="10415" top="2576" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimOlympics" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4059" top="471" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="6656" height="3106" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactOlympics-DimOlympics]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="2" sourceattachpoint="10" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10415" y="3177" />
+              <point x="7387" y="3177" />
+              <point x="7387" y="771" />
+              <point x="4359" y="771" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimSport" left="13415" top="5696" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimSport" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4059" top="-79" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="9656" height="6564" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactOlympics-DimSport]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="2" sourceattachpoint="10" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13415" y="6085" />
+              <point x="8887" y="6085" />
+              <point x="8887" y="221" />
+              <point x="4359" y="221" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +198,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-85</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-877</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -40,7 +217,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T02:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
     <Dimension dwd:design-time-name="8266c5ff-43e6-49bc-828f-7f8c3a26f2c7">
@@ -77,16 +254,71 @@
         <Hierarchy dwd:design-time-name="fda1ea90-e732-4db1-b0e2-35fc8d68939f">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
+        <Hierarchy dwd:design-time-name="e1e05d65-2e4b-4d06-8dd9-d5fdf11c0e8e">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
       </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="2bebe3a0-71a1-48f9-a19d-6ea59383f451">
+      <ID>Closing Ceremony Date</ID>
+      <Name>Closing Ceremony Date</Name>
+      <DimensionID>Closing Ceremony Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="54424a5d-af5a-4891-89a1-155f787d351b">
+          <AttributeID>Closing Ceremony Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="81b07eb3-1338-48dd-8c1a-8bb2b9c0b6f2">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f8da3456-9247-4c5e-a39d-eba1d170cc79">
+          <AttributeID>Month Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fc1ba58b-63ad-47ba-8d8b-1d8b4aa006de">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3f993e06-4975-4c84-ac5d-63a2cf5faf17">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="89ede3ea-4eda-47b0-bca3-ea6fcd9b1a8a">
+      <ID>Olympics</ID>
+      <Name>Olympics</Name>
+      <DimensionID>Olympics</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="151488b2-c45c-415d-ab11-57d237fa2ae9">
+          <AttributeID>Olympics Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a67c25b-4cb5-426a-b748-07ca78f19493">
+          <AttributeID>Olympics Type</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="28103958-76f5-4156-81c4-fe2bd2ec63d6">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="519a1507-7630-4186-8c31-f48a7a231d1e">
+      <ID>Sport</ID>
+      <Name>Sport</Name>
+      <DimensionID>Sport</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1bc801c6-c76e-4b31-8a82-cb3646e432c4">
+          <AttributeID>Sport</AttributeID>
+        </Attribute>
+      </Attributes>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
     <MeasureGroup dwd:design-time-name="eee33cdf-d97e-436c-9ef6-ffd2e738a14f">
       <ID>Fact Olympics</ID>
-      <Name>Fact Olympics</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <Name>Olympics</Name>
+      <CreatedTimestamp>0001-01-01T02:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T02:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T02:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
         <Measure dwd:design-time-name="497386f5-eac6-4dd5-bc4f-55b24af3b66b">
@@ -133,8 +365,8 @@
               <AttributeID>Country</AttributeID>
               <KeyColumns>
                 <KeyColumn dwd:design-time-name="fa23c1d5-691e-489b-b88a-103398f2837a">
-                  <NullProcessing>UnknownMember</NullProcessing>
                   <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="28c1ec93-d903-40a7-9d18-df6fde9c4144">
                     <TableID>dbo_FactOlympics</TableID>
                     <ColumnID>CountrySK</ColumnID>
@@ -152,11 +384,68 @@
               <AttributeID>Athlete</AttributeID>
               <KeyColumns>
                 <KeyColumn dwd:design-time-name="9b351db1-5782-453e-a82d-db795c11c022">
-                  <NullProcessing>UnknownMember</NullProcessing>
                   <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="68c3f1d5-572a-4ce6-a1ac-f157526f6fed">
                     <TableID>dbo_FactOlympics</TableID>
                     <ColumnID>AthleteSK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="adb300cd-b1d9-4311-b045-c344477bad79">
+          <CubeDimensionID>Closing Ceremony Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2a0cb5a5-e4e5-4d48-a92b-65b165ebfee4">
+              <AttributeID>Closing Ceremony Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0dff96df-d9bc-4843-aec4-3f1341d617f9">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="49a53884-6c43-47cf-9c4f-7a5d3b05063b">
+                    <TableID>dbo_FactOlympics</TableID>
+                    <ColumnID>ClosingCeremonyDateSK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c5e4a6ab-ec53-4143-b7bd-c56834954a97">
+          <CubeDimensionID>Olympics</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4be7cc4d-feaf-435d-9483-26e2830da99d">
+              <AttributeID>Olympics Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="57bf9f44-7d09-433c-b2c6-4ed1377a4769">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d52dad7e-4d30-41ed-ba84-764555cc9a2c">
+                    <TableID>dbo_FactOlympics</TableID>
+                    <ColumnID>OlympicsSK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="074064e1-a558-497e-896b-57cbc309b1f3">
+          <CubeDimensionID>Sport</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d0b10198-d7c3-40b6-8055-5bcbc2a61b3c">
+              <AttributeID>Sport</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fa29537a-ad76-4635-9aad-b5617d27d66d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9ce7d42e-5680-4afa-980b-39e457babaa0">
+                    <TableID>dbo_FactOlympics</TableID>
+                    <ColumnID>SportSK</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -171,4 +460,26 @@
   <Source dwd:design-time-name="f6759247-7b99-423d-ad30-32c7917d8a9c">
     <DataSourceViewID>DataSourceView</DataSourceViewID>
   </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="5b22be35-cdeb-40a8-89b5-5f2980d00961">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Points]
+ AS ([Measures].[Gold Medals] * 3) + ([Measures].[Silver Medals] * 2) + [Measures].[Bronze Medals], 
+FORMAT_STRING = "#.##0;-#.##0", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Olympics'  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
 </Cube>
