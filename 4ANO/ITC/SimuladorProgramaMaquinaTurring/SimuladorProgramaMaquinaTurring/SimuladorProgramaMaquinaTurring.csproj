@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TuringMachine\Program.cs" />
+    <Compile Include="TuringMachineSimulator.cs" />
+    <Compile Include="TuringMachine\Command.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

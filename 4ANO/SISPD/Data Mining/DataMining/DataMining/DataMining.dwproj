@@ -18,12 +18,6 @@
       <FullPath>Enem.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
-  <MiningModels>
-    <ProjectItem>
-      <Name>Provas Enem.dmm</Name>
-      <FullPath>Provas Enem.dmm</FullPath>
-    </ProjectItem>
-  </MiningModels>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
