@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9703" scrolltop="-14208" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20638" y="14393" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9300" scrolltop="-10490" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29554" y="14393" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -38,13 +38,24 @@
                 <layoutmanager>
                   <ddsxmlobj />
                 </layoutmanager>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Provas Enem" left="-8625" top="-9948" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5398" height="13307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Provas" left="-5848" top="-8519" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="6932" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
-                    <ddsxmlobjectstreaminitwrapper binary="000a000016150000fb330000" />
+                    <ddsxmlobjectstreaminitwrapper binary="000a0000141b000088130000" />
                   </control>
                   <layoutobject>
                     <ddsxmlobj>
-                      <property name="LogicalObject" value="Provas Enem" vartype="8" />
+                      <property name="LogicalObject" value="dbo_ProvaView" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="ParaTeste" left="2011" top="-5794" logicalid="3" controlid="2" masterid="0" hint1="0" hint2="0" width="6932" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000a0000141b000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="ParaTeste" vartype="8" />
                     </ddsxmlobj>
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
@@ -53,8 +64,8 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>-9703</DiagramViewPortLeft>
-            <DiagramViewPortTop>-14208</DiagramViewPortTop>
+            <DiagramViewPortLeft>-9300</DiagramViewPortLeft>
+            <DiagramViewPortTop>-10490</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>100</DiagramZoom>
@@ -69,189 +80,853 @@
       <xs:element name="Enem" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="d79738d2-5e95-419a-903d-6baa0aa0a054">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="Provas_x0020_Enem" msprop:design-time-name="568f8fdf-ff42-49c2-bc64-fa5e5e196df0" msprop:IsLogical="True" msprop:FriendlyName="Provas Enem" msprop:DbTableName="Provas Enem" msprop:TableType="View" msprop:Description="" msprop:QueryDefinition="SELECT        NU_INSCRICAO AS [Número de Inscrição], NU_ANO AS [Ano do Enem], IDADE AS Idade, TP_SEXO AS Sexo, &#xD;&#xA;                         COD_MUNICIPIO_INSC AS [Cód. Município de Residência], NO_MUNICIPIO_INSC AS [Município de Residência], UF_INSC AS [UF Residência], &#xD;&#xA;                         ST_CONCLUSAO AS [Sit. Conclusão Ensino Médio], IN_TP_ENSINO AS [Tipo de Ensino], IN_CERTIFICADO AS [Solicitou Certificação?], &#xD;&#xA;                         IN_BRAILLE AS [Solicitou Em Braille?], IN_AMPLIADA AS [Solicitou Ampliada?], IN_LEDOR AS [Solicitou Aux. Ledor?], &#xD;&#xA;                         IN_ACESSO AS [Solicitou Sala de Fácil Acesso?], IN_TRANSCRICAO AS [Solicitou Transcrição?], IN_LIBRAS AS [Solicitou Em Libras?], &#xD;&#xA;                         IN_UNIDADE_PRISIONAL AS [É De Unidade Prisional?], IN_BAIXA_VISAO AS [É Baixa Visão?], IN_CEGUEIRA AS [É Cego?], &#xD;&#xA;                         IN_DEFICIENCIA_AUDITIVA AS [É Deficiênte Auditivo?], IN_DEFICIENCIA_FISICA AS [É Deficiênte Física?], IN_DEFICIENCIA_MENTAL AS [É Deficiênte Mental?], &#xD;&#xA;                         IN_DEFICIT_ATENCAO AS [É Portador de Déficit Atenção?], IN_DISLEXIA AS [É Disléxico?], IN_GESTANTE AS [É Gestante?], IN_LACTANTE AS [É Lactante?], &#xD;&#xA;                         IN_LEITURA_LABIAL AS [Socitou Leitura Labial?], IN_SABATISTA AS [Solicitou Prova Sabatista?], IN_SURDEZ AS [É Surdo?], TP_ESTADO_CIVIL AS [Estado Civil], &#xD;&#xA;                         TP_COR_RACA AS [Cor/Raça], PK_COD_ENTIDADE AS [Cod. Escola], COD_MUNICIPIO_ESC AS [Cód. Município Escola], NO_MUNICIPIO_ESC AS [Município Escola], &#xD;&#xA;                         UF_ESC AS [UF Escola], ID_DEPENDENCIA_ADM AS [Tipo Escola], ID_LOCALIZACAO AS [Localização Escola], SIT_FUNC AS [Sit. Funcionamento Escola], &#xD;&#xA;                         COD_MUNICIPIO_PROVA AS [Cód. Município Prova], NO_MUNICIPIO_PROVA AS [Município Prova], UF_MUNICIPIO_PROVA AS [UF Prova], &#xD;&#xA;                         IN_PRESENCA_CN AS [Sit. Prova Ciências Naturais], IN_PRESENCA_CH AS [Sit. Prova Ciências Humanas], IN_PRESENCA_LC AS [Sit. Prova Linguas], &#xD;&#xA;                         IN_PRESENCA_MT AS [Sit. Prova Matemática], NU_NT_CN AS [Nota Ciências Natureza], NU_NT_CH AS [Nota Ciências Humanas], NU_NT_LC AS [Nota Linguas], &#xD;&#xA;                         NU_NT_MT AS [Nota Matemática], TX_RESPOSTAS_CN AS [Repos. Ciências Natureza], TX_RESPOSTAS_CH AS [Repos. Ciências Humanas], &#xD;&#xA;                         TX_RESPOSTAS_LC AS [Repos. Linguas], TX_RESPOSTAS_MT AS [Repos. Matemática], ID_PROVA_CN AS [Cor Prova Ciências Naturais], &#xD;&#xA;                         ID_PROVA_CH AS [Cor Prova Ciências Humanas], ID_PROVA_LC AS [Cor Prova Liguas], ID_PROVA_MT AS [Cor Prova Matemática], &#xD;&#xA;                         TP_LINGUA AS [Lingua Estrangeira], DS_GABARITO_CN AS [Gabarito Ciências Naturais], DS_GABARITO_CH AS [Gabarito Ciências Humanas], &#xD;&#xA;                         DS_GABARITO_LC AS [Gabarito Linguas], DS_GABARITO_MT AS [Gabarito Matemática], IN_STATUS_REDACAO AS [Sit. Presença Redação], &#xD;&#xA;                         NU_NOTA_COMP1 AS [Nota Redação Competência 1], NU_NOTA_COMP2 AS [Nota Redação Competência 2], NU_NOTA_COMP3 AS [Nota Redação Competência 3], &#xD;&#xA;                         NU_NOTA_COMP4 AS [Nota Redação Competência 4], NU_NOTA_COMP5 AS [Nota Redação Competência 5], NU_NOTA_REDACAO AS [Nota Redação], &#xD;&#xA;                         IN_CONCLUINTE_CENSO AS [Concluiu o Censo?], COD_ETAPA_ENSINO_CENSO AS [Etapa Ensino], COD_ENTIDADE_CENSO AS [Cod. Escola Censo], &#xD;&#xA;                         COD_MUNICIPIO_ESC_CENSO AS [Cód. Município Escola Censo], NO_MUNICIPIO_ESC_CENSO AS [Município Escola Censo], UF_ESC_CENSO AS [UF Escola Censo],&#xD;&#xA;                          ID_DEPENDENCIA_ADM_CENSO AS [Tipo Escola Censo], ID_LOCALIZACAO_CENSO AS [Localização Escola Censo], &#xD;&#xA;                         SIT_FUNC_CENSO AS [Sit. Funcionamento Escola Censo]&#xD;&#xA;FROM            ProvasEnem" msprop:QueryBuilder="SpecificQueryBuilder">
+            <xs:element name="dbo_ProvaView" msprop:design-time-name="3e852599-b2ec-4ab1-8350-5ac36917df6e" msprop:FriendlyName="Provas" msprop:DbSchemaName="dbo" msprop:DbTableName="ProvaView" msprop:TableType="View">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="Número_x0020_de_x0020_Inscrição" msprop:design-time-name="a70a363a-7f74-4a22-9f24-6d3abae6a38b" msprop:DbColumnName="Número de Inscrição" msprop:FriendlyName="Número de Inscrição" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Ano_x0020_do_x0020_Enem" msprop:design-time-name="1f0ecb0b-4ada-41dd-af3c-8759d1d486d8" msprop:DbColumnName="Ano do Enem" msprop:FriendlyName="Ano do Enem" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Idade" msprop:design-time-name="7d22b798-864d-46de-a43d-63e22d307192" msprop:DbColumnName="Idade" msprop:FriendlyName="Idade" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Sexo" msprop:design-time-name="3b517cbd-ed96-4047-a88d-f79f1708b927" msprop:DbColumnName="Sexo" msprop:FriendlyName="Sexo" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cód._x0020_Município_x0020_de_x0020_Residência" msprop:design-time-name="c9dad526-0899-40f7-bb28-559b281f4cdc" msprop:DbColumnName="Cód. Município de Residência" msprop:FriendlyName="Cód. Município de Residência" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Município_x0020_de_x0020_Residência" msprop:design-time-name="ec54e537-4f0e-47da-87d3-bcbb281c087c" msprop:DbColumnName="Município de Residência" msprop:FriendlyName="Município de Residência" minOccurs="0">
+                  <xs:element name="Número_x0020_de_x0020_Inscrição" msprop:design-time-name="246774cc-d1d6-435b-aff6-4946584c7fdd" msprop:DbColumnName="Número de Inscrição" msprop:FriendlyName="Número de Inscrição" type="xs:decimal" />
+                  <xs:element name="Ano_x0020_do_x0020_Enem" msprop:design-time-name="452685b1-eed4-4a97-b673-2a8656db81e3" msprop:DbColumnName="Ano do Enem" msprop:FriendlyName="Ano do Enem" type="xs:decimal" />
+                  <xs:element name="IDADE" msprop:design-time-name="b2d89364-f5db-4926-8130-b7db838660d2" msprop:DbColumnName="IDADE" msprop:FriendlyName="IDADE" type="xs:decimal" />
+                  <xs:element name="Sexo" msprop:design-time-name="916b1283-4893-438a-bb1b-180d760b60f0" msprop:DbColumnName="Sexo" msprop:FriendlyName="Sexo" type="xs:decimal" />
+                  <xs:element name="Cód._x0020_Município_x0020_de_x0020_Residência" msprop:design-time-name="688e6480-4290-4dab-8556-086f3c84a0f4" msprop:DbColumnName="Cód. Município de Residência" msprop:FriendlyName="Cód. Município de Residência" type="xs:decimal" />
+                  <xs:element name="Município_x0020_de_x0020_Residência" msprop:design-time-name="070d18db-1a19-4550-94ff-a2865a068b8f" msprop:DbColumnName="Município de Residência" msprop:FriendlyName="Município de Residência">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="150" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="UF_x0020_Residência" msprop:design-time-name="f50fd3b4-aa75-4396-a7ce-558d58c1e2e7" msprop:DbColumnName="UF Residência" msprop:FriendlyName="UF Residência" minOccurs="0">
+                  <xs:element name="UF_x0020_Residência" msprop:design-time-name="c00ed878-0822-48ef-af7f-1694c7b54068" msprop:DbColumnName="UF Residência" msprop:FriendlyName="UF Residência">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="2" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Sit._x0020_Conclusão_x0020_Ensino_x0020_Médio" msprop:design-time-name="996ee310-f06c-4541-a5a0-5c99ed6fb562" msprop:DbColumnName="Sit. Conclusão Ensino Médio" msprop:FriendlyName="Sit. Conclusão Ensino Médio" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Tipo_x0020_de_x0020_Ensino" msprop:design-time-name="20e5c3c7-a990-4822-b26b-b2a33f0bad41" msprop:DbColumnName="Tipo de Ensino" msprop:FriendlyName="Tipo de Ensino" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Certificação_x003F_" msprop:design-time-name="3e784bc9-74ec-40da-883d-432d6a431906" msprop:DbColumnName="Solicitou Certificação?" msprop:FriendlyName="Solicitou Certificação?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Em_x0020_Braille_x003F_" msprop:design-time-name="79afb102-6b73-43f4-84ca-d869decc9f9f" msprop:DbColumnName="Solicitou Em Braille?" msprop:FriendlyName="Solicitou Em Braille?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Ampliada_x003F_" msprop:design-time-name="4f439be5-fb7f-47f9-bffb-c65ebed500aa" msprop:DbColumnName="Solicitou Ampliada?" msprop:FriendlyName="Solicitou Ampliada?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Aux._x0020_Ledor_x003F_" msprop:design-time-name="46e18828-7bf5-4be8-b273-662d8bc1aa95" msprop:DbColumnName="Solicitou Aux. Ledor?" msprop:FriendlyName="Solicitou Aux. Ledor?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Sala_x0020_de_x0020_Fácil_x0020_Acesso_x003F_" msprop:design-time-name="9c942c71-c0d2-4db9-be02-74e9ba19a63e" msprop:DbColumnName="Solicitou Sala de Fácil Acesso?" msprop:FriendlyName="Solicitou Sala de Fácil Acesso?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Transcrição_x003F_" msprop:design-time-name="4b31571b-a6fb-4ed8-a556-86e708a6e7f7" msprop:DbColumnName="Solicitou Transcrição?" msprop:FriendlyName="Solicitou Transcrição?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Em_x0020_Libras_x003F_" msprop:design-time-name="884f208e-792f-48ed-a01f-30e4e032da36" msprop:DbColumnName="Solicitou Em Libras?" msprop:FriendlyName="Solicitou Em Libras?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_De_x0020_Unidade_x0020_Prisional_x003F_" msprop:design-time-name="a3a80711-99cc-4c66-84aa-ea06f256fb5f" msprop:DbColumnName="É De Unidade Prisional?" msprop:FriendlyName="É De Unidade Prisional?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Baixa_x0020_Visão_x003F_" msprop:design-time-name="5aa55581-823e-4d59-ae1d-27ec6530631a" msprop:DbColumnName="É Baixa Visão?" msprop:FriendlyName="É Baixa Visão?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Cego_x003F_" msprop:design-time-name="aae34ae6-9c76-4ace-b941-9717dce78d6b" msprop:DbColumnName="É Cego?" msprop:FriendlyName="É Cego?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Deficiênte_x0020_Auditivo_x003F_" msprop:design-time-name="c1fbfc02-2abe-456a-8598-441f51cdcd57" msprop:DbColumnName="É Deficiênte Auditivo?" msprop:FriendlyName="É Deficiênte Auditivo?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Deficiênte_x0020_Física_x003F_" msprop:design-time-name="6f91c2ed-7a96-4b4a-99dd-48f725216a9b" msprop:DbColumnName="É Deficiênte Física?" msprop:FriendlyName="É Deficiênte Física?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Deficiênte_x0020_Mental_x003F_" msprop:design-time-name="6166cdcd-dbea-4582-be63-fbdb0a1b193d" msprop:DbColumnName="É Deficiênte Mental?" msprop:FriendlyName="É Deficiênte Mental?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Portador_x0020_de_x0020_Déficit_x0020_Atenção_x003F_" msprop:design-time-name="f5284c78-fdfd-4cea-988f-c137c9ab7ec7" msprop:DbColumnName="É Portador de Déficit Atenção?" msprop:FriendlyName="É Portador de Déficit Atenção?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Disléxico_x003F_" msprop:design-time-name="caba60cf-f315-448e-886b-1922c5add862" msprop:DbColumnName="É Disléxico?" msprop:FriendlyName="É Disléxico?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Gestante_x003F_" msprop:design-time-name="675e707f-bc50-4444-9b92-50035ef43b07" msprop:DbColumnName="É Gestante?" msprop:FriendlyName="É Gestante?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Lactante_x003F_" msprop:design-time-name="7773c5c8-47e9-4443-bee4-ddeb568699f9" msprop:DbColumnName="É Lactante?" msprop:FriendlyName="É Lactante?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Socitou_x0020_Leitura_x0020_Labial_x003F_" msprop:design-time-name="5a2408ff-1698-4e5b-96f8-53ec256d7930" msprop:DbColumnName="Socitou Leitura Labial?" msprop:FriendlyName="Socitou Leitura Labial?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Solicitou_x0020_Prova_x0020_Sabatista_x003F_" msprop:design-time-name="39372eef-ecd2-4a0d-9490-66c524a3d5d3" msprop:DbColumnName="Solicitou Prova Sabatista?" msprop:FriendlyName="Solicitou Prova Sabatista?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="É_x0020_Surdo_x003F_" msprop:design-time-name="82c5cf0b-bb14-42a6-a254-0d9802fc4c05" msprop:DbColumnName="É Surdo?" msprop:FriendlyName="É Surdo?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Estado_x0020_Civil" msprop:design-time-name="3c2a9183-93fd-4dc5-bed4-0a94361d16a2" msprop:DbColumnName="Estado Civil" msprop:FriendlyName="Estado Civil" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cor_x002F_Raça" msprop:design-time-name="68079bbc-f927-46ed-9343-03a0cc761a32" msprop:DbColumnName="Cor/Raça" msprop:FriendlyName="Cor/Raça" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cod._x0020_Escola" msprop:design-time-name="727cbb4f-573b-4236-b578-7d1c71e97b57" msprop:DbColumnName="Cod. Escola" msprop:FriendlyName="Cod. Escola" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cód._x0020_Município_x0020_Escola" msprop:design-time-name="c6d31cae-6603-47b8-b2bb-bd815f5b4205" msprop:DbColumnName="Cód. Município Escola" msprop:FriendlyName="Cód. Município Escola" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Município_x0020_Escola" msprop:design-time-name="a7bf890e-08e8-44e4-b3de-3a151e2b03a2" msprop:DbColumnName="Município Escola" msprop:FriendlyName="Município Escola" minOccurs="0">
+                  <xs:element name="Sit._x0020_Conclusão_x0020_Ensino_x0020_Médio" msprop:design-time-name="1938f6b0-9405-468d-a54a-19e0edcf940c" msprop:DbColumnName="Sit. Conclusão Ensino Médio" msprop:FriendlyName="Sit. Conclusão Ensino Médio" type="xs:decimal" />
+                  <xs:element name="Tipo_x0020_de_x0020_Ensino" msprop:design-time-name="836d796e-0cfe-4d4d-9fef-455596d653ca" msprop:DbColumnName="Tipo de Ensino" msprop:FriendlyName="Tipo de Ensino" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Certificação_x003F_" msprop:design-time-name="0d9c0d34-981c-4805-86ab-dcc6d1967a73" msprop:DbColumnName="Solicitou Certificação?" msprop:FriendlyName="Solicitou Certificação?" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Em_x0020_Braille_x003F_" msprop:design-time-name="720a469f-426b-4b41-a26c-78ab7e20b07c" msprop:DbColumnName="Solicitou Em Braille?" msprop:FriendlyName="Solicitou Em Braille?" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Ampliada_x003F_" msprop:design-time-name="36b44bd1-23f1-40d7-a4ca-04cc92d6833c" msprop:DbColumnName="Solicitou Ampliada?" msprop:FriendlyName="Solicitou Ampliada?" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Aux._x0020_Ledor_x003F_" msprop:design-time-name="886e7fcb-f5b6-4623-af68-5d76d40a43d0" msprop:DbColumnName="Solicitou Aux. Ledor?" msprop:FriendlyName="Solicitou Aux. Ledor?" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Sala_x0020_de_x0020_Fácil_x0020_Acesso_x003F_" msprop:design-time-name="bb2068d4-61be-4675-959b-7ef6a37c76cc" msprop:DbColumnName="Solicitou Sala de Fácil Acesso?" msprop:FriendlyName="Solicitou Sala de Fácil Acesso?" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Transcrição_x003F_" msprop:design-time-name="469a0953-efcc-4459-92e2-056b35fd6035" msprop:DbColumnName="Solicitou Transcrição?" msprop:FriendlyName="Solicitou Transcrição?" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Em_x0020_Libras_x003F_" msprop:design-time-name="59e6f073-0164-4f35-b2f7-370dc2f26111" msprop:DbColumnName="Solicitou Em Libras?" msprop:FriendlyName="Solicitou Em Libras?" type="xs:decimal" />
+                  <xs:element name="É_x0020_De_x0020_Unidade_x0020_Prisional_x003F_" msprop:design-time-name="6ac4ffc1-a642-4e00-a785-5b1beff11838" msprop:DbColumnName="É De Unidade Prisional?" msprop:FriendlyName="É De Unidade Prisional?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Baixa_x0020_Visão_x003F_" msprop:design-time-name="ac520bf8-ba09-4210-9b99-7b38c9b0707b" msprop:DbColumnName="É Baixa Visão?" msprop:FriendlyName="É Baixa Visão?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Cego_x003F_" msprop:design-time-name="6b7692b3-ec79-452f-9715-08c4c43da7ec" msprop:DbColumnName="É Cego?" msprop:FriendlyName="É Cego?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Auditivo_x003F_" msprop:design-time-name="028ff544-b77d-4e0b-8dd0-0edc27971628" msprop:DbColumnName="É Deficiênte Auditivo?" msprop:FriendlyName="É Deficiênte Auditivo?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Física_x003F_" msprop:design-time-name="ef56b281-0da6-41fe-9c31-0c545c92f0e8" msprop:DbColumnName="É Deficiênte Física?" msprop:FriendlyName="É Deficiênte Física?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Mental_x003F_" msprop:design-time-name="1e6f92d0-bfe3-4f70-9ab1-3231291e05ba" msprop:DbColumnName="É Deficiênte Mental?" msprop:FriendlyName="É Deficiênte Mental?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Portador_x0020_de_x0020_Déficit_x0020_Atenção_x003F_" msprop:design-time-name="12562138-f6d1-43b4-8e75-b96d02e8b1a6" msprop:DbColumnName="É Portador de Déficit Atenção?" msprop:FriendlyName="É Portador de Déficit Atenção?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Disléxico_x003F_" msprop:design-time-name="d1cf06a7-5173-47a7-b938-2677f0d41b06" msprop:DbColumnName="É Disléxico?" msprop:FriendlyName="É Disléxico?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Gestante_x003F_" msprop:design-time-name="404c694e-0673-44ba-a981-1c1508ef93ff" msprop:DbColumnName="É Gestante?" msprop:FriendlyName="É Gestante?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Lactante_x003F_" msprop:design-time-name="d511c2ba-c2e8-45e3-9d06-1726f8436a13" msprop:DbColumnName="É Lactante?" msprop:FriendlyName="É Lactante?" type="xs:decimal" />
+                  <xs:element name="Socitou_x0020_Leitura_x0020_Labial_x003F_" msprop:design-time-name="ef338b7b-fc17-4bb2-b611-7446aa79804b" msprop:DbColumnName="Socitou Leitura Labial?" msprop:FriendlyName="Socitou Leitura Labial?" type="xs:decimal" />
+                  <xs:element name="Solicitou_x0020_Prova_x0020_Sabatista_x003F_" msprop:design-time-name="494d7785-240d-49ef-acf4-83da0a8e19a3" msprop:DbColumnName="Solicitou Prova Sabatista?" msprop:FriendlyName="Solicitou Prova Sabatista?" type="xs:decimal" />
+                  <xs:element name="É_x0020_Surdo_x003F_" msprop:design-time-name="a6be96cf-c4aa-4964-a9df-c1e9518ae83b" msprop:DbColumnName="É Surdo?" msprop:FriendlyName="É Surdo?" type="xs:decimal" />
+                  <xs:element name="Estado_x0020_Civil" msprop:design-time-name="8238d3ac-7106-4416-8dd8-6ee431fc28b8" msprop:DbColumnName="Estado Civil" msprop:FriendlyName="Estado Civil" type="xs:decimal" />
+                  <xs:element name="Cor_x002F_Raça" msprop:design-time-name="7ea696ef-a2b2-4c8b-9e47-e5148d117229" msprop:DbColumnName="Cor/Raça" msprop:FriendlyName="Cor/Raça" type="xs:decimal" />
+                  <xs:element name="Cod._x0020_Escola" msprop:design-time-name="1daa6e36-f37a-47c7-b681-34fb7703a90d" msprop:DbColumnName="Cod. Escola" msprop:FriendlyName="Cod. Escola" type="xs:decimal" />
+                  <xs:element name="Cód._x0020_Município_x0020_Escola" msprop:design-time-name="d01daad0-0212-4e92-ba1d-3b3c20402abb" msprop:DbColumnName="Cód. Município Escola" msprop:FriendlyName="Cód. Município Escola" type="xs:decimal" />
+                  <xs:element name="Município_x0020_Escola" msprop:design-time-name="1393610e-0083-4b21-9f29-a903d51a46ea" msprop:DbColumnName="Município Escola" msprop:FriendlyName="Município Escola">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="150" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="UF_x0020_Escola" msprop:design-time-name="b166d98b-bb74-4eec-bb39-affe7ef92489" msprop:DbColumnName="UF Escola" msprop:FriendlyName="UF Escola" minOccurs="0">
+                  <xs:element name="UF_x0020_Escola" msprop:design-time-name="c9cfaa40-6969-4fff-b020-fad17755ec3c" msprop:DbColumnName="UF Escola" msprop:FriendlyName="UF Escola">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="2" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Tipo_x0020_Escola" msprop:design-time-name="69fff4bd-ed2a-4e49-b552-332a6c576c3f" msprop:DbColumnName="Tipo Escola" msprop:FriendlyName="Tipo Escola" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Localização_x0020_Escola" msprop:design-time-name="06f806d5-7247-4ba4-afbe-04f0f95e5451" msprop:DbColumnName="Localização Escola" msprop:FriendlyName="Localização Escola" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola" msprop:design-time-name="fab515a5-6ea7-40cf-bb53-7fb8121fa952" msprop:DbColumnName="Sit. Funcionamento Escola" msprop:FriendlyName="Sit. Funcionamento Escola" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cód._x0020_Município_x0020_Prova" msprop:design-time-name="e7789076-148e-410d-bf65-930f24deb923" msprop:DbColumnName="Cód. Município Prova" msprop:FriendlyName="Cód. Município Prova" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Município_x0020_Prova" msprop:design-time-name="a835285a-327b-4238-9497-8f5310af3c5f" msprop:DbColumnName="Município Prova" msprop:FriendlyName="Município Prova" minOccurs="0">
+                  <xs:element name="Tipo_x0020_Escola" msprop:design-time-name="803f086e-9b02-4df6-bc84-2ec5a9c6ba66" msprop:DbColumnName="Tipo Escola" msprop:FriendlyName="Tipo Escola" type="xs:decimal" />
+                  <xs:element name="Localização_x0020_Escola" msprop:design-time-name="ba7eff2e-3f7b-4339-b870-68024291378a" msprop:DbColumnName="Localização Escola" msprop:FriendlyName="Localização Escola" type="xs:decimal" />
+                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola" msprop:design-time-name="846adcc2-813e-4e25-b9d6-7b3663eba75a" msprop:DbColumnName="Sit. Funcionamento Escola" msprop:FriendlyName="Sit. Funcionamento Escola" type="xs:decimal" />
+                  <xs:element name="Cód._x0020_Município_x0020_Prova" msprop:design-time-name="8b6b15b3-e11b-4658-bc7d-d8f70ce030d7" msprop:DbColumnName="Cód. Município Prova" msprop:FriendlyName="Cód. Município Prova" type="xs:decimal" />
+                  <xs:element name="Município_x0020_Prova" msprop:design-time-name="a78a88fe-5e9e-4bc0-9011-bec24b840c54" msprop:DbColumnName="Município Prova" msprop:FriendlyName="Município Prova">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="150" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="UF_x0020_Prova" msprop:design-time-name="eaf104d9-49c5-44b0-9bb9-561ead2cadb5" msprop:DbColumnName="UF Prova" msprop:FriendlyName="UF Prova" minOccurs="0">
+                  <xs:element name="UF_x0020_Prova" msprop:design-time-name="834b8aab-2344-480b-aa64-557e7f504c5c" msprop:DbColumnName="UF Prova" msprop:FriendlyName="UF Prova">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="2" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="1479d66e-461f-4289-b2ba-9d81a0d042ea" msprop:DbColumnName="Sit. Prova Ciências Naturais" msprop:FriendlyName="Sit. Prova Ciências Naturais" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="51baef0d-493b-45a3-9420-bccac422f3e5" msprop:DbColumnName="Sit. Prova Ciências Humanas" msprop:FriendlyName="Sit. Prova Ciências Humanas" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Sit._x0020_Prova_x0020_Linguas" msprop:design-time-name="53593fc1-f85c-4b35-b039-87b507b16259" msprop:DbColumnName="Sit. Prova Linguas" msprop:FriendlyName="Sit. Prova Linguas" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Sit._x0020_Prova_x0020_Matemática" msprop:design-time-name="91e31b8f-268d-43c6-af9b-7bea67e4df53" msprop:DbColumnName="Sit. Prova Matemática" msprop:FriendlyName="Sit. Prova Matemática" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Ciências_x0020_Natureza" msprop:design-time-name="4a3f42ca-e829-4d62-841a-44a291f5da04" msprop:DbColumnName="Nota Ciências Natureza" msprop:FriendlyName="Nota Ciências Natureza" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Ciências_x0020_Humanas" msprop:design-time-name="d371f86d-b36d-4e72-bbc0-0feb0adf38eb" msprop:DbColumnName="Nota Ciências Humanas" msprop:FriendlyName="Nota Ciências Humanas" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Linguas" msprop:design-time-name="28d4b22e-682d-460e-bda7-b4159b3f4f59" msprop:DbColumnName="Nota Linguas" msprop:FriendlyName="Nota Linguas" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Matemática" msprop:design-time-name="79e3c4be-a033-4394-8063-a63d783f27b4" msprop:DbColumnName="Nota Matemática" msprop:FriendlyName="Nota Matemática" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Repos._x0020_Ciências_x0020_Natureza" msprop:design-time-name="6cf76c51-ce52-41cc-a895-943a7ccc5225" msprop:DbColumnName="Repos. Ciências Natureza" msprop:FriendlyName="Repos. Ciências Natureza" minOccurs="0">
+                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="ab34d250-1205-4f66-838f-8bf12d16c6e3" msprop:DbColumnName="Sit. Prova Ciências Naturais" msprop:FriendlyName="Sit. Prova Ciências Naturais" type="xs:decimal" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="1433c765-201f-4ee4-9ba2-d2fee3d3df38" msprop:DbColumnName="Sit. Prova Ciências Humanas" msprop:FriendlyName="Sit. Prova Ciências Humanas" type="xs:decimal" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Linguas" msprop:design-time-name="672b6851-64bc-4a9b-a6ce-3270cd81290a" msprop:DbColumnName="Sit. Prova Linguas" msprop:FriendlyName="Sit. Prova Linguas" type="xs:decimal" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Matemática" msprop:design-time-name="1e2e0b86-0a3f-47af-af5a-34d3f0aa2277" msprop:DbColumnName="Sit. Prova Matemática" msprop:FriendlyName="Sit. Prova Matemática" type="xs:decimal" />
+                  <xs:element name="Repos._x0020_Ciências_x0020_Natureza" msprop:design-time-name="d530d967-c06d-49bd-b872-702c0af6e8be" msprop:DbColumnName="Repos. Ciências Natureza" msprop:FriendlyName="Repos. Ciências Natureza">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="45" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Repos._x0020_Ciências_x0020_Humanas" msprop:design-time-name="e894de3e-5d7b-4bd0-8744-30da1a6596b7" msprop:DbColumnName="Repos. Ciências Humanas" msprop:FriendlyName="Repos. Ciências Humanas" minOccurs="0">
+                  <xs:element name="Repos._x0020_Ciências_x0020_Humanas" msprop:design-time-name="423c84e2-2cf8-47c2-81ba-0978ef9fe556" msprop:DbColumnName="Repos. Ciências Humanas" msprop:FriendlyName="Repos. Ciências Humanas">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="45" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Repos._x0020_Linguas" msprop:design-time-name="28d0b3a8-36ed-479b-bde6-c834b679ab76" msprop:DbColumnName="Repos. Linguas" msprop:FriendlyName="Repos. Linguas" minOccurs="0">
+                  <xs:element name="Repos._x0020_Linguas" msprop:design-time-name="a368e2c8-bfd2-4f90-a211-66c579352b0a" msprop:DbColumnName="Repos. Linguas" msprop:FriendlyName="Repos. Linguas">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="45" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Repos._x0020_Matemática" msprop:design-time-name="6ed1589a-b49d-4afc-9b7d-6af25607c396" msprop:DbColumnName="Repos. Matemática" msprop:FriendlyName="Repos. Matemática" minOccurs="0">
+                  <xs:element name="Repos._x0020_Matemática" msprop:design-time-name="0535f5eb-e225-4224-bd2f-716e2b32948d" msprop:DbColumnName="Repos. Matemática" msprop:FriendlyName="Repos. Matemática">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="45" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="2aae4783-f7c1-4aec-bbb9-b88208757429" msprop:DbColumnName="Cor Prova Ciências Naturais" msprop:FriendlyName="Cor Prova Ciências Naturais" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="c8e21cd6-5e64-4223-9c32-022614211a8f" msprop:DbColumnName="Cor Prova Ciências Humanas" msprop:FriendlyName="Cor Prova Ciências Humanas" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cor_x0020_Prova_x0020_Liguas" msprop:design-time-name="8febc264-9229-4ffa-8d02-6faacba12fa2" msprop:DbColumnName="Cor Prova Liguas" msprop:FriendlyName="Cor Prova Liguas" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cor_x0020_Prova_x0020_Matemática" msprop:design-time-name="cfff2774-47c8-4896-8dfb-f40dd12c29c0" msprop:DbColumnName="Cor Prova Matemática" msprop:FriendlyName="Cor Prova Matemática" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Lingua_x0020_Estrangeira" msprop:design-time-name="7eb574dc-eea2-4ed2-b6bc-31510b80fc28" msprop:DbColumnName="Lingua Estrangeira" msprop:FriendlyName="Lingua Estrangeira" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Gabarito_x0020_Ciências_x0020_Naturais" msprop:design-time-name="8df7e9bd-fe40-4a5c-90a4-143451a8af09" msprop:DbColumnName="Gabarito Ciências Naturais" msprop:FriendlyName="Gabarito Ciências Naturais" minOccurs="0">
+                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="0d05d514-cacd-46a5-a650-8cf0a5c84a66" msprop:DbColumnName="Cor Prova Ciências Naturais" msprop:FriendlyName="Cor Prova Ciências Naturais" type="xs:decimal" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="d2216c84-e802-4283-8e01-36a7d88e8a91" msprop:DbColumnName="Cor Prova Ciências Humanas" msprop:FriendlyName="Cor Prova Ciências Humanas" type="xs:decimal" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Liguas" msprop:design-time-name="c997c8a4-7433-4670-8585-d4fa0c429862" msprop:DbColumnName="Cor Prova Liguas" msprop:FriendlyName="Cor Prova Liguas" type="xs:decimal" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Matemática" msprop:design-time-name="9a1a7973-ebfb-4289-8935-d1394a94d6cc" msprop:DbColumnName="Cor Prova Matemática" msprop:FriendlyName="Cor Prova Matemática" type="xs:decimal" />
+                  <xs:element name="Lingua_x0020_Estrangeira" msprop:design-time-name="21f86465-026b-41ba-a291-c6b84101cc76" msprop:DbColumnName="Lingua Estrangeira" msprop:FriendlyName="Lingua Estrangeira" type="xs:decimal" />
+                  <xs:element name="Gabarito_x0020_Ciências_x0020_Naturais" msprop:design-time-name="38aa3ad0-6622-4cce-b555-85b7c49168f1" msprop:DbColumnName="Gabarito Ciências Naturais" msprop:FriendlyName="Gabarito Ciências Naturais">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="45" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Gabarito_x0020_Ciências_x0020_Humanas" msprop:design-time-name="8ec47cef-cd9c-45ec-9a31-5f6f73249110" msprop:DbColumnName="Gabarito Ciências Humanas" msprop:FriendlyName="Gabarito Ciências Humanas" minOccurs="0">
+                  <xs:element name="Gabarito_x0020_Ciências_x0020_Humanas" msprop:design-time-name="87a7d820-085a-4dfa-81e6-e9a41fcebfb9" msprop:DbColumnName="Gabarito Ciências Humanas" msprop:FriendlyName="Gabarito Ciências Humanas">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="45" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Gabarito_x0020_Linguas" msprop:design-time-name="d211cb15-6866-45dd-b9cd-8e6bda9a7269" msprop:DbColumnName="Gabarito Linguas" msprop:FriendlyName="Gabarito Linguas" minOccurs="0">
+                  <xs:element name="Gabarito_x0020_Linguas" msprop:design-time-name="d71045e3-1491-4600-9d51-b28b69e489f4" msprop:DbColumnName="Gabarito Linguas" msprop:FriendlyName="Gabarito Linguas">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Gabarito_x0020_Matemática" msprop:design-time-name="76dfe94f-8546-4339-97ec-379afaff3d9d" msprop:DbColumnName="Gabarito Matemática" msprop:FriendlyName="Gabarito Matemática" minOccurs="0">
+                  <xs:element name="Gabarito_x0020_Matemática" msprop:design-time-name="c91073e0-4a15-43f9-95c0-a6d0d96c0673" msprop:DbColumnName="Gabarito Matemática" msprop:FriendlyName="Gabarito Matemática">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="45" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Sit._x0020_Presença_x0020_Redação" msprop:design-time-name="37bddd63-2486-4ea8-9497-463e721ee47a" msprop:DbColumnName="Sit. Presença Redação" msprop:FriendlyName="Sit. Presença Redação" minOccurs="0">
+                  <xs:element name="Sit._x0020_Presença_x0020_Redação" msprop:design-time-name="c55b3413-7a3a-4d66-921a-876e339f947f" msprop:DbColumnName="Sit. Presença Redação" msprop:FriendlyName="Sit. Presença Redação">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="1" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_1" msprop:design-time-name="e00ad941-aa63-49e3-934f-063d93a7a805" msprop:DbColumnName="Nota Redação Competência 1" msprop:FriendlyName="Nota Redação Competência 1" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_2" msprop:design-time-name="744b76de-3335-4561-976e-db06161bec38" msprop:DbColumnName="Nota Redação Competência 2" msprop:FriendlyName="Nota Redação Competência 2" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_3" msprop:design-time-name="3b08a922-f441-4a6d-adf5-731a11455520" msprop:DbColumnName="Nota Redação Competência 3" msprop:FriendlyName="Nota Redação Competência 3" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_4" msprop:design-time-name="9eac90d7-0459-4802-94b6-d645131b3a88" msprop:DbColumnName="Nota Redação Competência 4" msprop:FriendlyName="Nota Redação Competência 4" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_5" msprop:design-time-name="51957925-8b6a-428a-bf4e-d2b468726cc1" msprop:DbColumnName="Nota Redação Competência 5" msprop:FriendlyName="Nota Redação Competência 5" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Nota_x0020_Redação" msprop:design-time-name="0fc59e0f-4b32-426f-801e-a9f201889788" msprop:DbColumnName="Nota Redação" msprop:FriendlyName="Nota Redação" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Concluiu_x0020_o_x0020_Censo_x003F_" msprop:design-time-name="e820c9e6-a129-4dc2-ac67-ee58cc8a2a59" msprop:DbColumnName="Concluiu o Censo?" msprop:FriendlyName="Concluiu o Censo?" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Etapa_x0020_Ensino" msprop:design-time-name="7b1163cb-a350-47bb-8c78-1c5698d2828c" msprop:DbColumnName="Etapa Ensino" msprop:FriendlyName="Etapa Ensino" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cod._x0020_Escola_x0020_Censo" msprop:design-time-name="55c243f2-a6c4-4d7a-a4fa-10ac354792bc" msprop:DbColumnName="Cod. Escola Censo" msprop:FriendlyName="Cod. Escola Censo" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Cód._x0020_Município_x0020_Escola_x0020_Censo" msprop:design-time-name="84bda2b6-5f5c-4d45-92c7-f45aee6e0622" msprop:DbColumnName="Cód. Município Escola Censo" msprop:FriendlyName="Cód. Município Escola Censo" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Município_x0020_Escola_x0020_Censo" msprop:design-time-name="cff2a092-06ca-4bb6-a898-41dca6c69a1b" msprop:DbColumnName="Município Escola Censo" msprop:FriendlyName="Município Escola Censo" minOccurs="0">
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_1" msprop:design-time-name="1b6a2a5d-0862-469e-9fad-755e098b35aa" msprop:DbColumnName="Nota Redação Competência 1" msprop:FriendlyName="Nota Redação Competência 1" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_2" msprop:design-time-name="1f8b4323-d22a-47c5-9bd8-4dddb31fd039" msprop:DbColumnName="Nota Redação Competência 2" msprop:FriendlyName="Nota Redação Competência 2" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_3" msprop:design-time-name="8b5ce040-1161-4f3d-aa6f-46e313048b3d" msprop:DbColumnName="Nota Redação Competência 3" msprop:FriendlyName="Nota Redação Competência 3" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_4" msprop:design-time-name="78e2b4b9-278f-4ea5-9023-122aa3fb36d0" msprop:DbColumnName="Nota Redação Competência 4" msprop:FriendlyName="Nota Redação Competência 4" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_5" msprop:design-time-name="1d1d34b0-7c27-46ef-a5ce-cb6af4903d2b" msprop:DbColumnName="Nota Redação Competência 5" msprop:FriendlyName="Nota Redação Competência 5" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Redação" msprop:design-time-name="ecd197a0-6cac-414f-a0ef-d9b480a81e97" msprop:DbColumnName="Nota Redação" msprop:FriendlyName="Nota Redação" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Ciências_x0020_Natureza" msprop:design-time-name="c3bf935f-d761-485d-a6b9-1e49858f22cd" msprop:DbColumnName="Nota Ciências Natureza" msprop:FriendlyName="Nota Ciências Natureza" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Ciências_x0020_Humanas" msprop:design-time-name="a2739584-db0f-42c3-b1db-acebe6a948cf" msprop:DbColumnName="Nota Ciências Humanas" msprop:FriendlyName="Nota Ciências Humanas" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Linguas" msprop:design-time-name="b45e19de-aa4e-4931-9ea0-36a24603e42f" msprop:DbColumnName="Nota Linguas" msprop:FriendlyName="Nota Linguas" type="xs:decimal" />
+                  <xs:element name="Nota_x0020_Matemática" msprop:design-time-name="a8fd285a-366a-444e-916d-8a0955610755" msprop:DbColumnName="Nota Matemática" msprop:FriendlyName="Nota Matemática" type="xs:decimal" />
+                  <xs:element name="Concluiu_x0020_o_x0020_Censo_x003F_" msprop:design-time-name="66331c4f-f618-429b-8879-e575ee48179d" msprop:DbColumnName="Concluiu o Censo?" msprop:FriendlyName="Concluiu o Censo?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Etapa_x0020_Ensino" msprop:design-time-name="bc4b97f8-a975-435f-b436-b1171c7ff5f6" msprop:DbColumnName="Etapa Ensino" msprop:FriendlyName="Etapa Ensino" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cod._x0020_Escola_x0020_Censo" msprop:design-time-name="03161812-ab00-4443-af53-bafd05d7114e" msprop:DbColumnName="Cod. Escola Censo" msprop:FriendlyName="Cod. Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_Escola_x0020_Censo" msprop:design-time-name="b9cc5c6a-b342-43e8-b668-74bc5015c6b2" msprop:DbColumnName="Cód. Município Escola Censo" msprop:FriendlyName="Cód. Município Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_Escola_x0020_Censo" msprop:design-time-name="4335f936-ad21-45d3-b127-bbea98b01ca2" msprop:DbColumnName="Município Escola Censo" msprop:FriendlyName="Município Escola Censo" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="150" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="UF_x0020_Escola_x0020_Censo" msprop:design-time-name="2812f7d2-844a-480b-aade-4616e3bc28ad" msprop:DbColumnName="UF Escola Censo" msprop:FriendlyName="UF Escola Censo" minOccurs="0">
+                  <xs:element name="UF_x0020_Escola_x0020_Censo" msprop:design-time-name="dba915dc-6ed6-48c7-9ba9-229e10235719" msprop:DbColumnName="UF Escola Censo" msprop:FriendlyName="UF Escola Censo" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="2" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Tipo_x0020_Escola_x0020_Censo" msprop:design-time-name="1e4836df-08d5-4d2f-861e-b45e669293e5" msprop:DbColumnName="Tipo Escola Censo" msprop:FriendlyName="Tipo Escola Censo" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Localização_x0020_Escola_x0020_Censo" msprop:design-time-name="d2d9c91d-496e-45e3-8973-a2fc9280dd33" msprop:DbColumnName="Localização Escola Censo" msprop:FriendlyName="Localização Escola Censo" type="xs:decimal" minOccurs="0" />
-                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola_x0020_Censo" msprop:design-time-name="ee4ccf76-60b6-40f3-9a35-bd7766c9793a" msprop:DbColumnName="Sit. Funcionamento Escola Censo" msprop:FriendlyName="Sit. Funcionamento Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Tipo_x0020_Escola_x0020_Censo" msprop:design-time-name="b618a5f1-a849-4e0f-886f-fd60168bf39f" msprop:DbColumnName="Tipo Escola Censo" msprop:FriendlyName="Tipo Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Localização_x0020_Escola_x0020_Censo" msprop:design-time-name="ffec73a0-9a14-4a2b-b4d9-58c45c96532e" msprop:DbColumnName="Localização Escola Censo" msprop:FriendlyName="Localização Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola_x0020_Censo" msprop:design-time-name="7959c528-300f-450d-b4f3-abe1c170c98e" msprop:DbColumnName="Sit. Funcionamento Escola Censo" msprop:FriendlyName="Sit. Funcionamento Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Respondeu_x003F_" msdata:ReadOnly="true" msprop:design-time-name="a4d3ca7a-a949-45a6-b621-01a19c7bebe2" msprop:DbColumnName="Respondeu?" msprop:FriendlyName="Respondeu?" type="xs:decimal" />
+                  <xs:element name="Qtde_x0020_Pessoas_x0020_Moram_x0020_Junto" msprop:design-time-name="8243fa13-5342-40e8-969e-c3a912b7fe67" msprop:DbColumnName="Qtde Pessoas Moram Junto" msprop:FriendlyName="Qtde Pessoas Moram Junto" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Escolaridade_x0020_Pai" msprop:design-time-name="04418cd9-8581-435b-8bbe-44cec0505b7e" msprop:DbColumnName="Escolaridade Pai" msprop:FriendlyName="Escolaridade Pai" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Escolaridade_x0020_Mãe" msprop:design-time-name="8858e33e-c789-430c-aa8c-a8ea2ff3905d" msprop:DbColumnName="Escolaridade Mãe" msprop:FriendlyName="Escolaridade Mãe" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Renda_x0020_Familiar" msprop:design-time-name="a853e487-79bd-44f7-820f-f33310f087c9" msprop:DbColumnName="Renda Familiar" msprop:FriendlyName="Renda Familiar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Renda_x0020_Individual" msprop:design-time-name="668b232f-44a9-4f63-a985-36aa06eab416" msprop:DbColumnName="Renda Individual" msprop:FriendlyName="Renda Individual" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Moradia" msprop:design-time-name="701723a8-abf2-430e-9d19-c2f1aae13c8e" msprop:DbColumnName="Tipo Moradia" msprop:FriendlyName="Tipo Moradia" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Localização_x0020_Moradia" msprop:design-time-name="e5ce9b13-1c47-4d5b-af4d-c7f0ec390d00" msprop:DbColumnName="Localização Moradia" msprop:FriendlyName="Localização Moradia" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Já_x0020_Trabalhou_x003F_" msprop:design-time-name="59a89a5a-7cec-4687-b5ba-bc8739022325" msprop:DbColumnName="Já Trabalhou?" msprop:FriendlyName="Já Trabalhou?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Ajudar_x0020_Despesas_x0020_Casa_x003F_" msprop:design-time-name="9ce2946b-079b-4f8f-9cf3-ad1be5d0e5ee" msprop:DbColumnName="Trabalhou para Ajudar Despesas Casa?" msprop:FriendlyName="Trabalhou para Ajudar Despesas Casa?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Sustentar_x0020_Família_x003F_" msprop:design-time-name="4f781dc9-71b0-4b69-9695-e6ebe7cb7354" msprop:DbColumnName="Trabalhou para Sustentar Família?" msprop:FriendlyName="Trabalhou para Sustentar Família?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_ser_x0020_Independente_x003F_" msprop:design-time-name="25ec5f6d-9c98-42a4-8ce8-15b3fa7fae6c" msprop:DbColumnName="Trabalhou para ser Independente?" msprop:FriendlyName="Trabalhou para ser Independente?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Adquirir_x0020_Experiência_x003F_" msprop:design-time-name="5cd71e6f-27d6-4f3a-a1fd-8d6fd3fbc6d8" msprop:DbColumnName="Trabalhou para Adquirir Experiência?" msprop:FriendlyName="Trabalhou para Adquirir Experiência?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Pagar_x0020_Estudos_x003F_" msprop:design-time-name="9fbe9a25-9e95-4d99-aae3-078d4d54ceb9" msprop:DbColumnName="Trabalhou para Pagar Estudos?" msprop:FriendlyName="Trabalhou para Pagar Estudos?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Preparatório_x0020_para_x0020_Trabalho_x003F_" msprop:design-time-name="47c2b44a-25d0-48b5-9cc2-ea84b42ab7e2" msprop:DbColumnName="Fez Curso Preparatório para Trabalho?" msprop:FriendlyName="Fez Curso Preparatório para Trabalho?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Profissionalizante_x003F_" msprop:design-time-name="e8b74e01-48a3-457b-a239-90b73b10c646" msprop:DbColumnName="Fez Curso Profissionalizante?" msprop:FriendlyName="Fez Curso Profissionalizante?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Preparatório_x0020_Vestibular_x003F_" msprop:design-time-name="0d8bd675-7228-4bd0-a2ce-dfd659ec36c6" msprop:DbColumnName="Fez Curso Preparatório Vestibular?" msprop:FriendlyName="Fez Curso Preparatório Vestibular?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Superior_x003F_" msprop:design-time-name="3932a325-ac01-4519-b752-12a130ac285b" msprop:DbColumnName="Fez Curso Superior?" msprop:FriendlyName="Fez Curso Superior?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_de_x0020_Lingua_x0020_Extrangeira_x003F_" msprop:design-time-name="03e2ee75-0db4-4e90-8db4-5debe7dc14d8" msprop:DbColumnName="Fez Curso de Lingua Extrangeira?" msprop:FriendlyName="Fez Curso de Lingua Extrangeira?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Informática_x003F_" msprop:design-time-name="85b0d72e-e341-4382-8875-fdf9e74a78ab" msprop:DbColumnName="Fez Curso Informática?" msprop:FriendlyName="Fez Curso Informática?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Preparatório_x0020_Concurso_x003F_" msprop:design-time-name="10e8a722-898d-4a78-9cc5-65f2e5298dbd" msprop:DbColumnName="Fez Curso Preparatório Concurso?" msprop:FriendlyName="Fez Curso Preparatório Concurso?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Outro_x0020_Curso_x003F_" msprop:design-time-name="342b8576-e497-491a-a53f-a36a7c443ea2" msprop:DbColumnName="Fez Outro Curso?" msprop:FriendlyName="Fez Outro Curso?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Qtde_x0020_Horas_x0020_Semanais_x0020_Que_x0020_Trabalha" msprop:design-time-name="b8e7195b-a3ff-4997-810d-8746c3b414f6" msprop:DbColumnName="Qtde Horas Semanais Que Trabalha" msprop:FriendlyName="Qtde Horas Semanais Que Trabalha" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Idade_x0020_que_x0020_Começou_x0020_a_x0020_Trabalhar" msprop:design-time-name="a142ae03-d01a-4bfa-88e4-eaf39d41f1a9" msprop:DbColumnName="Idade que Começou a Trabalhar" msprop:FriendlyName="Idade que Começou a Trabalhar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Qtde_x0020_Anos_x0020_para_x0020_Concluir_x0020_Ensino_x0020_Médio" msprop:design-time-name="3385b3ff-6b36-416f-8d27-5558fcaa07c3" msprop:DbColumnName="Qtde Anos para Concluir Ensino Médio" msprop:FriendlyName="Qtde Anos para Concluir Ensino Médio" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Qtde_x0020_Anos_x0020_para_x0020_Concluir_x0020_Ensino_x0020_Fundamental" msprop:design-time-name="f742fc29-2358-4adc-a2f4-f5eb9939acea" msprop:DbColumnName="Qtde Anos para Concluir Ensino Fundamental" msprop:FriendlyName="Qtde Anos para Concluir Ensino Fundamental" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola_x0020_Ensino_x0020_Fundamental" msprop:design-time-name="956d6c1d-b51b-4bcd-b35a-8fd4e2628e00" msprop:DbColumnName="Tipo Escola Ensino Fundamental" msprop:FriendlyName="Tipo Escola Ensino Fundamental" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola_x0020_Ensino_x0020_Médio" msprop:design-time-name="794fe7a4-487c-4b0d-b36d-c2d94d4ddf1a" msprop:DbColumnName="Tipo Escola Ensino Médio" msprop:FriendlyName="Tipo Escola Ensino Médio" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Parou_x0020_o_x0020_Ensino_x0020_Médio_x003F_" msprop:design-time-name="3c9f0147-ccaf-47a5-920e-844272819549" msprop:DbColumnName="Parou o Ensino Médio?" msprop:FriendlyName="Parou o Ensino Médio?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Ensino_x0020_Médio" msprop:design-time-name="8a3ae7d0-ce40-4aea-bf54-85ed1e3b0694" msprop:DbColumnName="Tipo Ensino Médio" msprop:FriendlyName="Tipo Ensino Médio" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_CH" msdata:ReadOnly="true" msprop:design-time-name="e404da19-106b-41a0-a3cd-3891a9ef7aa3" msprop:DbColumnName="Categoria Nota CH" msprop:FriendlyName="Categoria Nota CH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_CN" msdata:ReadOnly="true" msprop:design-time-name="2545fe27-f456-41b6-ac97-2b1a17fad8ee" msprop:DbColumnName="Categoria Nota CN" msprop:FriendlyName="Categoria Nota CN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_LN" msdata:ReadOnly="true" msprop:design-time-name="10c2ab82-38d1-495c-886f-b744b3acf389" msprop:DbColumnName="Categoria Nota LN" msprop:FriendlyName="Categoria Nota LN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_MT" msdata:ReadOnly="true" msprop:design-time-name="b62f4838-4305-4ea8-afaf-39d16eadf560" msprop:DbColumnName="Categoria Nota MT" msprop:FriendlyName="Categoria Nota MT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_RD" msdata:ReadOnly="true" msprop:design-time-name="66d5d1c3-8b9c-4495-bf85-aadc6f4f2a25" msprop:DbColumnName="Categoria Nota RD" msprop:FriendlyName="Categoria Nota RD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ParaTeste" msprop:design-time-name="e4350791-825f-48f7-87c4-6da72ede7f22" msprop:IsLogical="True" msprop:FriendlyName="ParaTeste" msprop:DbTableName="ParaTeste" msprop:TableType="View" msprop:Description="" msprop:QueryDefinition="SELECT        TOP (100) [Número de Inscrição], [Ano do Enem], IDADE, Sexo, [Cód. Município de Residência], [Município de Residência], [UF Residência], &#xD;&#xA;                         [Sit. Conclusão Ensino Médio], [Tipo de Ensino], [Solicitou Certificação?], [Solicitou Em Braille?], [Solicitou Ampliada?], [Solicitou Aux. Ledor?], &#xD;&#xA;                         [Solicitou Sala de Fácil Acesso?], [Solicitou Transcrição?], [Solicitou Em Libras?], [É De Unidade Prisional?], [É Baixa Visão?], [É Cego?], [É Deficiênte Auditivo?], &#xD;&#xA;                         [É Deficiênte Física?], [É Deficiênte Mental?], [É Portador de Déficit Atenção?], [É Disléxico?], [É Gestante?], [É Lactante?], [Socitou Leitura Labial?], &#xD;&#xA;                         [Solicitou Prova Sabatista?], [É Surdo?], [Estado Civil], [Cor/Raça], [Cod. Escola], [Cód. Município Escola], [Município Escola], [UF Escola], [Tipo Escola], &#xD;&#xA;                         [Localização Escola], [Sit. Funcionamento Escola], [Cód. Município Prova], [Município Prova], [UF Prova], [Sit. Prova Ciências Naturais], &#xD;&#xA;                         [Sit. Prova Ciências Humanas], [Sit. Prova Linguas], [Sit. Prova Matemática], [Repos. Ciências Natureza], [Repos. Ciências Humanas], [Repos. Linguas], &#xD;&#xA;                         [Repos. Matemática], [Cor Prova Ciências Naturais], [Cor Prova Ciências Humanas], [Cor Prova Liguas], [Cor Prova Matemática], [Lingua Estrangeira], &#xD;&#xA;                         [Gabarito Ciências Naturais], [Gabarito Ciências Humanas], [Gabarito Linguas], [Gabarito Matemática], [Sit. Presença Redação], [Nota Redação Competência 1], &#xD;&#xA;                         [Nota Redação Competência 2], [Nota Redação Competência 3], [Nota Redação Competência 4], [Nota Redação Competência 5], [Nota Redação], &#xD;&#xA;                         [Nota Ciências Natureza], [Nota Ciências Humanas], [Nota Linguas], [Nota Matemática], [Concluiu o Censo?], [Etapa Ensino], [Cod. Escola Censo], &#xD;&#xA;                         [Cód. Município Escola Censo], [Município Escola Censo], [UF Escola Censo], [Tipo Escola Censo], [Localização Escola Censo], [Sit. Funcionamento Escola Censo], &#xD;&#xA;                         [Respondeu?], [Qtde Pessoas Moram Junto], [Escolaridade Pai], [Escolaridade Mãe], [Renda Familiar], [Renda Individual], [Tipo Moradia], [Localização Moradia], &#xD;&#xA;                         [Já Trabalhou?], [Trabalhou para Ajudar Despesas Casa?], [Trabalhou para Sustentar Família?], [Trabalhou para ser Independente?], &#xD;&#xA;                         [Trabalhou para Adquirir Experiência?], [Trabalhou para Pagar Estudos?], [Fez Curso Preparatório para Trabalho?], [Fez Curso Profissionalizante?], &#xD;&#xA;                         [Fez Curso Preparatório Vestibular?], [Fez Curso Superior?], [Fez Curso de Lingua Extrangeira?], [Fez Curso Informática?], [Fez Curso Preparatório Concurso?], &#xD;&#xA;                         [Fez Outro Curso?], [Qtde Horas Semanais Que Trabalha], [Idade que Começou a Trabalhar], [Qtde Anos para Concluir Ensino Médio], &#xD;&#xA;                         [Qtde Anos para Concluir Ensino Fundamental], [Tipo Escola Ensino Fundamental], [Tipo Escola Ensino Médio], [Parou o Ensino Médio?], [Tipo Ensino Médio], &#xD;&#xA;                         [Categoria Nota CH], [Categoria Nota CN], [Categoria Nota LN], [Categoria Nota MT], [Categoria Nota RD]&#xD;&#xA;FROM            ProvaView&#xD;&#xA;WHERE        ([Nota Ciências Humanas] &gt; 75000)" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Número_x0020_de_x0020_Inscrição" msprop:design-time-name="839e5ec0-c375-4db0-bea9-28208264e6f9" msprop:DbColumnName="Número de Inscrição" msprop:FriendlyName="Número de Inscrição" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Ano_x0020_do_x0020_Enem" msprop:design-time-name="9117a626-5b56-4144-88ac-33f03787f627" msprop:DbColumnName="Ano do Enem" msprop:FriendlyName="Ano do Enem" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="IDADE" msprop:design-time-name="9e168f5c-1e72-4efb-86cd-d7f0de8c8542" msprop:DbColumnName="IDADE" msprop:FriendlyName="IDADE" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sexo" msprop:design-time-name="d4952959-30c5-456c-930a-002653cb451f" msprop:DbColumnName="Sexo" msprop:FriendlyName="Sexo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_de_x0020_Residência" msprop:design-time-name="7bc498d5-ace7-4d0f-a191-04c1554a7ccb" msprop:DbColumnName="Cód. Município de Residência" msprop:FriendlyName="Cód. Município de Residência" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_de_x0020_Residência" msprop:design-time-name="38298db9-0f75-4c4e-b068-fd80ec10ed72" msprop:DbColumnName="Município de Residência" msprop:FriendlyName="Município de Residência" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Residência" msprop:design-time-name="99e78bbf-d10b-461d-a492-5d90901378a1" msprop:DbColumnName="UF Residência" msprop:FriendlyName="UF Residência" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sit._x0020_Conclusão_x0020_Ensino_x0020_Médio" msprop:design-time-name="f932e2af-115f-4a96-b002-2184209e7a13" msprop:DbColumnName="Sit. Conclusão Ensino Médio" msprop:FriendlyName="Sit. Conclusão Ensino Médio" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Tipo_x0020_de_x0020_Ensino" msprop:design-time-name="0174ece1-5cf5-4502-b049-66fee86c044f" msprop:DbColumnName="Tipo de Ensino" msprop:FriendlyName="Tipo de Ensino" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Certificação_x003F_" msprop:design-time-name="ee02433a-a062-4166-9ad2-c513b84d8760" msprop:DbColumnName="Solicitou Certificação?" msprop:FriendlyName="Solicitou Certificação?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Em_x0020_Braille_x003F_" msprop:design-time-name="f3efa9b2-ab9e-44b2-a6aa-0e7f5c1f42c6" msprop:DbColumnName="Solicitou Em Braille?" msprop:FriendlyName="Solicitou Em Braille?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Ampliada_x003F_" msprop:design-time-name="3d0f8b49-f277-4ac2-8d7b-d36db3fd7c3c" msprop:DbColumnName="Solicitou Ampliada?" msprop:FriendlyName="Solicitou Ampliada?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Aux._x0020_Ledor_x003F_" msprop:design-time-name="8b332ed1-683d-4643-b759-076e3e014a81" msprop:DbColumnName="Solicitou Aux. Ledor?" msprop:FriendlyName="Solicitou Aux. Ledor?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Sala_x0020_de_x0020_Fácil_x0020_Acesso_x003F_" msprop:design-time-name="ca7ffd34-c065-4e8d-a2e1-91494ee26d03" msprop:DbColumnName="Solicitou Sala de Fácil Acesso?" msprop:FriendlyName="Solicitou Sala de Fácil Acesso?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Transcrição_x003F_" msprop:design-time-name="05a3ec7f-6477-4845-83cd-623b6b6bfd52" msprop:DbColumnName="Solicitou Transcrição?" msprop:FriendlyName="Solicitou Transcrição?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Em_x0020_Libras_x003F_" msprop:design-time-name="5b4077c1-8ecc-4a7c-b859-4ae814ab3b8a" msprop:DbColumnName="Solicitou Em Libras?" msprop:FriendlyName="Solicitou Em Libras?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_De_x0020_Unidade_x0020_Prisional_x003F_" msprop:design-time-name="2ba994e4-8896-46e0-8e69-5cc4bb3b09f0" msprop:DbColumnName="É De Unidade Prisional?" msprop:FriendlyName="É De Unidade Prisional?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Baixa_x0020_Visão_x003F_" msprop:design-time-name="62c6703f-6f6c-4348-989d-6c5c1e18d48e" msprop:DbColumnName="É Baixa Visão?" msprop:FriendlyName="É Baixa Visão?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Cego_x003F_" msprop:design-time-name="bf2ce76c-36d2-4196-81d7-f2ba29681e74" msprop:DbColumnName="É Cego?" msprop:FriendlyName="É Cego?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Auditivo_x003F_" msprop:design-time-name="e9baeedb-f60e-44d7-ba46-7c1da767603b" msprop:DbColumnName="É Deficiênte Auditivo?" msprop:FriendlyName="É Deficiênte Auditivo?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Física_x003F_" msprop:design-time-name="3485a776-ad3e-4163-b532-0595900a128c" msprop:DbColumnName="É Deficiênte Física?" msprop:FriendlyName="É Deficiênte Física?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Deficiênte_x0020_Mental_x003F_" msprop:design-time-name="4bc6a16e-13b2-41b0-82d0-7a66890d2168" msprop:DbColumnName="É Deficiênte Mental?" msprop:FriendlyName="É Deficiênte Mental?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Portador_x0020_de_x0020_Déficit_x0020_Atenção_x003F_" msprop:design-time-name="9c971ade-2492-45e5-b787-f013116195b6" msprop:DbColumnName="É Portador de Déficit Atenção?" msprop:FriendlyName="É Portador de Déficit Atenção?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Disléxico_x003F_" msprop:design-time-name="523a4206-dad1-4878-96f7-2884d28aaea8" msprop:DbColumnName="É Disléxico?" msprop:FriendlyName="É Disléxico?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Gestante_x003F_" msprop:design-time-name="d027ef1f-9239-469a-b314-ddabaf3af42d" msprop:DbColumnName="É Gestante?" msprop:FriendlyName="É Gestante?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Lactante_x003F_" msprop:design-time-name="a965d49a-5b8e-4e94-9614-928792c933a3" msprop:DbColumnName="É Lactante?" msprop:FriendlyName="É Lactante?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Socitou_x0020_Leitura_x0020_Labial_x003F_" msprop:design-time-name="fa333ce0-82df-464a-ae14-8eb84746b2ff" msprop:DbColumnName="Socitou Leitura Labial?" msprop:FriendlyName="Socitou Leitura Labial?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Solicitou_x0020_Prova_x0020_Sabatista_x003F_" msprop:design-time-name="5243e6b3-ecac-4072-80ee-db978feb39cf" msprop:DbColumnName="Solicitou Prova Sabatista?" msprop:FriendlyName="Solicitou Prova Sabatista?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="É_x0020_Surdo_x003F_" msprop:design-time-name="3a1880cb-f5e4-4210-8113-b293618b4dbc" msprop:DbColumnName="É Surdo?" msprop:FriendlyName="É Surdo?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Estado_x0020_Civil" msprop:design-time-name="c1f0a3af-9a17-444b-9501-12f0d72a6acb" msprop:DbColumnName="Estado Civil" msprop:FriendlyName="Estado Civil" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x002F_Raça" msprop:design-time-name="93827c33-50fd-417a-a13a-ce9eae26bf57" msprop:DbColumnName="Cor/Raça" msprop:FriendlyName="Cor/Raça" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cod._x0020_Escola" msprop:design-time-name="2e83683d-0522-4d10-97a4-0123a98ccc2f" msprop:DbColumnName="Cod. Escola" msprop:FriendlyName="Cod. Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_Escola" msprop:design-time-name="fe6a27ff-25a4-4d6c-adb4-cfdd9779cfad" msprop:DbColumnName="Cód. Município Escola" msprop:FriendlyName="Cód. Município Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_Escola" msprop:design-time-name="c98e047b-4a82-409c-9c8c-018d14d4747e" msprop:DbColumnName="Município Escola" msprop:FriendlyName="Município Escola" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Escola" msprop:design-time-name="87ed4829-04ed-4615-aad2-7a62aedb400a" msprop:DbColumnName="UF Escola" msprop:FriendlyName="UF Escola" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola" msprop:design-time-name="7545b9bc-b9aa-4ddb-af99-16b873501e6c" msprop:DbColumnName="Tipo Escola" msprop:FriendlyName="Tipo Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Localização_x0020_Escola" msprop:design-time-name="5b610809-f07d-4d53-9f85-343b3c6f569a" msprop:DbColumnName="Localização Escola" msprop:FriendlyName="Localização Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola" msprop:design-time-name="712c7df6-c681-4423-9afb-e8d692bb4b40" msprop:DbColumnName="Sit. Funcionamento Escola" msprop:FriendlyName="Sit. Funcionamento Escola" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_Prova" msprop:design-time-name="b90d0f9e-de1b-4c67-8de7-855af13aefeb" msprop:DbColumnName="Cód. Município Prova" msprop:FriendlyName="Cód. Município Prova" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_Prova" msprop:design-time-name="e3f0339f-899f-4a71-88c2-e4e047ef05ae" msprop:DbColumnName="Município Prova" msprop:FriendlyName="Município Prova" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Prova" msprop:design-time-name="2a2ed0a2-b969-4a36-a654-77d88ff789cc" msprop:DbColumnName="UF Prova" msprop:FriendlyName="UF Prova" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="180adf37-0e6d-44e0-b20d-a62ccaa48426" msprop:DbColumnName="Sit. Prova Ciências Naturais" msprop:FriendlyName="Sit. Prova Ciências Naturais" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="ec9a8cba-7d80-46fe-b707-62d24d26710b" msprop:DbColumnName="Sit. Prova Ciências Humanas" msprop:FriendlyName="Sit. Prova Ciências Humanas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Linguas" msprop:design-time-name="1f347ddf-eb3c-4519-a877-d424ed70c2b7" msprop:DbColumnName="Sit. Prova Linguas" msprop:FriendlyName="Sit. Prova Linguas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Prova_x0020_Matemática" msprop:design-time-name="1857d6bf-1342-4ecd-891d-6a24017d6f45" msprop:DbColumnName="Sit. Prova Matemática" msprop:FriendlyName="Sit. Prova Matemática" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Repos._x0020_Ciências_x0020_Natureza" msprop:design-time-name="f6e87514-71c9-4aea-a127-d9edf5265967" msprop:DbColumnName="Repos. Ciências Natureza" msprop:FriendlyName="Repos. Ciências Natureza" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Repos._x0020_Ciências_x0020_Humanas" msprop:design-time-name="356e631a-0581-4e92-9e09-7c8319facdfb" msprop:DbColumnName="Repos. Ciências Humanas" msprop:FriendlyName="Repos. Ciências Humanas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Repos._x0020_Linguas" msprop:design-time-name="916105c0-b6c1-4bb4-b003-758dd28aac62" msprop:DbColumnName="Repos. Linguas" msprop:FriendlyName="Repos. Linguas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Repos._x0020_Matemática" msprop:design-time-name="3fbf55e5-cc2e-4a43-b570-714e702748e4" msprop:DbColumnName="Repos. Matemática" msprop:FriendlyName="Repos. Matemática" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Naturais" msprop:design-time-name="0a88949f-6d55-4ea9-ae71-9323452caee1" msprop:DbColumnName="Cor Prova Ciências Naturais" msprop:FriendlyName="Cor Prova Ciências Naturais" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Ciências_x0020_Humanas" msprop:design-time-name="02d1b4d1-1886-4c7a-859e-b262419efab0" msprop:DbColumnName="Cor Prova Ciências Humanas" msprop:FriendlyName="Cor Prova Ciências Humanas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Liguas" msprop:design-time-name="f7ade6a1-19df-49c0-ace0-27602f23aa59" msprop:DbColumnName="Cor Prova Liguas" msprop:FriendlyName="Cor Prova Liguas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cor_x0020_Prova_x0020_Matemática" msprop:design-time-name="c89605e3-53f0-41c8-bcd8-1dac90f14f4b" msprop:DbColumnName="Cor Prova Matemática" msprop:FriendlyName="Cor Prova Matemática" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Lingua_x0020_Estrangeira" msprop:design-time-name="4c047319-71d2-4eca-b493-d5a6af478eb6" msprop:DbColumnName="Lingua Estrangeira" msprop:FriendlyName="Lingua Estrangeira" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Gabarito_x0020_Ciências_x0020_Naturais" msprop:design-time-name="dd8f20c8-4449-4bf5-b017-8c5920a7bf34" msprop:DbColumnName="Gabarito Ciências Naturais" msprop:FriendlyName="Gabarito Ciências Naturais" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Gabarito_x0020_Ciências_x0020_Humanas" msprop:design-time-name="b600b7d8-92f1-499c-ad22-ed77c676b2bb" msprop:DbColumnName="Gabarito Ciências Humanas" msprop:FriendlyName="Gabarito Ciências Humanas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Gabarito_x0020_Linguas" msprop:design-time-name="528e1563-ebc6-42f9-b067-968c699aad88" msprop:DbColumnName="Gabarito Linguas" msprop:FriendlyName="Gabarito Linguas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Gabarito_x0020_Matemática" msprop:design-time-name="3524e8a6-361b-4ca3-8616-11a8cbd6e930" msprop:DbColumnName="Gabarito Matemática" msprop:FriendlyName="Gabarito Matemática" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sit._x0020_Presença_x0020_Redação" msprop:design-time-name="15ce1366-73c0-43a9-9a68-16a388499bdc" msprop:DbColumnName="Sit. Presença Redação" msprop:FriendlyName="Sit. Presença Redação" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_1" msprop:design-time-name="6b1b984a-0261-4918-901b-639c130f5623" msprop:DbColumnName="Nota Redação Competência 1" msprop:FriendlyName="Nota Redação Competência 1" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_2" msprop:design-time-name="542d3b6a-efc0-4936-b5db-2be003a4fed7" msprop:DbColumnName="Nota Redação Competência 2" msprop:FriendlyName="Nota Redação Competência 2" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_3" msprop:design-time-name="d10e4f20-42b1-4abc-9123-fde567152ab0" msprop:DbColumnName="Nota Redação Competência 3" msprop:FriendlyName="Nota Redação Competência 3" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_4" msprop:design-time-name="f8c99542-9272-40d5-8089-abbdf34784b0" msprop:DbColumnName="Nota Redação Competência 4" msprop:FriendlyName="Nota Redação Competência 4" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação_x0020_Competência_x0020_5" msprop:design-time-name="d20aafe4-8f0d-4b14-af7a-b2ddaa997faf" msprop:DbColumnName="Nota Redação Competência 5" msprop:FriendlyName="Nota Redação Competência 5" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Redação" msprop:design-time-name="88508b13-efa9-483f-ac73-4571a8494d3b" msprop:DbColumnName="Nota Redação" msprop:FriendlyName="Nota Redação" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Ciências_x0020_Natureza" msprop:design-time-name="cd715d4b-082f-4b6a-ba85-964ca488b9e5" msprop:DbColumnName="Nota Ciências Natureza" msprop:FriendlyName="Nota Ciências Natureza" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Ciências_x0020_Humanas" msprop:design-time-name="41f65264-bc90-4a02-b3e3-38bdd86ef773" msprop:DbColumnName="Nota Ciências Humanas" msprop:FriendlyName="Nota Ciências Humanas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Linguas" msprop:design-time-name="567cd85f-8e35-45ef-ae91-3a571daa318d" msprop:DbColumnName="Nota Linguas" msprop:FriendlyName="Nota Linguas" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Nota_x0020_Matemática" msprop:design-time-name="7a439629-fe36-414c-86b8-0026d7c10d64" msprop:DbColumnName="Nota Matemática" msprop:FriendlyName="Nota Matemática" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Concluiu_x0020_o_x0020_Censo_x003F_" msprop:design-time-name="b7ac5312-cb7c-4e8f-bacf-993fd36e9407" msprop:DbColumnName="Concluiu o Censo?" msprop:FriendlyName="Concluiu o Censo?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Etapa_x0020_Ensino" msprop:design-time-name="793c207a-2464-4711-91f0-7bc3ff520238" msprop:DbColumnName="Etapa Ensino" msprop:FriendlyName="Etapa Ensino" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cod._x0020_Escola_x0020_Censo" msprop:design-time-name="57ec15ef-4492-4fbe-9ae9-1aefa4f8e8ae" msprop:DbColumnName="Cod. Escola Censo" msprop:FriendlyName="Cod. Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Cód._x0020_Município_x0020_Escola_x0020_Censo" msprop:design-time-name="df9fe5f3-2b4b-4acd-ab78-80164ddf6fc0" msprop:DbColumnName="Cód. Município Escola Censo" msprop:FriendlyName="Cód. Município Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Município_x0020_Escola_x0020_Censo" msprop:design-time-name="cab27b9f-8d14-4f75-9b0e-655ac812e821" msprop:DbColumnName="Município Escola Censo" msprop:FriendlyName="Município Escola Censo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UF_x0020_Escola_x0020_Censo" msprop:design-time-name="cfd82358-2edf-4e8a-b740-044c955f7f66" msprop:DbColumnName="UF Escola Censo" msprop:FriendlyName="UF Escola Censo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola_x0020_Censo" msprop:design-time-name="ed0ad9d7-f4e4-4832-9934-4c92726894b4" msprop:DbColumnName="Tipo Escola Censo" msprop:FriendlyName="Tipo Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Localização_x0020_Escola_x0020_Censo" msprop:design-time-name="a6bca47c-c138-494c-b7dd-5521202c3aa5" msprop:DbColumnName="Localização Escola Censo" msprop:FriendlyName="Localização Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Sit._x0020_Funcionamento_x0020_Escola_x0020_Censo" msprop:design-time-name="fdae7931-338b-4ad3-b581-5f1d814b2a5b" msprop:DbColumnName="Sit. Funcionamento Escola Censo" msprop:FriendlyName="Sit. Funcionamento Escola Censo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Respondeu_x003F_" msprop:design-time-name="4b6e5704-9b3e-4583-b1c6-758637682dd8" msprop:DbColumnName="Respondeu?" msprop:FriendlyName="Respondeu?" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Qtde_x0020_Pessoas_x0020_Moram_x0020_Junto" msprop:design-time-name="8507369a-d178-4e96-9f33-568bbec3c69d" msprop:DbColumnName="Qtde Pessoas Moram Junto" msprop:FriendlyName="Qtde Pessoas Moram Junto" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Escolaridade_x0020_Pai" msprop:design-time-name="48397cc6-a356-4fe7-a4a9-8c1c3245dec6" msprop:DbColumnName="Escolaridade Pai" msprop:FriendlyName="Escolaridade Pai" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Escolaridade_x0020_Mãe" msprop:design-time-name="5cc51db5-4a4d-4595-bed9-dd41e735ea9c" msprop:DbColumnName="Escolaridade Mãe" msprop:FriendlyName="Escolaridade Mãe" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Renda_x0020_Familiar" msprop:design-time-name="8ed94f6f-ab6f-416c-a69a-8ae6d3e6125f" msprop:DbColumnName="Renda Familiar" msprop:FriendlyName="Renda Familiar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Renda_x0020_Individual" msprop:design-time-name="7b257b4b-bf06-450e-a7d5-39d19d369e96" msprop:DbColumnName="Renda Individual" msprop:FriendlyName="Renda Individual" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Moradia" msprop:design-time-name="d9990a3b-d6d6-42e7-880f-6a3eb328b98f" msprop:DbColumnName="Tipo Moradia" msprop:FriendlyName="Tipo Moradia" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Localização_x0020_Moradia" msprop:design-time-name="6b692ee0-6480-4a6c-99cd-97e3630a45f0" msprop:DbColumnName="Localização Moradia" msprop:FriendlyName="Localização Moradia" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Já_x0020_Trabalhou_x003F_" msprop:design-time-name="d9a3a549-e99a-414a-be65-636bd81b2134" msprop:DbColumnName="Já Trabalhou?" msprop:FriendlyName="Já Trabalhou?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Ajudar_x0020_Despesas_x0020_Casa_x003F_" msprop:design-time-name="f1fb5566-e07c-42dc-87f8-eec4bf368815" msprop:DbColumnName="Trabalhou para Ajudar Despesas Casa?" msprop:FriendlyName="Trabalhou para Ajudar Despesas Casa?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Sustentar_x0020_Família_x003F_" msprop:design-time-name="e2b09cdd-6b7d-4fd3-b8fc-b709dbb47d4a" msprop:DbColumnName="Trabalhou para Sustentar Família?" msprop:FriendlyName="Trabalhou para Sustentar Família?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_ser_x0020_Independente_x003F_" msprop:design-time-name="f618a6bf-69e1-4284-830c-57741d36787b" msprop:DbColumnName="Trabalhou para ser Independente?" msprop:FriendlyName="Trabalhou para ser Independente?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Adquirir_x0020_Experiência_x003F_" msprop:design-time-name="d496e997-43a7-4f23-8eb6-d6258495bfd4" msprop:DbColumnName="Trabalhou para Adquirir Experiência?" msprop:FriendlyName="Trabalhou para Adquirir Experiência?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Trabalhou_x0020_para_x0020_Pagar_x0020_Estudos_x003F_" msprop:design-time-name="46908b46-7028-4abe-830a-28669a5b4183" msprop:DbColumnName="Trabalhou para Pagar Estudos?" msprop:FriendlyName="Trabalhou para Pagar Estudos?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Preparatório_x0020_para_x0020_Trabalho_x003F_" msprop:design-time-name="78fe7c06-8d9c-40d0-a5a6-39c8e0ceab50" msprop:DbColumnName="Fez Curso Preparatório para Trabalho?" msprop:FriendlyName="Fez Curso Preparatório para Trabalho?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Profissionalizante_x003F_" msprop:design-time-name="ed78def0-3307-448e-83fe-573e9232a991" msprop:DbColumnName="Fez Curso Profissionalizante?" msprop:FriendlyName="Fez Curso Profissionalizante?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Preparatório_x0020_Vestibular_x003F_" msprop:design-time-name="cced47c7-f202-4cd6-8675-7db0d51df14f" msprop:DbColumnName="Fez Curso Preparatório Vestibular?" msprop:FriendlyName="Fez Curso Preparatório Vestibular?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Superior_x003F_" msprop:design-time-name="45aa390c-f5c4-4d6f-af55-328d3f580c12" msprop:DbColumnName="Fez Curso Superior?" msprop:FriendlyName="Fez Curso Superior?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_de_x0020_Lingua_x0020_Extrangeira_x003F_" msprop:design-time-name="1de2c53b-c759-434c-9ac4-6c7de4924add" msprop:DbColumnName="Fez Curso de Lingua Extrangeira?" msprop:FriendlyName="Fez Curso de Lingua Extrangeira?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Informática_x003F_" msprop:design-time-name="0e162e29-12c1-452f-9973-c7b1791c1802" msprop:DbColumnName="Fez Curso Informática?" msprop:FriendlyName="Fez Curso Informática?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Curso_x0020_Preparatório_x0020_Concurso_x003F_" msprop:design-time-name="c9cf1843-596b-428a-9936-f4ed613bc440" msprop:DbColumnName="Fez Curso Preparatório Concurso?" msprop:FriendlyName="Fez Curso Preparatório Concurso?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Fez_x0020_Outro_x0020_Curso_x003F_" msprop:design-time-name="68111865-7d7d-49c1-8b59-21f804feecf8" msprop:DbColumnName="Fez Outro Curso?" msprop:FriendlyName="Fez Outro Curso?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Qtde_x0020_Horas_x0020_Semanais_x0020_Que_x0020_Trabalha" msprop:design-time-name="222aa62f-3abc-4877-ac96-32a46ccf4df4" msprop:DbColumnName="Qtde Horas Semanais Que Trabalha" msprop:FriendlyName="Qtde Horas Semanais Que Trabalha" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Idade_x0020_que_x0020_Começou_x0020_a_x0020_Trabalhar" msprop:design-time-name="286f1c87-7350-4a14-b20e-9fd0c467738d" msprop:DbColumnName="Idade que Começou a Trabalhar" msprop:FriendlyName="Idade que Começou a Trabalhar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Qtde_x0020_Anos_x0020_para_x0020_Concluir_x0020_Ensino_x0020_Médio" msprop:design-time-name="766aba6a-a3fc-48bf-a9f1-3bc04b6838fc" msprop:DbColumnName="Qtde Anos para Concluir Ensino Médio" msprop:FriendlyName="Qtde Anos para Concluir Ensino Médio" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Qtde_x0020_Anos_x0020_para_x0020_Concluir_x0020_Ensino_x0020_Fundamental" msprop:design-time-name="6dfc22e8-4375-4006-a441-56d56af219f4" msprop:DbColumnName="Qtde Anos para Concluir Ensino Fundamental" msprop:FriendlyName="Qtde Anos para Concluir Ensino Fundamental" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola_x0020_Ensino_x0020_Fundamental" msprop:design-time-name="83b93afd-c786-4a8d-a197-cb8241ac38a2" msprop:DbColumnName="Tipo Escola Ensino Fundamental" msprop:FriendlyName="Tipo Escola Ensino Fundamental" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Escola_x0020_Ensino_x0020_Médio" msprop:design-time-name="2f3d4b6e-eb81-496b-9e25-1ff6989e2157" msprop:DbColumnName="Tipo Escola Ensino Médio" msprop:FriendlyName="Tipo Escola Ensino Médio" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Parou_x0020_o_x0020_Ensino_x0020_Médio_x003F_" msprop:design-time-name="a4c2f74e-805d-4ea8-98a1-bfa8cbb77e6e" msprop:DbColumnName="Parou o Ensino Médio?" msprop:FriendlyName="Parou o Ensino Médio?" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Tipo_x0020_Ensino_x0020_Médio" msprop:design-time-name="fbcd007e-f56e-4d1c-a1f0-9941b92ad160" msprop:DbColumnName="Tipo Ensino Médio" msprop:FriendlyName="Tipo Ensino Médio" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_CH" msprop:design-time-name="e09a4a68-0d81-44d9-b3ee-0810740ce710" msprop:DbColumnName="Categoria Nota CH" msprop:FriendlyName="Categoria Nota CH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_CN" msprop:design-time-name="e80387d5-bbfc-40ea-8595-e80beb5e99b3" msprop:DbColumnName="Categoria Nota CN" msprop:FriendlyName="Categoria Nota CN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_LN" msprop:design-time-name="42c7f15b-d0b6-4876-bb53-6ced68cd8682" msprop:DbColumnName="Categoria Nota LN" msprop:FriendlyName="Categoria Nota LN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_MT" msprop:design-time-name="2d567267-1532-4f3a-8d5b-4dcb9e9146ee" msprop:DbColumnName="Categoria Nota MT" msprop:FriendlyName="Categoria Nota MT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Categoria_x0020_Nota_x0020_RD" msprop:design-time-name="7608ecc7-55c2-4715-8c9b-6fa223cccbfd" msprop:DbColumnName="Categoria Nota RD" msprop:FriendlyName="Categoria Nota RD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>

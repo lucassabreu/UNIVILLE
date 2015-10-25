@@ -18,6 +18,12 @@
       <FullPath>Enem.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <MiningModels>
+    <ProjectItem>
+      <Name>ProvasNotaCH.dmm</Name>
+      <FullPath>ProvasNotaCH.dmm</FullPath>
+    </ProjectItem>
+  </MiningModels>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
@@ -26,7 +32,7 @@
           <ConfigurationSetting>
             <Id>Enem</Id>
             <Name>Enem</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=enem</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=enem</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
