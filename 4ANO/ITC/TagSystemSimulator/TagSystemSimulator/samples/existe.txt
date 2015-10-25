@@ -1,0 +1,486 @@
+; a linha inicial precisa ter o formato: #PalavraProcurar@PalavraVerificar
+
+; identifica a letra a procurar
+0: read
+0:  when # goto 0r
+0:  when A goto a1
+0:  when B goto b1
+0:  when C goto c1
+0:  when D goto d1
+0:  when E goto e1
+0:  when F goto f1
+0:  when G goto g1
+0:  when H goto h1
+0:  when I goto i1
+0:  when J goto j1
+0:  when K goto k1
+0:  when L goto l1
+0:  when M goto m1
+0:  when N goto n1
+0:  when O goto o1
+0:  when P goto p1
+0:  when Q goto q1
+0:  when R goto r1
+0:  when S goto s1
+0:  when T goto t1
+0:  when U goto u1
+0:  when V goto v1
+0:  when W goto w1
+0:  when X goto x1
+0:  when Y goto y1
+0:  when Z goto z1
+; aceita a palavra se não faltar nenhuma letra em "PalavraProcurar"
+0:  when @ goto ACCEPT
+; escreve o # para não perder a referencia
+;0:  when * goto REJECT
+0r: write # goto 0
+
+; rola até a "PalavraProcurar"
+rol: write * goto rol1
+rol1: read 
+rol1:  when # goto rol2
+rol1:  when * goto rol3
+rol2: write # goto 0
+rol3: write * goto rol1
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+a1: read
+a1:  when @ goto a2
+a1:  when # goto REJECT
+a1:  when * goto a1r
+; escreve a letra para não perde-la
+a1r: write * goto a1
+; escreve o @ para não perder a referencia
+a2: write @ goto a2p
+
+a2p: read
+a2p:  when A goto rol
+a2p:  when # goto REJECT
+a2p:  when * goto a2pr
+a2pr: write * goto a2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+b1: read
+b1:  when @ goto b2
+b1:  when # goto REJECT
+b1:  when * goto b1r
+; escreve a letra para não perde-la
+b1r: write * goto b1
+; escreve o @ para não perder a referencia
+b2: write @ goto b2p
+
+b2p: read
+b2p:  when B goto rol
+b2p:  when # goto REJECT
+b2p:  when * goto b2pr
+b2pr: write * goto b2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+c1: read
+c1:  when @ goto c2
+c1:  when # goto REJECT
+c1:  when * goto c1r
+; escreve a letra para não perde-la
+c1r: write * goto c1
+; escreve o @ para não perder a referencia
+c2: write @ goto c2p
+
+c2p: read
+c2p:  when C goto rol
+c2p:  when # goto REJECT
+c2p:  when * goto c2pr
+c2pr: write * goto c2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+d1: read
+d1:  when @ goto d2
+d1:  when # goto REJECT
+d1:  when * goto d1r
+; escreve a letra para não perde-la
+d1r: write * goto d1
+; escreve o @ para não perder a referencia
+d2: write @ goto d2p
+
+d2p: read
+d2p:  when D goto rol
+d2p:  when # goto REJECT
+d2p:  when * goto d2pr
+d2pr: write * goto d2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+e1: read
+e1:  when @ goto e2
+e1:  when # goto REJECT
+e1:  when * goto e1r
+; escreve a letra para não perde-la
+e1r: write * goto e1
+; escreve o @ para não perder a referencia
+e2: write @ goto e2p
+
+e2p: read
+e2p:  when E goto rol
+e2p:  when # goto REJECT
+e2p:  when * goto e2pr
+e2pr: write * goto e2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+f1: read
+f1:  when @ goto f2
+f1:  when # goto REJECT
+f1:  when * goto f1r
+; escreve a letra para não perde-la
+f1r: write * goto f1
+; escreve o @ para não perder a referencia
+f2: write @ goto f2p
+
+f2p: read
+f2p:  when F goto rol
+f2p:  when # goto REJECT
+f2p:  when * goto f2pr
+f2pr: write * goto f2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+g1: read
+g1:  when @ goto g2
+g1:  when # goto REJECT
+g1:  when * goto g1r
+; escreve a letra para não perde-la
+g1r: write * goto g1
+; escreve o @ para não perder a referencia
+g2: write @ goto g2p
+
+g2p: read
+g2p:  when G goto rol
+g2p:  when # goto REJECT
+g2p:  when * goto g2pr
+g2pr: write * goto g2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+h1: read
+h1:  when @ goto h2
+h1:  when # goto REJECT
+h1:  when * goto h1r
+; escreve a letra para não perde-la
+h1r: write * goto h1
+; escreve o @ para não perder a referencia
+h2: write @ goto h2p
+
+h2p: read
+h2p:  when H goto rol
+h2p:  when # goto REJECT
+h2p:  when * goto h2pr
+h2pr: write * goto h2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+i1: read
+i1:  when @ goto i2
+i1:  when # goto REJECT
+i1:  when * goto i1r
+; escreve a letra para não perde-la
+i1r: write * goto i1
+; escreve o @ para não perder a referencia
+i2: write @ goto i2p
+
+i2p: read
+i2p:  when I goto rol
+i2p:  when # goto REJECT
+i2p:  when * goto i2pr
+i2pr: write * goto i2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+j1: read
+j1:  when @ goto j2
+j1:  when # goto REJECT
+j1:  when * goto j1r
+; escreve a letra para não perde-la
+j1r: write * goto j1
+; escreve o @ para não perder a referencia
+j2: write @ goto j2p
+
+j2p: read
+j2p:  when J goto rol
+j2p:  when # goto REJECT
+j2p:  when * goto j2pr
+j2pr: write * goto j2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+k1: read
+k1:  when @ goto k2
+k1:  when # goto REJECT
+k1:  when * goto k1r
+; escreve a letra para não perde-la
+k1r: write * goto k1
+; escreve o @ para não perder a referencia
+k2: write @ goto k2p
+
+k2p: read
+k2p:  when K goto rol
+k2p:  when # goto REJECT
+k2p:  when * goto k2pr
+k2pr: write * goto k2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+l1: read
+l1:  when @ goto l2
+l1:  when # goto REJECT
+l1:  when * goto l1r
+; escreve a letra para não perde-la
+l1r: write * goto l1
+; escreve o @ para não perder a referencia
+l2: write @ goto l2p
+
+l2p: read
+l2p:  when L goto rol
+l2p:  when # goto REJECT
+l2p:  when * goto l2pr
+l2pr: write * goto l2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+m1: read
+m1:  when @ goto m2
+m1:  when # goto REJECT
+m1:  when * goto m1r
+; escreve a letra para não perde-la
+m1r: write * goto m1
+; escreve o @ para não perder a referencia
+m2: write @ goto m2p
+
+m2p: read
+m2p:  when M goto rol
+m2p:  when # goto REJECT
+m2p:  when * goto m2pr
+m2pr: write * goto m2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+n1: read
+n1:  when @ goto n2
+n1:  when # goto REJECT
+n1:  when * goto n1r
+; escreve a letra para não perde-la
+n1r: write * goto n1
+; escreve o @ para não perder a referencia
+n2: write @ goto n2p
+
+n2p: read
+n2p:  when N goto rol
+n2p:  when # goto REJECT
+n2p:  when * goto n2pr
+n2pr: write * goto n2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+o1: read
+o1:  when @ goto o2
+o1:  when # goto REJECT
+o1:  when * goto o1r
+; escreve a letra para não perde-la
+o1r: write * goto o1
+; escreve o @ para não perder a referencia
+o2: write @ goto o2p
+
+o2p: read
+o2p:  when O goto rol
+o2p:  when # goto REJECT
+o2p:  when * goto o2pr
+o2pr: write * goto o2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+p1: read
+p1:  when @ goto p2
+p1:  when # goto REJECT
+p1:  when * goto p1r
+; escreve a letra para não perde-la
+p1r: write * goto p1
+; escreve o @ para não perder a referencia
+p2: write @ goto p2p
+
+p2p: read
+p2p:  when P goto rol
+p2p:  when # goto REJECT
+p2p:  when * goto p2pr
+p2pr: write * goto p2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+q1: read
+q1:  when @ goto q2
+q1:  when # goto REJECT
+q1:  when * goto q1r
+; escreve a letra para não perde-la
+q1r: write * goto q1
+; escreve o @ para não perder a referencia
+q2: write @ goto q2p
+
+q2p: read
+q2p:  when Q goto rol
+q2p:  when # goto REJECT
+q2p:  when * goto q2pr
+q2pr: write * goto q2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+r1: read
+r1:  when @ goto r2
+r1:  when # goto REJECT
+r1:  when * goto r1r
+; escreve a letra para não perde-la
+r1r: write * goto r1
+; escreve o @ para não perder a referencia
+r2: write @ goto r2p
+
+r2p: read
+r2p:  when R goto rol
+r2p:  when # goto REJECT
+r2p:  when * goto r2pr
+r2pr: write * goto r2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+s1: read
+s1:  when @ goto s2
+s1:  when # goto REJECT
+s1:  when * goto s1r
+; escreve a letra para não perde-la
+s1r: write * goto s1
+; escreve o @ para não perder a referencia
+s2: write @ goto s2p
+
+s2p: read
+s2p:  when S goto rol
+s2p:  when # goto REJECT
+s2p:  when * goto s2pr
+s2pr: write * goto s2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+t1: read
+t1:  when @ goto t2
+t1:  when # goto REJECT
+t1:  when * goto t1r
+; escreve a letra para não perde-la
+t1r: write * goto t1
+; escreve o @ para não perder a referencia
+t2: write @ goto t2p
+
+t2p: read
+t2p:  when T goto rol
+t2p:  when # goto REJECT
+t2p:  when * goto t2pr
+t2pr: write * goto t2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+u1: read
+u1:  when @ goto u2
+u1:  when # goto REJECT
+u1:  when * goto u1r
+; escreve a letra para não perde-la
+u1r: write * goto u1
+; escreve o @ para não perder a referencia
+u2: write @ goto u2p
+
+u2p: read
+u2p:  when U goto rol
+u2p:  when # goto REJECT
+u2p:  when * goto u2pr
+u2pr: write * goto u2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+v1: read
+v1:  when @ goto v2
+v1:  when # goto REJECT
+v1:  when * goto v1r
+; escreve a letra para não perde-la
+v1r: write * goto v1
+; escreve o @ para não perder a referencia
+v2: write @ goto v2p
+
+v2p: read
+v2p:  when V goto rol
+v2p:  when # goto REJECT
+v2p:  when * goto v2pr
+v2pr: write * goto v2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+w1: read
+w1:  when @ goto w2
+w1:  when # goto REJECT
+w1:  when * goto w1r
+; escreve a letra para não perde-la
+w1r: write * goto w1
+; escreve o @ para não perder a referencia
+w2: write @ goto w2p
+
+w2p: read
+w2p:  when W goto rol
+w2p:  when # goto REJECT
+w2p:  when * goto w2pr
+w2pr: write * goto w2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+x1: read
+x1:  when @ goto x2
+x1:  when # goto REJECT
+x1:  when * goto x1r
+; escreve a letra para não perde-la
+x1r: write * goto x1
+; escreve o @ para não perder a referencia
+x2: write @ goto x2p
+
+x2p: read
+x2p:  when X goto rol
+x2p:  when # goto REJECT
+x2p:  when * goto x2pr
+x2pr: write * goto x2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+y1: read
+y1:  when @ goto y2
+y1:  when # goto REJECT
+y1:  when * goto y1r
+; escreve a letra para não perde-la
+y1r: write * goto y1
+; escreve o @ para não perder a referencia
+y2: write @ goto y2p
+
+y2p: read
+y2p:  when Y goto rol
+y2p:  when # goto REJECT
+y2p:  when * goto y2pr
+y2pr: write * goto y2p
+
+; uma letra
+; avaliar se existe a letra na segunda palavra
+z1: read
+z1:  when @ goto z2
+z1:  when # goto REJECT
+z1:  when * goto z1r
+; escreve a letra para não perde-la
+z1r: write * goto z1
+; escreve o @ para não perder a referencia
+z2: write @ goto z2p
+
+z2p: read
+z2p:  when Z goto rol
+z2p:  when # goto REJECT
+z2p:  when * goto z2pr
+z2pr: write * goto z2p

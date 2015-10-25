@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8AC80F35-958E-4A27-9792-DA28FA034CD5}</ProjectGuid>
+    <ProjectGuid>{57706674-E497-4F24-8B4D-9B2083B037BE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimuladorProgramaMaquinaTurring</RootNamespace>
-    <AssemblyName>SimuladorProgramaMaquinaTurring</AssemblyName>
+    <RootNamespace>TagSystemSimulator</RootNamespace>
+    <AssemblyName>TagSystemSimulator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,18 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm.cs" />
+    <Compile Include="Command\AcceptCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\ReadCommand.cs" />
+    <Compile Include="Command\RejectCommand.cs" />
+    <Compile Include="Command\WriteCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TuringMachine\Program.cs" />
-    <Compile Include="TuringMachineSimulator.cs" />
-    <Compile Include="TuringMachine\Command.cs" />
+    <Compile Include="Simulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Diag.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\programa.txt">
+    <Content Include="samples\existe.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\read_write.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

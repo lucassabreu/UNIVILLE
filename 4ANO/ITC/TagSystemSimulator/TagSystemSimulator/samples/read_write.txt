@@ -1,0 +1,5 @@
+﻿0: write B goto 2
+2: write A goto 1
+1: read
+1:  when A goto ACCEPT
+1:  when * goto REJECT

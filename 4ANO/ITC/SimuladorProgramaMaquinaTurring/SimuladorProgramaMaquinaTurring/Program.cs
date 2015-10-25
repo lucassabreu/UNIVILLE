@@ -1,6 +1,7 @@
 ﻿using SimuladorProgramaMaquinaTurring.TuringMachine;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +10,41 @@ namespace SimuladorProgramaMaquinaTurring
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
+            /*args = new string[]{
+                @"resources/programa.txt",
+                "1100011000111"
+            };*/
+
+            if (args.Count() < 1)
+            {
+                Console.WriteLine("Eh preciso informar um <arquivo com o programa> e a <fita de entrada>");
+                Console.ReadKey();
+                return;
+            }
+
             TuringMachineSimulator tms = new TuringMachineSimulator();
 
             TuringMachine.Program tmp = new TuringMachine.Program();
 
-            tmp.AddCommandToLabel("0", new Command('0', Command.EMPTY, Command.RIGHT, "1o"));
+            StreamReader sr = new StreamReader(args[0]);
+            String[] line;
+            
+            while (sr.Peek() >= 0)
+            {
+                line = sr.ReadLine().Split(' ');
+                tmp.AddCommandToLabel(line[0],
+                    new Command(
+                        line[1] == "_" ? Command.EMPTY : (line[1] == "*" ? Command.WILDCARD : line[1][0]),
+                        line[2] == "_" ? Command.EMPTY : (line[2] == "*" ? Command.WILDCARD : line[2][0]),
+                        line[3] == "l" ? Command.LEFT : (line[3] == "r" ? Command.RIGHT : Command.STAY), 
+                        line[4]));
+            }
+
+            /*tmp.AddCommandToLabel("0", new Command('0', Command.EMPTY, Command.RIGHT, "1o"));
             tmp.AddCommandToLabel("0", new Command('1', Command.EMPTY, Command.RIGHT, "1i"));
             tmp.AddCommandToLabel("0", new Command(Command.EMPTY, Command.EMPTY, Command.STAY, "ACE"));
 
@@ -45,11 +74,26 @@ namespace SimuladorProgramaMaquinaTurring
             tmp.AddCommandToLabel("REJ", new Command(Command.WILDCARD, Command.EMPTY, Command.LEFT, "REJ"));
             tmp.AddCommandToLabel("RE2", new Command(Command.EMPTY, '(', Command.STAY, "REJECT"));
 
-            tmp.FirstLabel = "0";
+            tmp.FirstLabel = "0";*/
 
-            tms.RunProgram(tmp, "11000110011");
+            /*foreach (string key in tmp.LabelList)
+            {
+                foreach (Command c in tmp.GetLabel(key))
+                {
+                    Console.WriteLine("{0} {1} {2} {3} {4}", key,
+                            (c.EqualsTo == '\0' ? '_' : (c.EqualsTo == null ? '*' : c.EqualsTo)),
+                            (c.WriteSymbol == '\0' ? '_' : (c.WriteSymbol == null ? '*' : c.WriteSymbol)),
+                            (c.MoveTo == -1 ? 'l' : (c.MoveTo == 1 ? 'r' : '*')),
+                            c.GoToLabel);
+                }
+            }*/
 
+            tms.RunProgram(tmp, args.Count() > 1 ? args[1] : "");
+
+            Console.WriteLine();
+            Console.WriteLine("Precione uma tecla para sair...");
             Console.ReadKey();
+            Console.WriteLine();
         }
 
         static void OneMain(string[] args)

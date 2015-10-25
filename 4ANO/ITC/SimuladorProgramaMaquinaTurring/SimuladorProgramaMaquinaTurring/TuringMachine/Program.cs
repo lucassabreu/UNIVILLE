@@ -10,11 +10,10 @@ namespace SimuladorProgramaMaquinaTurring.TuringMachine
     {
         private Dictionary<string, List<Command>> labels = new Dictionary<string, List<Command>>();
 
-        private string _firstLabel;
+        private string _firstLabel = null;
 
         public void AddCommandToLabel(string labelName, params Command[] commands)
         {
-
             List<Command> label = this.GetLabel(labelName.Trim());
 
             if (label == null)
@@ -35,6 +34,9 @@ namespace SimuladorProgramaMaquinaTurring.TuringMachine
             }
 
             labels[label] = commands;
+
+            if (this.FirstLabel == null)
+                this.FirstLabel = label;
         }
 
         public List<Command> GetLabel(string label)
@@ -45,6 +47,11 @@ namespace SimuladorProgramaMaquinaTurring.TuringMachine
                 return this.labels[label];
             else
                 return null;
+        }
+
+        public string[] LabelList
+        {
+            get { return this.labels.Keys.ToArray(); }
         }
 
         public string FirstLabel

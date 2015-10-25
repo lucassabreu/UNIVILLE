@@ -39,10 +39,10 @@ namespace SimuladorProgramaMaquinaTurring
                 {
                     if ((c.EqualsTo == Command.WILDCARD && GetSymbol() != Command.EMPTY) || c.EqualsTo.Equals(this.GetSymbol()))
                     {
-                        Console.Write("{0}\t{1}\t{2}\t{3}\t", labelName, 
+                        /*Console.Write("{0}\t{1}\t{2}\t{3}\t", labelName, 
                             (c.EqualsTo == '\0' ? '_' : (c.EqualsTo == null ? '*' : c.EqualsTo)), 
                             (c.WriteSymbol == '\0' ? '_' : (c.WriteSymbol == null ? '*' : c.WriteSymbol)), 
-                            c.GoToLabel);
+                            c.GoToLabel);*/
                         this.Write(c.WriteSymbol);
                         this.position += c.MoveTo;
                         labelName = c.GoToLabel;
