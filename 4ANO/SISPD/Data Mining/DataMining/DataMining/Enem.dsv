@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9300" scrolltop="-10490" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29554" y="14393" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9300" scrolltop="-7038" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20955" y="14393" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -38,7 +38,7 @@
                 <layoutmanager>
                   <ddsxmlobj />
                 </layoutmanager>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Provas" left="-5848" top="-8519" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="6932" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Provas" left="-8757" top="-6377" logicalid="3" controlid="1" masterid="0" hint1="0" hint2="0" width="6932" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobjectstreaminitwrapper binary="000a0000141b000088130000" />
                   </control>
@@ -49,7 +49,7 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="ParaTeste" left="2011" top="-5794" logicalid="3" controlid="2" masterid="0" hint1="0" hint2="0" width="6932" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="ParaTeste" left="-1269" top="-6404" logicalid="4" controlid="2" masterid="0" hint1="0" hint2="0" width="6932" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobjectstreaminitwrapper binary="000a0000141b000088130000" />
                   </control>
@@ -65,7 +65,7 @@
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
             <DiagramViewPortLeft>-9300</DiagramViewPortLeft>
-            <DiagramViewPortTop>-10490</DiagramViewPortTop>
+            <DiagramViewPortTop>-7038</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>100</DiagramZoom>
@@ -496,6 +496,13 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="Categoria_x0020_Nota_x0020_RD" msdata:ReadOnly="true" msprop:design-time-name="66d5d1c3-8b9c-4495-bf85-aadc6f4f2a25" msprop:DbColumnName="Categoria Nota RD" msprop:FriendlyName="Categoria Nota RD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="É_x0020_Deficiente_x003F_" msdata:ReadOnly="true" msprop:Description="Possui algum tipo de Deficiencia Física ou Mental" msprop:ComputedColumnExpression="CASE WHEN &#xD;&#xA;&#x9;&#x9;[É Baixa Visão?] = '1' &#xD;&#xA;&#x9; OR [É Cego?] = '1' &#xD;&#xA;&#x9; OR [É Surdo?] = '1' &#xD;&#xA;&#x9; OR [É Deficiênte Auditivo?] = '1' &#xD;&#xA;&#x9; OR [É Deficiênte Física?] = '1' &#xD;&#xA;&#x9; OR [É Deficiênte Mental?] = '1' &#xD;&#xA;&#x9; OR [É Portador de Déficit Atenção?] = '1' &#xD;&#xA;&#x9; OR [É Disléxico?] = '1' &#xD;&#xA;&#x9;&#x9;&#x9; THEN 'S' ELSE 'N' END" msprop:IsLogical="True" msprop:design-time-name="dfc17447-3f12-46e4-acec-4b5d303b7725" msprop:DbColumnName="É Deficiente?">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="1" />
