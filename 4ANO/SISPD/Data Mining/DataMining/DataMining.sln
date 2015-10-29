@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DataMining", "DataMining\DataMining.dwproj", "{7BB1445C-483F-46E1-92DE-22612F0F99E6}"
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DataMining", "DataMining\DataMining.dwproj", "{9F92ED17-961D-4108-8460-5272243A5C9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7BB1445C-483F-46E1-92DE-22612F0F99E6}.Development|Default.ActiveCfg = Development
-		{7BB1445C-483F-46E1-92DE-22612F0F99E6}.Development|Default.Build.0 = Development
-		{7BB1445C-483F-46E1-92DE-22612F0F99E6}.Development|Default.Deploy.0 = Development
+		{9F92ED17-961D-4108-8460-5272243A5C9E}.Development|Default.ActiveCfg = Development
+		{9F92ED17-961D-4108-8460-5272243A5C9E}.Development|Default.Build.0 = Development
+		{9F92ED17-961D-4108-8460-5272243A5C9E}.Development|Default.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
