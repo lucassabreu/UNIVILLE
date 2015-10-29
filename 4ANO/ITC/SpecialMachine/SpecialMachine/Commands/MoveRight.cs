@@ -8,6 +8,8 @@ namespace SpecialMachine.Commands
 {
     class MoveRight : DefaultCommand
     {
+        public MoveRight(string c) : base(c) { }
+
         override public string Execute(Simulator sim)
         {
             sim.MoveRight();

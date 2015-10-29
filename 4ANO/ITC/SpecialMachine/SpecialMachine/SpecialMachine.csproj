@@ -42,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm.cs" />
+    <Compile Include="Checked.cs" />
+    <Compile Include="Commands\Accept.cs" />
     <Compile Include="Commands\Check.cs" />
     <Compile Include="Commands\DefaultCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\If.cs" />
     <Compile Include="Commands\MoveLeft.cs" />
     <Compile Include="Commands\MoveRight.cs" />
+    <Compile Include="Commands\Reject.cs" />
     <Compile Include="Commands\Uncheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

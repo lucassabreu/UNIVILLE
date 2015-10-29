@@ -8,6 +8,9 @@ namespace SpecialMachine.Commands
 {
     class Check : DefaultCommand
     {
+
+        public Check(string c) : base(c) { }
+
         override public string Execute(Simulator sim)
         {
             sim.Check();

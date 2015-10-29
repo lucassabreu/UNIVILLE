@@ -20,12 +20,8 @@
   </DataSourceViews>
   <MiningModels>
     <ProjectItem>
-      <Name>MinerarCatNotaCH.dmm</Name>
-      <FullPath>MinerarCatNotaCH.dmm</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>ProvasCatCHPelasOutras.dmm</Name>
-      <FullPath>ProvasCatCHPelasOutras.dmm</FullPath>
+      <Name>MinerarMatematica.dmm</Name>
+      <FullPath>MinerarMatematica.dmm</FullPath>
     </ProjectItem>
   </MiningModels>
   <Configurations>

@@ -22,5 +22,10 @@ namespace SpecialMachine.Commands
         {
             return sim.IsChecked() ? this._commandTrue : this._commandFalse;
         }
+
+        public override string ToString()
+        {
+            return String.Format("if goto {0} else goto {1};", this._commandTrue, this._commandFalse);
+        }
     }
 }

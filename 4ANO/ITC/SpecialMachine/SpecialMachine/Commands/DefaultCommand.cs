@@ -10,13 +10,19 @@ namespace SpecialMachine.Commands
     {
         protected string _nextCommand;
 
-        public DefaultCommand(string nextCommand){
+        public DefaultCommand(string nextCommand)
+        {
             this._nextCommand = nextCommand;
         }
 
-        public string Execute(Simulator sim)
+        public virtual string Execute(Simulator sim)
         {
             return this._nextCommand;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0} goto {1};", this.GetType().Name.ToLower(), this._nextCommand);
         }
     }
 }

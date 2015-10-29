@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SpecialMachine
 {
-    class Algorithm
+    public class Algorithm
     {
         private string _firstCommandName = null;
         private Dictionary<string, ICommand> _commands = new Dictionary<string,ICommand>();
@@ -23,9 +23,9 @@ namespace SpecialMachine
             return null;
         }
 
-        public ICommand GetFirst()
+        public string FirstCommandName
         {
-            return this.Get(this._firstCommandName);
+            get { return this._firstCommandName; }
         }
 
         public void Add(string name, ICommand command)
