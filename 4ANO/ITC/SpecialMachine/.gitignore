@@ -1,0 +1,14 @@
+#java specific
+*.class
+
+#IDE especif files
+nbproject/private/
+.metadata/
+
+#output compiled files
+bin/
+dist/
+build/
+
+*/bin
+*/obj
