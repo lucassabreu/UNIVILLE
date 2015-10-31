@@ -11,16 +11,14 @@ namespace SpecialMachine
     {
         static void Main(string[] args)
         {
+            /*args = new string[]
+            {
+                "samples/limpa_fita.txt",
+                "        "
+            };*/
 
-            Algorithm algorithm = new Algorithm();
-
-            algorithm.Add("a", new MoveLeft("0"));
-            algorithm.Add("0", new Check("1"));
-            algorithm.Add("1", new MoveRight("2"));
-            algorithm.Add("2", new If("3", "0"));
-            algorithm.Add("3", new Accept());
-
-            Simulator.Instance.Run(algorithm, "     V   ");
+            Algorithm algorithm = Algorithm.CreateFromFile(args[0]);
+            Simulator.Instance.Run(algorithm, args[1]);
 
             Console.WriteLine();
             Console.WriteLine("Status: ", Simulator.Instance.State);

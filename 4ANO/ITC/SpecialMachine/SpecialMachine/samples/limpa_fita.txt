@@ -1,0 +1,16 @@
+﻿; verifica se o primeiro esta marcado
+0: if goto 1 else goto av;
+1: uncheck goto ac;
+
+ac: accept;
+rj: reject;
+
+; marca e avança
+av: check goto av1;
+av1: moveright goto av2;
+av2: if goto bk else goto av;
+
+; desmarca e volta
+bk: uncheck goto bk1;
+bk1: moveleft goto bk2;
+bk2: if goto ac else goto bk;
