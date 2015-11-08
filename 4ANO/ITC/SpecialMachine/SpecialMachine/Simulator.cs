@@ -103,7 +103,7 @@ namespace SpecialMachine
             }
             else
             {
-                if (!this._tape[this._realPosition + 1])
+                if (!IsChecked())
                     this._tape[this._realPosition + 1] = true;
                 else
                 {
@@ -120,7 +120,7 @@ namespace SpecialMachine
             }
             else
             {
-                if (this._tape[this._realPosition + 1])
+                if (IsChecked())
                     this._tape[this._realPosition + 1] = false;
                 else
                 {
@@ -145,11 +145,19 @@ namespace SpecialMachine
         public void MoveRight()
         {
             this._realPosition++;
+            if (!ValidPosition())
+            {
+                Error();
+            }
         }
 
         public void MoveLeft()
         {
             this._realPosition--;
+            if (!ValidPosition())
+            {
+                Error();
+            }
         }
 
         public void Error()

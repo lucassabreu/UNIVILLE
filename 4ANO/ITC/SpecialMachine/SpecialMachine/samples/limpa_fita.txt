@@ -1,5 +1,8 @@
 ﻿; verifica se o primeiro esta marcado
-0: if goto 1 else goto av;
+t: moveright goto t;
+
+0: if goto 1 else goto 0i;
+0i: moveright goto av;
 1: uncheck goto ac;
 
 ac: accept;
